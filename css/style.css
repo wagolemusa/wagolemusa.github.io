@@ -1,0 +1,320 @@
+body{
+	margin: 0;
+font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+font-size: 1rem;
+font-weight: 400;
+line-height: 1.5;
+text-align: left;
+background-image: url(../img/diary.jpg);
+background-attachment: fixed;
+background-repeat: no-repeat;
+background-size: 1300px 670px;
+
+}
+
+
+/*
+ Navbar styles
+ background-repeat: no-repeat, repeat;
+*/
+
+.top{
+	background-color: #3F729B;
+	overflow:  hidden;
+
+}
+
+.top a {
+	float: left;
+	color: #ffffff;
+	text-decoration: none;
+	font-size: 20px;
+	text-align: center;
+	padding: 14px 16px;
+}
+
+.top a:hover {
+	background-color:#59698d;
+	color: #ffffff;
+}
+
+.top-right{
+	float: right;
+}
+.account{
+	background-color: #3F729B;
+	color: #ffffff;
+	padding: 16px;
+	font-size: 24px;
+	padding-left: 50px;
+}
+
+.account-content{
+	display: none;
+	background-color: #3F729B;
+	position: absolute;
+	min-width: 200px;
+	box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+	z-index: 1;
+}
+.account-content a {
+	color: #ffffff;
+	padding: 12px 16px;
+	text-decoration: none;
+}
+
+.account-content a:hover {
+background-color:#59698d;
+}
+
+.dropdown:hover .account-content {
+	display: block;
+}
+
+.dropdown:hover .account{
+background-color:#59698d;
+}
+
+
+/* Register form  styles */
+
+#register{
+	background: rgba(0, 0, 0, 0.55);
+	padding: 5px;
+	padding-left: 400px;
+	padding-right: 400px;
+	color: #ffffff;
+	font-size: 20px
+}
+#login{
+		background: rgba(0, 0, 0, 0.55);
+
+	padding: 5px;
+	padding-left: 400px;
+	padding-right: 400px;
+	color: #ffffff;
+font-size: 20px;
+}
+
+input[type=text], input[type=password]{
+	width: 500px;
+	padding: 10px;
+	margin: 5px 0 22px 0;
+	
+}
+
+.register_button{
+	background-color: #3F729B;
+	color: #ffffff;
+	padding-top: 16px 20px;
+	margin: 8px;
+	width: 150px;
+	font-size: 20px;
+	opacity: 0.9;
+	border: none;
+}
+
+
+button {
+	float: center;
+	padding: 14px 16px;
+		opacity: 0.9;
+	border: none;
+}
+
+/* home backgraund */
+
+.homemusa{
+background: rgba(0, 0, 0, 0.55);
+
+	height: 550px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	padding-top: 20px;
+}
+
+.homemusa-text{
+	text-align: center;
+	left: 50%
+	transform: translate(-50%, -50%);
+	color: white;
+	padding-top: 10px;
+	padding-bottom: 30px;
+}
+
+.homemusa-text h1{
+	font-size: 60px;
+
+}
+.homemusa-text p{
+	font-size: 24px;
+}
+
+.homemusa-text a{
+  background-color: dodgerblue;
+	color: #ffffff;
+	margin: 20px;
+	width: 150px;
+	font-size: 30px;
+	font-weight: 100px;
+	opacity: 0.9;
+	border: none;
+	text-decoration: none;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 8px;
+	padding-right: 8px; 
+
+}
+
+
+.footer {
+	padding-top: 10px;
+  padding-bottom: 10px;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #1C2331;
+   color: white;
+   text-align: center;
+}
+
+.footer a{
+	font-size: 16px;
+	color: #fff;
+	text-decoration: none;
+}
+
+/*---- Add Diary Style-------*/
+.row{
+	background: rgba(0, 0, 0, 0.55);
+	color: #ffffff;
+	display: flex;
+}
+
+.column{
+	flex: 50%;
+	padding: 10px;
+	width: 50%;
+	padding-top: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+input[type=date], input[type=time]{
+	width: 150px;
+	padding: 10px;
+	margin: 5px 0 22px 0;
+	
+}
+.data b{
+	font-size: 20px;
+
+
+}
+
+.data{
+background: rgba(0, 0, 0, 0.55);
+padding: 12px;
+
+}
+
+
+.book{
+	cursor: pointer;
+background: rgba(0, 0, 0, 0.55);
+
+padding: 12px;
+border: 12px;
+border: 1px solid rgba(255, 255, 255, 0.55);
+border-radius: 5px;
+margin-bottom: 10px;
+}
+td, th{
+	padding: 8px;
+	text-align: left;
+}
+table{
+	width: 500px;
+}
+
+
+/* --------------Updating style-----------*/
+.book-update{
+cursor: pointer;
+background: rgba(0, 0, 0, 0.55);
+padding: 12px;
+border: 12px;
+border: 1px solid rgba(255, 255, 255, 0.55);
+border-radius: 5px;
+margin-bottom: 10px;
+padding-left: 50px;
+padding-right: 50px;
+color: #ffffff;
+}
+
+.book-container{
+	padding-left: 50px;
+padding-right: 50px;
+
+}
+
+.book-container button{
+	float: right;
+	background-color: #FF8800;
+	color: #ffffff;
+	font-size: 20px;
+	opacity: 0.9;
+	cursor: pointer;
+	border: none;
+}
+
+.book-container table{
+		width: 900px;
+
+}
+
+
+
+.row1{
+	background: rgba(0, 0, 0, 0.55);
+	color: #ffffff;
+	display: flex;
+}
+
+.column1{
+	flex: 50%;
+	padding: 10px;
+	width: 50%;
+	padding-top: 20px;
+	padding-left: 100px;
+	padding-right: 100px;
+}
+
+#pro{
+cursor: pointer;
+background: rgba(0, 0, 0, 0.55);
+padding: 12px;
+border: 12px;
+border-radius: 5px;
+margin-bottom: 10px;
+padding-left: 50px;	
+
+}
+#pro p{
+	font-size: 20px;
+
+}
+#pro b{
+	background-color: #0d47a1;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	padding-right:10px;
+}
+.postbtn{
+	background-color: #0d47a1;
+	color: #ffffff;
+	font-size: 20px;
+}
