@@ -25,7 +25,7 @@
 
 
 function getText(){
-	fetch('https://dairyapp.herokuapp.com/api')
+	fetch('https://dairyapp.herokuapp.com/api/')
 	.then((res) => res.text())
 	.then((data) =>{
 		document.getElementById('output').innerHTML = data;
