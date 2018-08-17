@@ -14,7 +14,6 @@ headers:{"Content-Type":"application/json"}})
 
 // function getText(){
 // 	fetch('https://dairyapp.herokuapp.com/api/')
-// 	headers:{"Content-Type":"application/json"}
 // 	.then((res) => res.text())
 // 	.then((data) =>{
 // 		document.getElementById('output').innerHTML = data;
