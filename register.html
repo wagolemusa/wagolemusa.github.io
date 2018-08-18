@@ -2,8 +2,12 @@
 <html>
 <head>
 	<title>My Dairy</title>
+	<meta charset="utf-8"/>
+
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
+	<script src="script/homescript.js"></script>
+
 <body>
 
 <div class="top">
@@ -17,25 +21,30 @@
 
 
 <div id="register">
+	<h2 id="reg"></h2>
 		<h1>Create Account </h1>
-<form action="login.html">
-		<label for="full_name"><b>Full names</b></label>
-		<input type="text" placeholder="Full name" name="full_name" required="">
+<form name="register" method="POST" onsubmit="fetchUser()" id="regform">
+
+<label for="full_name"><b>Full names</b></label>
+		<input type="text" name="full_name" placeholder="Full name">
 
 		<label for="username"><b>Username</b></label>
-		<input type="text" placeholder="Username" name="username" required="">
+		<input type="text" name="username" placeholder="Username">
 
 	<label for="email"><b>Email</b></label>
-		<input type="text" placeholder="Email" name="Email" required="">
+		<input type="text"  name="email" placeholder="Email">
 
 
 		<label for="password"><b>Password</b></label>
-		<input type="password" placeholder="password" name="password" required="">
+		<input type="password" name="password" placeholder="password">
+
+
 
 		<label for="confirm_password">Confirm Password</label>
-		<input type="password" placeholder="Confirm password" name="confirm_password" required="">
+		<input type="password" name="confirm_password" placeholder="Confirm password">
 
-		<button type="submit" class="register_button">Signup</button>
+		<button name"submit" class="register_button">Signup</button>
+
 <a href="login.html">Already registered? Log in!?</a>
 
 </form>
