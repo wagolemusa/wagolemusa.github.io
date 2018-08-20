@@ -75,5 +75,78 @@ function fetchUser(){
 	}
 })
 .catch(error => console.log('error:',error));
+}
 
+
+function fetchsession(){
+	event.preventDefault()
+	const url = route+"/v2/auth/signup";
+	fetch(url, {method: "GET",
+headers: {"Content-Type":"application/json", 'X-API-KEY':token}})
+.then((resp)=> resp.json())
+.then((data)=> {
+	if (data["message"] == "You are out of session" || data["message"] == "Your token expired Please Login again"
+|| data["message"] == "Invalid token please login to get a new token"){
+	window.location.replace('login.html');
+} else{console.log(data);}
+})
+.catch(error => console.log('error:',error));
+}
+
+
+function onload(){
+	const url = route+"/v2/auth/signup"
+	fetch(url, {method:"GET", 
+headers: {"Content-Type":"application/json", 'X-API-KEY':token}})
+.then((resp)=>resp.json())
+.then((data)=>{
+	if (data["message"] == "You are out of session" || data["message"] == "Your token expired Please Login again"
+|| data["message"] == "Invalid token please login to get a new token"){
+	window.location.replace('login.html');
+}else{console.log("welcame "+data["name"]);}
+})
+.catch(error => { window.location.replace('login.html');});
+}
+
+
+function fetchlogin(){
+	event.preventDefault()
+	let username = document.forms["login"]["username"].value;
+	let password = document.forms["login"]["password"].value;
+
+	if (username == ""){
+		alert("Username can't not be empty");
+		document.login.username.focus();
+		return false
+	}
+	else if (password == ""){
+		alert("Password can't be empity");
+		document.login.password.focus();
+		return false
+	}
+	else{
+		let url = route+"/v2/auth/login"
+
+		let data = {username:username, password:password};
+		fetch(url, {method: "POST",
+		headers:{
+			"Content-Type":"application/json"
+		},
+	body:JSON.stringify(data)
+	})
+	.then((res)=>res.json())
+	.then((data)=> {
+		if (data["token"]){
+			let date = new Date();
+			date.setTime(date.getTime()+(1000*60*60*30));
+			document.cookie = data["token"]+"; expires="+date.toGMTString();
+			window.location.replace("add_entry.html");
+		}
+		else {
+			document.getElementById("regstatus").innerText = data["message"];
+			console.log(data["message"]);
+		}
+	})
+	.catch(error => console.log('error:',error));
+	}
 }
