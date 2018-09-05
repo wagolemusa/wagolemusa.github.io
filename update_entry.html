@@ -3,7 +3,6 @@
 <head>
 	<title>My Dairy</title>
 	<meta charset="utf-8"/>
-
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
@@ -25,13 +24,47 @@
 		</div>
 	</div>
 
+<th id = "total"></th>
 
+<div id="myModal" class="modal">
+	<div class="modal-content">
+	  <span class="close">&times;</span>
+	  <p class="modalText" id ="single"></p>
+	  <div id="editor"></div>
+	</div>
+</div>
+
+<div class="totals">
+        
+	<table style="width:100%">
+		<tr>
+			<th id = "total"></th>
+			
+		</tr>
+	</table>
+</div>
+
+<div class="tableform" id="tableform">
+            
+</div>
+<div id="myModal" class="modal">
+		<div class="modal-content">
+		  <span class="close">&times;</span>
+		  <h5 class="modalText" id = "title"></h5><p class="modalText" id ="singleTitle"></p>
+		  <h5 class="modalText" id = "entry"></h5><p class="modalText" id ="single"></p>
+		  <div id="editor"></div>
+		</div>
+</div>
+
+
+
+<div id="output"></div>
 <div class="book-container">
 <div class="book2">
 <table>
 	<th>Title</th>
 	<th>Date</th>
-	<th>User</th>
+	<th></th>
 	<th></th>
 	<th></th>
 </table>
@@ -42,7 +75,6 @@
 	<tr>
 		<td>Code java</td>
 			<td>09/03/2018</td>
-		<td>Refuge</td>
 
 		<div class="remove">
 		<td><button>Update</button></td>
@@ -57,7 +89,6 @@
 	<tr>
 		<td>Meeting</td>
 			<td>08/29/2018</td>
-		<td>Wise</td>
 		<div class="remove">
 		<td><button>Update</button></td>
 		<td><button>Delete</button></td>
@@ -71,7 +102,6 @@
 	<tr>
 		<td>Zoom Call</td>
 		<td>08/20/2018</td>
-		<td>refuge</td>
 		<div class="remove">
 		<td><button>Update</button></td>
 		<td><button>Delete</button></td>
@@ -87,7 +117,6 @@
 	<tr>
 		<td>Code Django</td>
 			<td>08/23/2018</td>
-		<td>Homie</td>
 
 	<div class="remove">
 		<td><button>Update</button></td>
@@ -104,7 +133,6 @@
 	<tr>
 		<td>Meeting</td>
 			<td>08/29/2018</td>
-		<td>Wise</td>
 		<div class="remove">
 		<td><button>Update</button></td>
 		<td><button>Delete</button></td>
@@ -119,5 +147,7 @@
 <div class="footer">
   <p>@copyright  &nbsp;  by &nbsp; <a href="https://github.com/wagolemusa">refuge wise</a> </p>
 </div>
+<script src="script/viewupdates.js"></script>
+
 </body>
 </html>

@@ -25,6 +25,7 @@ headers:{"Content-Type":"application/json"}})
 
 
 
+
 // register user
 token = document.cookie.split(',')[0];
 function fetchUser(){
@@ -99,14 +100,20 @@ function onload(){
 	fetch(url, {method:"GET", 
 headers: {"Content-Type":"application/json", 'X-API-KEY':token}})
 .then((resp)=>resp.json())
-.then((data)=>{
-	if (data["message"] == "You are out of session" || data["message"] == "Your token expired Please Login again"
-|| data["message"] == "Invalid token please login to get a new token"){
-	window.location.replace('login.html');
-}else{console.log("welcame "+data["name"]);}
-})
-.catch(error => { window.location.replace('login.html');});
+.then((data) =>{
+    if (data["message"] == "you are out of session" || data["message"] == "your token expired please login again"
+|| data["message"] == "invalid token please login to get a new token")
+{
+window.location.replace('login.html');
+} 
+else{console.log("Welcome "+data["name"]);
+
 }
+
+})
+.catch(error =>{ window.location.replace('add_entry.html');});
+}
+
 
 
 function fetchlogin(){
@@ -138,7 +145,7 @@ function fetchlogin(){
 	.then((data)=> {
 		if (data["token"]){
 			let date = new Date();
-			date.setTime(date.getTime()+(1000*60*60*30));
+			date.setTime(date.getTime()+(5000*60*60*30));
 			document.cookie = data["token"]+"; expires="+date.toGMTString();
 			window.location.replace("add_entry.html");
 		}
@@ -150,3 +157,28 @@ function fetchlogin(){
 	.catch(error => console.log('error:',error));
 	}
 }
+
+
+function fetchAddEntry(){
+	event.preventDefault()
+	let url = route+"/v2/entries";
+
+	let title =document.forms["create"]["title"].value;
+	let dates = document.forms["create"]["dates"].value;
+	let entries = document.forms["create"]["entries"].value;
+
+	let data = {title:title, dates:dates, entries:entries}
+	fetch(url, {method:"POST",
+	headers: {"Content-Type":"application/json", 'X-API-KEY':token},
+    body:JSON.stringify(data)
+})
+.then((response) => response.text())
+.then((output) => {
+	document.getElementById("regstatus").innerText = "Succesfully posted "
+	window.location.replace("update_entry.html")
+})
+.catch(error => console.log('error:',error));
+}
+
+
+

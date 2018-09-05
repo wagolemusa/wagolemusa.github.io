@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>My Dairy</title>
+	<meta charset="utf-8"/>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
@@ -96,20 +97,18 @@
 <div class="column">
 <div class="data">
 	<h1>Create Diary</h1>
-<form action="">
-<b>Title</b>
-<input type="text" placeholder="Title" name="title" required="">
+    <p id="regstatus"></p>
+<form name="create" method="POST" onsubmit="fetchAddEntry()" id="regform"><b>Title</b>
+<input type="text" name="title" placeholder="Title" />
 <br/>
-<b>Time</b>
-<input type="time" name="time">
 <b>Date</b>
-<input type="month" name="">
+<input type="date" name="dates">
+
 <br/>
 
 <b>Content Diary</b>
-<textarea id="entry" name="entry" placeholder="Diary Content" required="" style="height: 200px; width: 590px;"></textarea><br/>
-<button type="submit" class="postbtn" name="diary">Create Diary</button>
-</form>
+<textarea  name="entries" placeholder="Diary Content" required="" style="height: 200px; width: 590px;"></textarea><br/>
+<button name"save" class="register_button">Save</button>
 </div>
 </div>
 </div>
@@ -117,5 +116,7 @@
 <div class="footer">
   <p>@copyright  &nbsp;  by &nbsp; <a href="https://github.com/wagolemusa">refuge wise</a> </p>
 </div>
+<script src="script/homescript.js"></script>
+
 </body>
 </html>

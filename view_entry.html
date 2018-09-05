@@ -2,9 +2,12 @@
 <html>
 <head>
 	<title>My Dairy</title>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
-<body>
+<body onload="allEntry()">
 
 <div class="top">
 	<a href="index.html"><img src="img/dis.jpeg" width="80px" height="50px"></a>
@@ -22,8 +25,11 @@
 				</div>
 			</div>
 		</div>
-	</div>
 </div>
+
+
+
+<div id="users"></div>
 
 
 <div class="footer">
@@ -31,4 +37,55 @@
 </div>
 
 </body>
+<script>
+	
+	function allEntry(){
+		var xhr = new XMLHttpRequest();
+		xhr.open('GET', 'https://dairyapp.herokuapp.com/api/v2/all_entries', true);
+	
+		xhr.onload = function(){
+			if(this.status == 200){
+				var entries = JSON.parse(this.responseText);
+	
+				var output = '';
+				for(var i in entries){
+					output += 
+						'</ul>' +
+						'<div class="user">' +
+						'<li>Title: '+entries[i].title+'</li>' + 
+						'<li>Dates: '+entries[i].dates+'</li>'+
+						'<li>Entries: '+entries[i].entries+'</li>'+
+	
+						'</ul>' +
+						'<div>';
+				}
+				document.getElementById('users').innerHTML = output;
+			}
+		}
+		xhr.send();
+	}
+	
+	// let route = "https://dairyapp.herokuapp.com/api/v2/all_entries";
+
+	// function allEntry(){
+	// 	fetch(route+"", {method:"GET", 
+	// 	headers:{"Content-Type":"application/json"}})
+	// 	.then((res) => res.json())
+    //         .then((data) => {
+	// 			let output = '<h2>Posts</h2>';
+				
+	// 			for(let in data){
+    //                 output +=`
+    //                     <div>
+    //                         <h3>${data.title}</h3>
+    //                         <P>${data.dates}</p>
+    //                     </div>
+
+    //                 `;
+    //             }
+    //             document.getElementById('output').innerHTML = output;
+    //         })
+    //     }
+
+	</script>
 </html>
