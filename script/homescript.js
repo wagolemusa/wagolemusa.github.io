@@ -160,13 +160,9 @@ function fetchUser(){
 
 document.getElementById("LoginForm").addEventListener("submit", function (event) {
 	event.preventDefault();
-	const username = document.getElementById("username");
-	const password = document.getElementById("password");
-  
-	  credentials = {
-		  username: username.value,
-		  password: password.value
-	  };
+	let username = document.forms["login"]["username"].value;
+	let password = document.forms["login"]["password"].value;
+	
 	  fetch("https://dairyapp.herokuapp.com/api/v2/auth/login", {
 			  method: "POST",
 			  headers: {
