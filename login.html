@@ -21,7 +21,7 @@
 <div id="login">
 <h1>Login</h1>
 <p id="regstatus"></p>
-<form id="LoginForm">
+<form name="login" method="POST" id="regform" onsubmit="fetchlogin()">
 
 	<label for="username"><b>Username</b></label><br/>
 <input type="text" name="username" placeholder="Username"  />
@@ -29,7 +29,8 @@
 <label for="password"><b>password</b></label><br/>
 <input type="password" name="password" placeholder="Password" />
 
-<input type="submit" value="Login">
+<button name="submit" class="register_button">Signin</button>
+
 <a href="register.html">Not registerd?</a>
 
 </form>
