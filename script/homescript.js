@@ -116,31 +116,49 @@ function fetchUser(){
 
 
 
-// function fetchlogin(){
-// 	event.preventDefault()
-// 	let username = document.forms["login"]["username"].value;
-// 	let password = document.forms["login"]["password"].value;
+function fetchlogin(){
+	event.preventDefault()
+	let username = document.forms["login"]["username"].value;
+	let password = document.forms["login"]["password"].value;
 
-// 	if (username == ""){
-// 		alert("Username can't not be empty");
-// 		document.login.username.focus();
-// 		return false
-// 	}
-// 	else if (password == ""){
-// 		alert("Password can't be empity");
-// 		document.login.password.focus();
-// 		return false
-// 	}
-// 	else{
-// 		let url = route+"/v2/auth/login"
+	if (username == ""){
+		alert("Username can't not be empty");
+		document.login.username.focus();
+		return false
+	}
+	else if (password == ""){
+		alert("Password can't be empity");
+		document.login.password.focus();
+		return false
+	}
+	else{
+		let url = route+"/v2/auth/login"
 
-// 		let data = {username:username, password:password};
-// 		fetch(url, {method: "POST",
-// 		headers:{
-// 			"Content-Type":"application/json"
-// 		},
-// 	body:JSON.stringify(data)
-// 	})
+		let data = {username:username, password:password};
+		fetch(url, {method: "POST",
+		headers:{
+			"Content-Type":"application/json"
+		},
+	body:JSON.stringify(data)
+	})
+	.then((response)=>{
+		response.json().then((data)=>{
+			if (data["message"]["token"]){
+				let token = data["message"]["token"]
+				locolStorage.setItem('token', JSON.stringify(token));
+				window.location.replace("add_entry.html")
+			}
+			else{
+				console.log(data["message"]);
+				//console.log(data)
+				const RegResponse = Object(data.message)
+				let Message = document.getElementById("logResponse");
+				const FetchedMessage = `<p class"res">${RegResponse}</p>`
+  				Message.innerHTML = FetchedMessageag
+			}
+			
+		})
+	})
 // 	.then((res)=>res.json())
 // 	.then((data)=> {
 // 		if (data["token"]){
@@ -155,39 +173,39 @@ function fetchUser(){
 // 		}
 // 	})
 // 	.catch(error => console.log('error:',error));
-// 	}
-// }
+		}
+}
 
-document.getElementById("LoginForm").addEventListener("submit", function (event) {
-	event.preventDefault();
-	let username = document.forms["login"]["username"].value;
-	let password = document.forms["login"]["password"].value;
+// document.getElementById("LoginForm").addEventListener("submit", function (event) {
+// 	event.preventDefault();
+// 	let username = document.forms["login"]["username"].value;
+// 	let password = document.forms["login"]["password"].value;
 	
-	  fetch("https://dairyapp.herokuapp.com/api/v2/auth/login", {
-			  method: "POST",
-			  headers: {
-				  "Content-Type": "application/json"
-			  },
-			  body: JSON.stringify(credentials)
-		  })
-		  .then((response)=>{
-			response.json().then((data) => {
-			  if (data["message"]["token"]){
-				let token = data["message"]["token"]
-				localStorage.setItem('token', JSON.stringify(token));
-				window.location.replace("diary_notes.html");
-			  }
-			  else{
-				console.log(data["message"]);
-				//console.log(data)
-				const RegResponse = Object(data.message)
-				let Message = document.getElementById("logResponse");
-				const FetchedMessage = `<p class"res">${RegResponse}</p>`
-				Message.innerHTML = FetchedMessage
-			  } 
-		  })
-		  .catch(err => console.log(err));
-  })});
+// 	  fetch("https://dairyapp.herokuapp.com/api/v2/auth/login", {
+// 			  method: "POST",
+// 			  headers: {
+// 				  "Content-Type": "application/json"
+// 			  },
+// 			  body: JSON.stringify(credentials)
+// 		  })
+// 		  .then((response)=>{
+// 			response.json().then((data) => {
+// 			  if (data["message"]["token"]){
+// 				let token = data["message"]["token"]
+// 				localStorage.setItem('token', JSON.stringify(token));
+// 				window.location.replace("diary_notes.html");
+// 			  }
+// 			  else{
+// 				console.log(data["message"]);
+// 				//console.log(data)
+// 				const RegResponse = Object(data.message)
+// 				let Message = document.getElementById("logResponse");
+// 				const FetchedMessage = `<p class"res">${RegResponse}</p>`
+// 				Message.innerHTML = FetchedMessage
+// 			  } 
+// 		  })
+// 		  .catch(err => console.log(err));
+//   })});
 
 
 
