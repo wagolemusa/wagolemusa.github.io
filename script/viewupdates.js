@@ -7,11 +7,12 @@ fetch("https://dairyapp.herokuapp.com/api/v2/entries",{
 	headers: {
 		"Content-Type": "application/json",
 		"Accept":"application/json",
-		"X-API-KEY":token
+		"x-access-token":token
 	},
 })
 .then((response)=>{
-	response.json().then((data)=>{
+	response.json().then((data)=>{ 
+		//console.log(data)
 		if (data["message"] == "Token is missing!" || data["message"] == "Token is invalid!"){
 			window.location.replace(login.html)
 		}
@@ -51,10 +52,10 @@ fetch("https://dairyapp.herokuapp.com/api/v2/entries",{
 // let span = document.getElementsByClassName("close")[0];
 
 // function fetchEntries(){
-//     if (!token){
-//         window.location.replace('login.html');
-//     }
-//     else{
+//     // if (!token){
+//     //     //window.location.replace('login.html');
+//     // }
+//     // else{
 //         let url = route2+"/v2/entries";
 //         fetch(url, {
 //             method:"GET",
@@ -69,15 +70,15 @@ fetch("https://dairyapp.herokuapp.com/api/v2/entries",{
 //             }
 //             else{
 //                 let output =`
-                // <div style="overflow-x:auto;">
-                // <table>
-                // <tr>
-				// <th>Title</th>
-				// <th>Date</th>
+//                 <div style="overflow-x:auto;">
+//                 <table>
+//                 <tr>
+// 				<th>Title</th>
+// 				<th>Date</th>
 
-                // <th>Action</th>
-                // </tr>
-                // `;
+//                 <th>Action</th>
+//                 </tr>
+//                 `;
 //                 Object.keys(data["message"]).forEach(function(ent){
 //                     let title = data["message"][ent]["title"];
 //                     let dates = data["message"][ent]["dates"];
@@ -100,7 +101,7 @@ fetch("https://dairyapp.herokuapp.com/api/v2/entries",{
 //         })
 //         .catch((error) => console.log(error)) 
 //     }
-// }
+// //}
 
 
 function viewSingle(entry_id){
@@ -108,7 +109,7 @@ function viewSingle(entry_id){
 	fetch(url,{
 		method: "GET", headers : {
 			"Content-Type":"application/json",
-			"X-API-KEY":token}
+			"x-access-token":token}
 	})
 	.then((res)=>res.json())
 	.then((data)=>{
@@ -162,11 +163,11 @@ function modifyEntry(){
 
 
 function deleteEntry(entry_id){
-	let url = route2+"/v2/entries/"+entry_id;
+	let url = route2+"/v2/entries/entry_id";
 	if (window.confirm("Are you sure, You want to delete?")){
 		fetch(url, {
 			method:"DELETE",
-			headers: {"Content-Type":"application/json", 'X-API-KEY':token}
+			headers: {"Content-Type":"application/json", 'x-access-token':token}
 		})
 		.then((res) => res.json())
 		.then((data) => {

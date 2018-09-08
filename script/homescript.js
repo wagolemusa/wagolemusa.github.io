@@ -83,7 +83,7 @@ function fetchsession(){
 	event.preventDefault()
 	const url = route+"/v2/auth/signup";
 	fetch(url, {method: "GET",
-headers: {"Content-Type":"application/json", 'X-API-KEY':token}})
+headers: {"Content-Type":"application/json", 'x-access-token':token}})
 .then((resp)=> resp.json())
 .then((data)=> {
 	if (data["message"] == "You are out of session" || data["message"] == "Your token expired Please Login again"
@@ -98,7 +98,7 @@ headers: {"Content-Type":"application/json", 'X-API-KEY':token}})
 function onload(){
 	const url = route+"/v2/auth/signup"
 	fetch(url, {method:"GET", 
-headers: {"Content-Type":"application/json", 'X-API-KEY':token}})
+headers: {"Content-Type":"application/json", 'x-access-token':token}})
 .then((resp)=>resp.json())
 .then((data) =>{
     if (data["message"] == "you are out of session" || data["message"] == "your token expired please login again"
@@ -169,7 +169,7 @@ function fetchAddEntry(){
 
 	let data = {title:title, dates:dates, entries:entries}
 	fetch(url, {method:"POST",
-	headers: {"Content-Type":"application/json", 'X-API-KEY':token},
+	headers: {"Content-Type":"application/json", 'x-access-token':token},
     body:JSON.stringify(data)
 })
 .then((response) => response.text())
