@@ -11,7 +11,7 @@
 
 // declare the main route
 let route = "https://dairyapp.herokuapp.com/api";
-
+let token = JSON.parse(localStorage.getItem("token"));
 // fetch the home message
 function fetchIndex(){
 fetch(route+"/", {method:"GET", 
