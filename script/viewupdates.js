@@ -37,10 +37,10 @@ fetch("https://dairyapp.herokuapp.com/api/v2/entries",{
 				let title = data[entr]["title"];
 				let dates = data[entr]["dates"];
 				let entries = data[entr]["entries"];
-				//console.log(entr.title)
+				console.log(data)
 
 				output += `
-				<tr
+				<tr>
 				<td>${data[entr]["title"]}</td>
 			
 				<td>${data[entr]["dates"]}</td>
