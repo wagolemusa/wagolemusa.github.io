@@ -115,7 +115,7 @@ function fetchUser(){
 // }
 
 
-
+document.getElementById("regform").addEventListener("submit",
 function fetchlogin(){
 	event.preventDefault()
 	let username = document.forms["login"]["username"].value;
@@ -141,40 +141,21 @@ function fetchlogin(){
 		},
 	body:JSON.stringify(data)
 	})
-	.then((response)=>{
-		response.json().then((data) => {
-            if (data["token"]){
-				let token = data["message"]["token"]
-				localStorage.setItem('token', JSON.stringify(token));
-				window.location.replace("add_entry.html")
-			}
-			else{
-				console.log(data["message"]);
-				//console.log(data)
-				const RegResponse = Object(data.message)
-				let Message = document.getElementById("logResponse");
-				const FetchedMessage = `<p class"res">${RegResponse}</p>`
-  				Message.innerHTML = FetchedMessageag
-			}
-			
-		})
-	})
-// 	.then((res)=>res.json())
-// 	.then((data)=> {
-// 		if (data["token"]){
-// 			let date = new Date();
-// 			date.setTime(date.getTime()+(5000*60*60*30));
-// 			document.cookie = data["token"]+"; expires="+date.toGMTString();
-// 			window.location.replace("add_entry.html");
-// 		}
-// 		else {
-// 			document.getElementById("regstatus").innerText = data["message"];
-// 			console.log(data["message"]);
-// 		}
-// 	})
-// 	.catch(error => console.log('error:',error));
+	.then((res)=>res.json())
+	.then((data) => {
+		if (data["token"]){
+			localStorage.setItem("token", JSON.stringify(data["token"]));
+			window.location.assign("add_entry.html");
 		}
+		else {
+			document.getElementById("regstatus").innerText = data["message"];
+			console.log(data["message"]);
+		}
+	})
+	.catch(error => console.log('error:',error));
 }
+
+});
 
 // document.getElementById("LoginForm").addEventListener("submit", function (event) {
 // 	event.preventDefault();
@@ -190,9 +171,9 @@ function fetchlogin(){
 // 		  })
 // 		  .then((response)=>{
 // 			response.json().then((data) => {
-// 			  if (data["message"]["token"]){
-// 				let token = data["message"]["token"]
-// 				localStorage.setItem('token', JSON.stringify(token));
+			//   if (data["message"]["token"]){
+			// 	let token = data["message"]["token"]
+			// 	localStorage.setItem('token', JSON.stringify(token));
 // 				window.location.replace("diary_notes.html");
 // 			  }
 // 			  else{
