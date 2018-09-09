@@ -143,9 +143,9 @@ function fetchlogin(){
 	})
 	.then((response)=>{
 		response.json().then((data) => {
-            if (data["message"]["token"]){
+            if (data["token"]){
 				let token = data["message"]["token"]
-				locolStorage.setItem('token', JSON.stringify(token));
+				localStorage.setItem('token', JSON.stringify(token));
 				window.location.replace("add_entry.html")
 			}
 			else{
