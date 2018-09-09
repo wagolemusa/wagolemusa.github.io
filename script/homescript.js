@@ -117,38 +117,6 @@ function fetchUser(){
 
 
 
-// document.getElementById("LoginForm").addEventListener("submit", function (event) {
-// 	event.preventDefault();
-// 	let username = document.forms["login"]["username"].value;
-// 	let password = document.forms["login"]["password"].value;
-	
-// 	  fetch("https://dairyapp.herokuapp.com/api/v2/auth/login", {
-// 			  method: "POST",
-// 			  headers: {
-// 				  "Content-Type": "application/json"
-// 			  },
-// 			  body: JSON.stringify(credentials)
-// 		  })
-// 		  .then((response)=>{
-// 			response.json().then((data) => {
-			//   if (data["message"]["token"]){
-			// 	let token = data["message"]["token"]
-			// 	localStorage.setItem('token', JSON.stringify(token));
-// 				window.location.replace("diary_notes.html");
-// 			  }
-// 			  else{
-// 				console.log(data["message"]);
-// 				//console.log(data)
-// 				const RegResponse = Object(data.message)
-// 				let Message = document.getElementById("logResponse");
-// 				const FetchedMessage = `<p class"res">${RegResponse}</p>`
-// 				Message.innerHTML = FetchedMessage
-// 			  } 
-// 		  })
-// 		  .catch(err => console.log(err));
-//   })});
-
-
 
 function fetchAddEntry(){
 	event.preventDefault()

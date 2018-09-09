@@ -1,6 +1,10 @@
-let token = JSON.parse(localStorage.getItem('token'));
 let route2 = "https://dairyapp.herokuapp.com/api";
 
+
+let token = JSON.parse(localStorage.getItem("token"));
+let modal = document.getElementById('myModal');
+let btn = document.getElementById("myBtn");
+let span = document.getElementsByClassName("close")[0];
 
 fetch("https://dairyapp.herokuapp.com/api/v2/entries",{
 	method: "GET",
@@ -29,11 +33,16 @@ fetch("https://dairyapp.herokuapp.com/api/v2/entries",{
 
 			</tr>`;
 			Object.keys(data).forEach(function(entr){
-				let entries = "`"+data[entr]["entries"]+"`";
+				//let entries = "`"+data[entr]["entries"]+"`";
+				let title = data[entr]["title"];
+				let dates = data[entr]["dates"];
+				let entries = data[entr]["entries"];
+				//console.log(entr.title)
 
 				output += `
 				<tr
 				<td>${data[entr]["title"]}</td>
+			
 				<td>${data[entr]["dates"]}</td>
 				<td><div id="myBtn"class="view", onclick="viewSingle(${data[entr]["entry_id"]})">
 				<td> <div id="Btn" class="view", onclick="modifyEntry(${data[entr]["entry_id"]}','${data[entr]["title"]}',${entries})"></div>
@@ -46,16 +55,16 @@ fetch("https://dairyapp.herokuapp.com/api/v2/entries",{
 	.catch(err => console.log(err));
 })
 
-// let token = document.cookie.split(';')[0];
+// let token = JSON.parse(localStorage.getItem("token"));
 // let modal = document.getElementById('myModal');
 // let btn = document.getElementById("myBtn");
 // let span = document.getElementsByClassName("close")[0];
 
-// function fetchEntries(){
-//     // if (!token){
-//     //     //window.location.replace('login.html');
-//     // }
-//     // else{
+// document.addEventListener("DOMContentLoaded", ()=>{
+//     if (!token){
+//         window.location.replace('login.html');
+//     }
+//     else{
 //         let url = route2+"/v2/entries";
 //         fetch(url, {
 //             method:"GET",
@@ -80,9 +89,9 @@ fetch("https://dairyapp.herokuapp.com/api/v2/entries",{
 //                 </tr>
 //                 `;
 //                 Object.keys(data["message"]).forEach(function(ent){
-//                     let title = data["message"][ent]["title"];
-//                     let dates = data["message"][ent]["dates"];
-//                     //let entries = data["message"][ent]["entries"];
+                    // let title = data["message"][ent]["title"];
+                    // let dates = data["message"][ent]["dates"];
+                    // //let entries = data["message"][ent]["entries"];
 
 //                     output += `
 //                     <tr>
@@ -101,7 +110,7 @@ fetch("https://dairyapp.herokuapp.com/api/v2/entries",{
 //         })
 //         .catch((error) => console.log(error)) 
 //     }
-// //}
+// });
 
 
 function viewSingle(entry_id){
