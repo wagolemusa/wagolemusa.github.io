@@ -46,7 +46,7 @@ fetch("https://dairyapp.herokuapp.com/api/v2/entries",{
 			
 				<td>${data[entr]["dates"]}</td>
 				<td><input type="submit" id="myBtn" value="view" onclick="viewSingle(${data[entr]["entry_id"]})"></div></td>
-				<td><input type="submit" id="myBtn1" value="edit" onclick="editPost('${data[entr]["entry_id"]}','${data[entr]["title"]}',${entries})"></td>
+				<td><input type="submit" id="myBtn1" value="edit" onclick="edit('${data[entr]["entry_id"]}','${data[entr]["title"]}',${entries})"></td>
 				<td> <div id="Btn" class="view", onclick="modifyEntry(${data[entr]["entry_id"]}','${data[entr]["title"]}',${entries})"></td>
 				<td><input type="submit" id="delete" value="delete" onclick="deleteEntry(${data[entr]["entry_id"]})"></td>
                 
@@ -180,8 +180,8 @@ function viewSingle(entry_id){
 	})
 	.then((res)=>res.json())
 	.then((data)=>{
-		document.getElementById("single").innerText = data["message"][2];
-		ducument.getElementById("editor").innerHTML = '';
+		document.getElementById("single").innerText = data["title"];
+		document.getElementById("editor").innerHTML = data["entries"];
 		model.style.display ="block";
 	})
 	.catch((error) => console.log(error))
@@ -247,3 +247,12 @@ function deleteEntry(entry_id){
 	}
 }
 
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
