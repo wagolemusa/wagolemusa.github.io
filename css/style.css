@@ -161,7 +161,6 @@ background: rgba(0, 0, 0, 0.55);
 .homemusa-text{
 	text-align: center;
 	left: 50%;
-	transform: translate(-50%, -50%);
 	color: white;
 	padding-top: 10px;
 	padding-bottom: 30px;
@@ -273,7 +272,7 @@ table{
 
 
 /* --------------Updating style-----------*/
-.book-update{
+#book-update{
 cursor: pointer;
 background: rgba(0, 0, 0, 0.55);
 padding: 12px;
@@ -284,6 +283,7 @@ margin-bottom: 10px;
 padding-left: 50px;
 padding-right: 50px;
 color: #ffffff;
+font-size: 20px;
 }
 
 .book-container{
@@ -401,13 +401,14 @@ margin-bottom: 10px;
 }
 .modal-content {
     border-radius: 10px; 
-    background-color: white;
+	background: rgba(0, 0, 0, 0.55);
     opacity: 0.8;
     margin: 10% auto; 
     padding: 20px;
     border: 1px solid #888;
     height: auto;
-    width: auto; 
+	width: auto; 
+	color: #fff;
 }
 .close {
     color: #aaa;
@@ -473,4 +474,108 @@ h3, h5{
     background-color:white;
     padding: 10px 10px 10px 10px;
     border-radius:10px;
+}
+
+
+.modal2 {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content2 {
+    background-color:saddlebrown;
+    margin: auto;
+    padding: 20px;
+    padding-top: 20px;
+    height: 400px;
+    opacity: 0.9;
+    overflow: auto;
+    border: 1px solid #888;
+    width: 50%;
+    border-radius: 20px;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.close1 {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close1:hover,
+.close1:focus {
+    color: #000;
+    text-decoration: none;
+cursor: pointer;
+}
+
+
+#myBtn{
+	float: center;
+	padding: 14px 16px;
+		opacity: 0.9;
+	border: none;
+	color: #fff;
+	font-size: 16px;
+background-color: #ffc107;
+border-color: #ffc107;
+
+}
+
+
+#delete{
+	float: center;
+	padding: 14px 16px;
+		opacity: 0.9;
+	border: none;
+	color: #fff;
+	font-size: 16px;
+
+background-color: #dc3545;
+
+border-color: #dc3545;
+
+}
+
+#myBtn1{
+	float: center;
+	padding: 14px 16px;
+		opacity: 0.9;
+	border: none;
+	color: #fff;
+	font-size: 16px;
+
+background-color: #28a745;
+
+border-color: #28a745;
+
+}
+
+
+.shows p{
+	padding-right: 200px;
 }
