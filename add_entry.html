@@ -1,122 +1,75 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>My Dairy</title>
-	<meta charset="utf-8"/>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-</head>
-<body>
+	<!DOCTYPE html>
+	<html>
+	<head>
+		<title>My Dairy</title>
+		<meta charset="utf-8"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+	<body onload="Allentries()">
 
-<div class="top">
-	<a href="index.html"><img src="img/dis.jpeg" width="80px" height="50px"></a>
+	<div class="top">
+		<a href="index.html"><img src="img/dis.jpeg" width="80px" height="50px"></a>
 
-	<div class="top-right">
-		<div class="dropdown">
-			<button class="account">Account</button>
-				<div class="account-content">
-					<a href="profile.html">Profile</a>
-					<a href="update_entry.html">Update Entry</a>
-					<a href="add_entry.html">View Entry</a>
-					<a href="add_entry.html">Add Entry</a>
-					<a href="index.html">Logout</a>
+		<div class="top-right">
+			<div class="dropdown">
+				<button class="account">Account</button>
+					<div class="account-content">
+						<a href="profile.html">Profile</a>
+						<a href="update_entry.html">Update Entry</a>
+						<a href="add_entry.html">View Entry</a>
+						<a href="add_entry.html">Add Entry</a>
+						<a href="index.html">Logout</a>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
 
-<div class="row">
-<div class="column">
-<div class="book1">
-<table>
-	<th>Title</th>
-	<th>Date</th>
-	<th>User</th>
-</table>
-</div>
-<div class="book">
-
-<table>
-
-	<tr>
-		<td>Code java</td>
-			<td>09/03/2018</td>
-		<td>Refuge</td>
-	
-	</tr>
-</table>
-</div>
-<div class="book">
-<table>
-	<tr>
-		<td>Meeting</td>
-			<td>08/29/2018</td>
-		<td>Wise</td>
-	
-	</tr>
-</table>
-</div>
-<div class="book">
-<table>
-	<tr>
-		<td>Zoom Call</td>
-		<td>08/20/2018</td>
-		<td>refuge</td>
-		
-
-	</tr>
-</table>
-</div>
-
-<div class="book">
-<table>
-	<tr>
-		<td>Code Django</td>
-			<td>08/23/2018</td>
-		<td>Homie</td>
-	
-
-	</tr>
-</table>
-</div>
-<div class="book">
-<table>
-	<tr>
-		<td>Presentation</td>
-		<td>08/13/2018</td>
-		<td>Niggah</td>
-		
-	</tr>
-</table>
-</div>
+	<div class="row">
+	<div class="column">
+		<div id="allentries"></div>
 
 
 
-</div>
+	<div class="book">
+	<table>
+		<tr>
+			<td>Presentation</td>
+			<td>08/13/2018</td>
+			<td>Niggah</td>
+			
+		</tr>
+	</table>
+	</div>
 
-<div class="column">
-<div class="data">
-	<h1>Create Diary</h1>
-    <p id="regstatus"></p>
-<form name="create" method="POST" onsubmit="fetchAddEntry()" id="regform"><b>Title</b>
-<input type="text" name="title" placeholder="Title" />
-<br/>
-<b>Date</b>
-<input type="date" name="dates">
 
-<br/>
 
-<b>Content Diary</b>
-<textarea  name="entries" placeholder="Diary Content" required="" style="height: 200px; width: 590px;"></textarea><br/>
-<button name"save" class="register_button">Save</button>
-</div>
-</div>
-</div>
+	</div>
 
-<div class="footer">
-  <p>@copyright  &nbsp;  by &nbsp; <a href="https://github.com/wagolemusa">refuge wise</a> </p>
-</div>
-<script src="script/homescript.js"></script>
+	<div class="column">
+	<div class="data">
+		<h1>Create Diary</h1>
+		<p id="regstatus"></p>
+	<form name="create" method="POST" onsubmit="fetchAddEntry()" id="regform"><b>Title</b>
+	<input type="text" name="title" placeholder="Title" />
+	<br/>
+	<b>Date</b>
+	<input type="date" name="dates">
 
-</body>
-</html>
+	<br/>
+
+	<b>Content Diary</b>
+	<textarea  name="entries" placeholder="Diary Content" required="" style="height: 200px; width: 590px;"></textarea><br/>
+	<button name"save" class="register_button">Save</button>
+	</div>
+	</div>
+	</div>
+
+	<div class="footer">
+	<p>@copyright  &nbsp;  by &nbsp; <a href="https://github.com/wagolemusa">refuge wise</a> </p>
+	</div>
+	<script src="script/entries_users.js"></script>
+	<script src="script/homescript.js"></script>
+
+	</body>
+	</html>
