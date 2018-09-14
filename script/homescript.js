@@ -70,8 +70,8 @@ function fetchUser(){
 		console.log(data["message"])
 	}
 	else{
-		document.getElementById("reg").innerText = "Email exists "
-		console.log(data["message"])
+		document.getElementById("reg").innerText = "You registered succesfully"
+		window.location.replace("login.html") 
 	}
 })
 .catch(error => console.log('error:',error));

@@ -33,59 +33,13 @@
 
 
 <div class="footer">
+
   <p>@copyright  &nbsp;  by &nbsp; <a href="https://github.com/wagolemusa">refuge wise</a> </p>
 </div>
 
 </body>
-<script>
-	
-	function allEntry(){
-		var xhr = new XMLHttpRequest();
-		xhr.open('GET', 'https://dairyapp.herokuapp.com/api/v2/all_entries', true);
-	
-		xhr.onload = function(){
-			if(this.status == 200){
-				var entries = JSON.parse(this.responseText);
-	
-				var output = '';
-				for(var i in entries){
-					output += 
-						'</ul>' +
-						'<div class="user">' +
-						'<li>Title: '+entries[i].title+'</li>' + 
-						'<li>Dates: '+entries[i].dates+'</li>'+
-						'<li>Entries: '+entries[i].entries+'</li>'+
-	
-						'</ul>' +
-						'<div>';
-				}
-				document.getElementById('users').innerHTML = output;
-			}
-		}
-		xhr.send();
-	}
-	
-	// let route = "https://dairyapp.herokuapp.com/api/v2/all_entries";
 
-	// function allEntry(){
-	// 	fetch(route+"", {method:"GET", 
-	// 	headers:{"Content-Type":"application/json"}})
-	// 	.then((res) => res.json())
-    //         .then((data) => {
-	// 			let output = '<h2>Posts</h2>';
-				
-	// 			for(let in data){
-    //                 output +=`
-    //                     <div>
-    //                         <h3>${data.title}</h3>
-    //                         <P>${data.dates}</p>
-    //                     </div>
+	
+	<script src="script/logout.js"></script>
 
-    //                 `;
-    //             }
-    //             document.getElementById('output').innerHTML = output;
-    //         })
-    //     }
-
-	</script>
 </html>
