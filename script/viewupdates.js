@@ -2,6 +2,7 @@ let route2 = "https://dairyapp.herokuapp.com/api";
 
 
 
+// Fetch user entries
 let token = JSON.parse(localStorage.getItem("token"));
 fetch("https://dairyapp.herokuapp.com/api/v2/entries",{
 	method: "GET",
@@ -59,7 +60,7 @@ fetch("https://dairyapp.herokuapp.com/api/v2/entries",{
 	.catch(err => console.log(err));
 })
 
-
+// Fetch and View entry by ID
 function viewSingle(entry_id){
 	let url = route2 +"/v2/entries/"+entry_id;
 	fetch(url,{
@@ -104,72 +105,7 @@ function viewSingle(entry_id){
 
 
 
-// function editPost(entry_id, title, dates, entries){
-// 	modal2.style.display="block";
-// 	document.getElementById("editForm").innerHTML = `<form id="entryNew">
-// 				  <p>want to make it more informative or interesting? Go ahead!</p>
-// 				  <div id="editPost">
-// 				  <p class="entryMessage"></p>
-// 				  <br><br>
-// 				  <br><br>
-// 				  Title:
-// 				  <input type="text" id="title" maxlength="20" value="${title}" required>
-// 				  </label><br><br>
-// 				  <br><br>
-// 				  <label>
-
-// 				  <input type="text" id="title" maxlength="20" value="${dates}" required>
-// 				  </label><br><br>
-// 				  <br><br>
-// 				  <label>
-
-// 				  My note:<br>
-// 				  <textarea rows="220" cols="150" id="comment" required>
-// 				  ${entries}
-// 				  </textarea>
-// 				  </label>
-// 				  <br><br>
-// 				  <input type="submit" value="Edit it!" onclick="editEntry(${entry_id})">
-// 				  </div>
-// 				  </form> `;
-//   }
-//   function editEntry(entry_id){
-// 	event.preventDefault();
-// 	let title = document.forms["entryNew"]["title"];
-// 	let dates  = document.forms["entryNew"]["dates"];
-// 	let entries = document.forms["entryNew"]["entries"];
-  
-// 	  credentials = {
-// 		  title: title.value,
-// 		  dates: dates.value,
-// 		  entries: entries.value
-// 	  };
-// 	let url = "https://dairyapp.herokuapp.com/api/v2/entries/"+entry_id;
-// 	fetch(url, {
-// 		method : "PUT", headers : {
-// 		  "Content-Type":"application/json", 
-// 		  "x-access-token":token},
-// 		  body: JSON.stringify(credentials)
-// 	})
-// 	.then((response)=>response.json())
-// 	.then((data)=>{
-// 	  if (data["message"] == "entry successfully modified!!"){
-// 		window.location.replace("update_entry.html");
-// 		modal2.style.display ="none";
-// 	  }
-// 	  else{
-// 		console.log(data)
-// 		const RegResponse = Object(data.message)
-// 		let Message = document.getElementById("editPost");
-// 		const FetchedMessage = `<p class"entryMessage">${RegResponse}</p>`
-// 		Message.innerHTML = FetchedMessage
-// 		modal2.style.display ="block";
-// 	}
-// })
-// 	.catch((error) =>console.log(error))
-
-//   }
-
+// Update Entries
 function edit(entry_id,title, dates, entries){
     
     modal.style.display="block";
@@ -210,7 +146,7 @@ function edit(entry_id,title, dates, entries){
 
 
 
-
+// Delete Entry by id
 function deleteEntry(entry_id){
 	let url = "https://dairyapp.herokuapp.com/api/v2/entries/"+entry_id;
 	if (window.confirm("Are you sure, You want to delete?")){
@@ -228,4 +164,3 @@ function deleteEntry(entry_id){
 		window.location.replace("update_entry.html");
 	}
 }
-

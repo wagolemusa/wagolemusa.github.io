@@ -1,3 +1,5 @@
+
+// Fetch all users, title and dates
 let route2 = "https://dairyapp.herokuapp.com/api";
 
 function Allentries(){
