@@ -24,8 +24,6 @@ function Allentries(){
     let dates = data[AllE]["dates"]
     let username = data[AllE]["username"]
 
-    console.log(AllE)
-
     entry += `
     <div class="book">
 

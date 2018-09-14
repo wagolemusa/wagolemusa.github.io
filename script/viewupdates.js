@@ -48,7 +48,7 @@ fetch("https://dairyapp.herokuapp.com/api/v2/entries",{
 				<td>${data[entr]["dates"]}</td>
 
 				<td><input type="submit" id="myBtn" value="View" onclick="viewSingle(${data[entr]["entry_id"]})"></td>
-				<td><input type="submit" id="myBtn1" value="Edit" onclick="edit('${data[entr]["entry_id"]}','${data[entr]["title"]}',${entries})"></td>
+				<td><input type="submit" id="myBtn1" value="Edit" onclick="edit('${data[entr]["entry_id"]}','${data[entr]["title"]}','${data[entr]["dates"]}','${data[entr]["entries"]}')"></td>
 				<td><input type="submit" id="delete" value="Delete" onclick="deleteEntry(${data[entr]["entry_id"]})"></td>
                 
 				</div></div></tr>`;
@@ -104,7 +104,6 @@ function viewSingle(entry_id){
 
 
 
-
 // function editPost(entry_id, title, dates, entries){
 // 	modal2.style.display="block";
 // 	document.getElementById("editForm").innerHTML = `<form id="entryNew">
@@ -131,12 +130,13 @@ function viewSingle(entry_id){
 // 				  </label>
 // 				  <br><br>
 // 				  <input type="submit" value="Edit it!" onclick="editEntry(${entry_id})">
-// 				  </form>`;
+// 				  </div>
+// 				  </form> `;
 //   }
 //   function editEntry(entry_id){
 // 	event.preventDefault();
 // 	let title = document.forms["entryNew"]["title"];
-// 	let dates  = document.forms["entryNew"]["dates"]
+// 	let dates  = document.forms["entryNew"]["dates"];
 // 	let entries = document.forms["entryNew"]["entries"];
   
 // 	  credentials = {
@@ -150,7 +150,8 @@ function viewSingle(entry_id){
 // 		  "Content-Type":"application/json", 
 // 		  "x-access-token":token},
 // 		  body: JSON.stringify(credentials)
-// 	}).then((response)=>response.json())
+// 	})
+// 	.then((response)=>response.json())
 // 	.then((data)=>{
 // 	  if (data["message"] == "entry successfully modified!!"){
 // 		window.location.replace("update_entry.html");
@@ -163,43 +164,45 @@ function viewSingle(entry_id){
 // 		const FetchedMessage = `<p class"entryMessage">${RegResponse}</p>`
 // 		Message.innerHTML = FetchedMessage
 // 		modal2.style.display ="block";
-// 	}})
+// 	}
+// })
 // 	.catch((error) =>console.log(error))
-//   }
 
+//   }
 
 function edit(entry_id,title, dates, entries){
     
     modal.style.display="block";
-    document.getElementById("single").innerText = "";
+	document.getElementById("single").innerText = "";
+	document.getElementById("title").innerText = "";
+	document.getElementById("manydate").innerHTML = "";
+	document.getElementById("dates").innerText = "";
+	document.getElementById("singleTitle").innerText = "";
     document.getElementById("entries").innerText = "";
-    document.getElementById("title").innerText = "";
-    document.getElementById("singleTitle").innerText = "";
-    document.getElementById("editor").innerHTML = `
+	document.getElementById("editor").innerHTML = `
+	
     <form name="modify"><br><p id="id"></p><br>
-    <textarea maxlength="20" rows ="1" cols = "33" name ="title">${title}</textarea><br>
-    <textarea rows ="10" cols = "33" name ="entry">${entries}</textarea><br><br>
+	<textarea maxlength="20" rows ="1" cols = "33" name ="title">${title}</textarea><br>
+	<textarea maxlength="20" rows ="1" cols = "33" name ="dates">${dates}</textarea><br>
+    <textarea rows ="10" cols = "33" name ="entries">${entries}</textarea><br><br>
     <button class="view" name="save" id = "submit">Edit </button><br></form>
     `;
     document.getElementById("submit").addEventListener("click",
     function modifyEntry(event){
         event.preventDefault();
-        let url = route2+"/entries/"+entry_id;
-        let title = document.forms["modify"]["title"].value;
+        let url = "https://dairyapp.herokuapp.com/api/v2/entries/"+entry_id;
+		let title = document.forms["modify"]["title"].value;
+		let dates = document.forms["modify"]["dates"].value;
         let entries = document.forms["modify"]["entries"].value;
-        let data = {title:title, entries:entries}
+        let data = {title:title, dates:dates, entries:entries}
         fetch(url, {
             method:"PUT", headers: {"Content-Type":"application/json", "x-access-token":token},
             body:JSON.stringify(data)
         })
         .then((response)=>response.json())
         .then((output)=>{
-            if (output["message"] == "Edited successfully"){
-                window.location.replace("entries.html");
-            } 
-            else{
-                document.getElementById("id").innerHTML = output["message"];
-            }
+			document.getElementById("id").innerText = "Succesfully updated "
+			window.location.replace("update_entry.html")
         })
         .catch((error)=>console.log(error))
     });
@@ -222,7 +225,7 @@ function deleteEntry(entry_id){
 		})
 	}
 	else{
-		window.location.replace("add_entries.html");
+		window.location.replace("update_entry.html");
 	}
 }
 
