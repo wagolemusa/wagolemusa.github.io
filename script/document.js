@@ -1,6 +1,6 @@
 var modal = document.getElementById('myModal');
 var btn = document.getElementById("myBtn");
-
+var showsyes = document.getElementById('shows');
 var span = document.getElementsByClassName("close")[0];
 
 /*btn.onclick = function() {
@@ -14,6 +14,12 @@ span.onclick = function() {
 window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
+    }
+}
+
+window.onclick = function(){
+    if (event.target == showsyes){
+    window.location.replace("show.html");
     }
 }
 

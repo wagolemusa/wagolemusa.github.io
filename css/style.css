@@ -219,7 +219,7 @@ background: rgba(0, 0, 0, 0.55);
 .column{
 	flex: 50%;
 	padding: 10px;
-	width: 50%;
+	width: 70%;
 	padding-top: 20px;
 	padding-left: 20px;
 	padding-right: 20px;
@@ -236,6 +236,22 @@ input[type=date], input[type=time]{
 
 }
 
+.column4{
+	flex: 50%;
+	padding: 10px;
+	width: 80%;
+	padding-top: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.column3{
+	flex: 20%;
+	padding: 10px;
+	width: 50%;
+	padding-top: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
 .data{
 background: rgba(0, 0, 0, 0.55);
 padding: 12px;
@@ -253,6 +269,13 @@ border-radius: 5px;
 margin-bottom: 10px;
 }
 
+
+.book a{
+	color: #ffffff;
+	font-size: 20px;
+	text-decoration: none;
+
+}
 .book:hover{
 	background:rgba(63, 81, 181, 0.7);
 
@@ -285,6 +308,20 @@ padding-right: 50px;
 color: #ffffff;
 font-size: 20px;
 }
+
+#book-update1{
+	cursor: pointer;
+	background: rgba(0, 0, 0, 0.55);
+	padding: 12px;
+	border: 12px;
+	border: 1px solid rgba(255, 255, 255, 0.55);
+	border-radius: 5px;
+	margin-bottom: 10px;
+	padding-left: 50px;
+	padding-right: 50px;
+	color: #ffffff;
+	font-size: 20px;
+	}
 
 .book-container{
 	padding-left: 50px;
