@@ -1,13 +1,3 @@
-	function myFunction(){
-		var txt;
-		if (confirm("Do you have an account?")){
-			 window.location = 'account.html';
-		}else{
-			 window.location = 'register.html';
-	}
-	document.getElementById("demo").innerHTML = txt;
-}
-
 
 // declare the main route
 let route = "https://dairyapp.herokuapp.com/api";

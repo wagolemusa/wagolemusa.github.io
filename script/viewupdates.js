@@ -118,8 +118,8 @@ function edit(entry_id,title, dates, entries){
 	document.getElementById("editor").innerHTML = `
 	
     <form name="modify"><br><p id="id"></p><br>
-	<textarea maxlength="20" rows ="1" cols = "33" name ="title">${title}</textarea><br>
-	<textarea maxlength="20" rows ="1" cols = "33" name ="dates">${dates}</textarea><br>
+	<textarea maxlength="20" rows ="2" cols = "33" name ="title">${title}</textarea><br><br>
+	<textarea maxlength="20" rows ="2" cols = "33" name ="dates">${dates}</textarea><br><br>
     <textarea rows ="10" cols = "33" name ="entries">${entries}</textarea><br><br>
     <button class="view" name="save" id = "submit">Edit </button><br></form>
     `;
