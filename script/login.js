@@ -4,7 +4,7 @@
 let route = "https://dairyapp.herokuapp.com/api";
 
 document.getElementById("regform").addEventListener("submit",
-function fetchlogin(){
+function fetchlogin(event){
 	event.preventDefault()
 	let username = document.forms["login"]["username"].value;
 	let password = document.forms["login"]["password"].value;
