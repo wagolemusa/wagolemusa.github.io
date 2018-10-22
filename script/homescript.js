@@ -86,7 +86,7 @@ function fetchAddEntry(event){
 .then((response) => response.text())
 .then((output) => {
 	document.getElementById("regstatus").innerText = "Succesfully posted "
-	window.location.replace("update_entry.html")
+	window.location.replace("add_entry.html")
 })
 .catch(error => console.log('error:',error));
 })
