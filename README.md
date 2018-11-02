@@ -1,2 +1,2 @@
-# My-Diary
-MyDiary is an online journal where users can pen down their thoughts and feelings. 
+# sendIT
+SendIT is a courier service that helps users deliver parcels to different destinations. SendIT  provides courier quotes based on weight categories.

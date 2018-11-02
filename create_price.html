@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SendIT</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+<div class="top">
+<img src="img/delivery.png">
+ <div class="dropdown">
+    <button class="dropbtn">Admin: Wagole wise
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+  
+      <a href="#">Profile</a>
+  
+      <hr/>
+			<a href="index.html">Logout</a>
+    </div>
+
+  </div>
+        <a href="admin_dashboard.html">Back To Admin</a>
+
+  </div>
+
+<br/>
+
+<div class="contianer">
+      
+<td><button style="color: #ffffff; background-color:#00C851; font-size: 18px; width: 10em;  border: none;
+" id="myBtn">Create Price</button></td>
+<h1>Parcel price</h1> 
+
+   <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search by Dates..">
+
+<table id="NewTable">
+  <tr class="header">
+    <th style="width:30%;">From</th>
+    <th style="width:30%;">To</th>
+    <th style="width:30%;">Price</th>
+    <th style="width:30%;"></th>
+
+
+
+  </tr>
+  <tr>
+    <td>Nairobi</td>
+    <td>Kisumu</td>
+    <td>2500</td>
+
+  <td><button style="color: #ffffff; background-color:#00C851; font-size: 18px;  border: none;
+" id="myBtn">Update</button></td>
+
+ 
+
+
+
+
+  </tr>
+  <tr>
+  
+    <td>Nakuru</td>
+    <td>Mombasa</td>
+    <td>3600</td>
+ <td><button style="color: #ffffff; background-color:#00C851; font-size: 18px;  border: none;
+" id="myBtn">Update</button></td>
+
+
+
+
+  </tr>
+  <tr>
+
+    <td>Busia</td>
+    <td>Kakamega</td>
+    <td>2000</td>
+ <td><button style="color: #ffffff; background-color:#00C851; font-size: 18px;  border: none;
+" id="myBtn">Update</button></td>
+
+
+
+  </tr>
+  <tr>
+
+    <td>Kisi</td>
+    <td>Nairobi</td>
+    <td>1500</td>
+   <td><button style="color: #ffffff; background-color:#00C851; font-size: 18px;  border: none;
+" id="myBtn">Update</button></td>
+
+
+
+  </tr>
+</table> 
+</div>
+
+
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h1>Create Delivery Prices</h1>
+    <form id='create_price.html' action="" method='post'>
+      <input type="text" placeholder="From......" required>
+      <input type="text" placeholder="To........" required>
+      <input type="number" placeholder="price" required>
+      <button type='submit'>Create price</button>
+    </form>
+<br/>
+  </div>
+
+</div>
+<script src="js/script.js"></script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html> 

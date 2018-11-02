@@ -1,69 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>My Dairy</title>
-	<meta charset="utf-8"/>
-
+	<title>SendIT</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
-
 <body>
-
 <div class="top">
-	<a href="index.html"><img src="img/dis.jpeg" width="80px" height="50px"></a>
+<img src="img/delivery.png">
+  	<a href="login.html">Login</a>
+  	<a href="register.html">Register</a>
+          <a href="index.html">Home</a>  
 
-	<div class="top-right">
-	
-		</div>
-	</div>
 </div>
 
-
-<div id="register">
-	<h2 id="reg"></h2>
-		<h1>Create Account </h1>
-<form name="register" id="regform">
-
-<label for="full_name"><b>Full names</b></label>
-		<input type="text" name="full_name" placeholder="Full name">
-
-		<label for="username"><b>Username</b></label>
-		<input type="text" name="username" placeholder="Username">
-
-	<label for="email"><b>Email</b></label>
-		<input type="text"  name="email" placeholder="Email">
-
-
-		<label for="password"><b>Password</b></label>
-		<input type="password" name="password" placeholder="password">
-
-
-
-		<label for="confirm_password">Confirm Password</label>
-		<input type="password" name="confirm_password" placeholder="Confirm password">
-
-		<button name="submit" id="submit" class="register_button">Signup</button>
-
-<a href="login.html">Already registered? Log in!?</a>
+<h2 style="text-align: center; font-size: 25px;">Create Account</h2>
+<form id='register' action="login.html" method='post'>
+  <input type="text" name="firtname" placeholder="Firstname" required>
+  <input type="text" name="lastname" placeholder="Lastname" required>
+  <input type="text" name="username" placeholder="Username" required>
+  <input type="number" name="phone" placeholder="Phone Number" required>
+  <input type="text" name="country" placeholder="country " required>
+  <input type="email" name="email" placeholder="Email" required>
+  <input type="password" name="password" placeholder="Password" required>
+  <input type="password" name="confirm-password" placeholder="Re Password" required>
+  <button type='submit'>Register</button>
+  <a href="login.html">Already Member ? Sign In Now..</a>
+    <br/>
+  <br/>
 
 </form>
-<hr/>
-<p style="font-size: 20px;">Or Connect with</p>
-<b style="background-color: #0d47a1; padding-right: 20px; padding-left: 20px; padding-top: 10px; padding-bottom: 10px;">Facebook</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<b style="background-color: #CC0000; padding-right: 20px; padding-left: 20px; padding-top: 10px; padding-bottom: 10px;">+ Google</b>
-<br/><br/>
-<hr/>
-<br/><br/>
-
-</div>
-
-
-<div class="footer">
-  <p>@copyright  &nbsp;  by &nbsp; <a href="https://github.com/wagolemusa">refuge wise</a> </p>
-</div>
-<script src="script/homescript.js"></script>
-
-<script src="script/register.js></script>
-
 </body>
-</html>
+</html> 
