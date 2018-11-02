@@ -429,6 +429,7 @@ font-size: 20px;
     -ms-flex-wrap: wrap;
     margin-right: -15px;
     margin-left: -15px;
+    width: 36em;
       
 }
 .col-md-4{
@@ -438,8 +439,7 @@ font-size: 20px;
     position: relative;
 width: 100%;
 min-height: 1px;
-padding-right: 15px;
-padding-left: 15px;
+
     }
 
 .color-block {
