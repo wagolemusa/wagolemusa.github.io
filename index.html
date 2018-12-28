@@ -2,10 +2,12 @@
 <html>
 <head>
 	<title>SendIT</title>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script src="js/home.js"></script>
 </head>
-<body>
-<div class="top">
+<body onload="fetchIndex()">
+  
+  <div class="top">
 <img src="img/delivery.png">
   <a href="admin_login.html">Admin</a>
   <a href="login.html">Login</a>
@@ -19,7 +21,9 @@
     <div class="new_delivery">
 
    <h2>SendIT</h2>
-   <p>Is one of the popular courier services</p>
+
+   <p id="output"></p>
+
    <p>We deliver parcels in different destinations, as fast as possible</p>
       <a href="register.html">Signup & send Your Parcels Now</a>  
 </div>
