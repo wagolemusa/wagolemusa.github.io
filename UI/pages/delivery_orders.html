@@ -2,21 +2,20 @@
 <html>
 <head>
 	<title>SendIT</title>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 <body>
 <div class="top">
-<img src="img/delivery.png">
+<img src="../img/delivery.png">
  <div class="dropdown">
     <button class="dropbtn">Admin: Wagole wise
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-  
       <a href="#">Profile</a>
-  
+    
       <hr/>
-			<a href="index.html">Logout</a>
+			<a href="../../index.html">Logout</a>
     </div>
 
   </div>
@@ -24,70 +23,71 @@
 
   </div>
 
-<br/>
 
 <div class="contianer">
-      
-<td><button style="color: #ffffff; background-color:#00C851; font-size: 18px; width: 10em;  border: none;
-" id="myBtn">Create Price</button></td>
-<h1>Parcel prices</h1> 
+<h1>Deliveries Orders</h1>
 
    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search by Dates..">
 
 <table id="NewTable">
   <tr class="header">
+    <th style="width:20%;">Date</th>
+    <th style="width:20%;">User</th>
+    <th style="width:25%;">Deliveries</th>
     <th style="width:30%;">From</th>
     <th style="width:30%;">To</th>
-    <th style="width:30%;">Price</th>
     <th style="width:30%;"></th>
 
 
 
   </tr>
   <tr>
+    <td>2018/08/10</td>
+    <td>Homie</td>
+    <td>Tv</td>
     <td>Nairobi</td>
     <td>Kisumu</td>
-    <td>2500</td>
 
   <td><button style="color: #ffffff; background-color:#00C851; font-size: 18px;  border: none;
-" id="myBtn">Update</button></td>
+" id="myBtn">Change</button></td>
 
- 
 
 
 
 
   </tr>
   <tr>
-  
+    <td>2018/19/08</td>
+    <td>musa</td>
+    <td>Laptops</td>
     <td>Nakuru</td>
     <td>Mombasa</td>
-    <td>3600</td>
  <td><button style="color: #ffffff; background-color:#00C851; font-size: 18px;  border: none;
-" id="myBtn">Update</button></td>
+">Change</button></td>
 
 
 
 
   </tr>
   <tr>
-
+    <td>2018/30/10</td>
+    <td>Wise</td>
+    <td>package</td>
     <td>Busia</td>
     <td>Kakamega</td>
-    <td>2000</td>
  <td><button style="color: #ffffff; background-color:#00C851; font-size: 18px;  border: none;
-" id="myBtn">Update</button></td>
-
+">Change</button></td>
 
 
   </tr>
   <tr>
-
+    <td>2018/01/12</td>
+    <td>Refuge</td>
+    <td>Tables</td>
     <td>Kisi</td>
     <td>Nairobi</td>
-    <td>1500</td>
    <td><button style="color: #ffffff; background-color:#00C851; font-size: 18px;  border: none;
-" id="myBtn">Update</button></td>
+">Change</button></td>
 
 
 
@@ -95,33 +95,23 @@
 </table> 
 </div>
 
-
 <div id="myModal" class="modal">
 
   <!-- Modal content -->
   <div class="modal-content">
     <span class="close">&times;</span>
-    <h1>Create Delivery Prices</h1>
-    <form  action="create_price.html">
-      <input type="text" placeholder="From......" required>
-      <input type="text" placeholder="To........" required>
-      <input type="number" placeholder="price" required>
-      <button type='submit'>Create price</button>
+          <h1 style="text-align: center; font-size: 25px;">Change Orders</h1>
+
+    <form  action="delivery_orders.html">
+      <input type="text" placeholder="Nairobi" required>
+      <input type="text" placeholder="Kisumu" required>
+      <button type='submit'>Change</button>
     </form>
 <br/>
   </div>
 
 </div>
 <script src="js/script.js"></script>
-
-
-
-
-
-
-
-
-
 
 </body>
 </html> 
