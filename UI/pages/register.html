@@ -15,21 +15,22 @@
 <div class="outer">
 
 <h2 style="text-align: center; font-size: 25px;">Create Account</h2>
-<form action="login.html">
-  <input type="text" name="firtname" placeholder="Firstname" required>
-  <input type="text" name="lastname" placeholder="Lastname" required>
+<h2 id="reg"></h2>
+<form name="register" id="regform">
+  <input type="text" name="first_name" placeholder="Firstname" required>
+  <input type="text" name="last_name" placeholder="Lastname" required>
   <input type="text" name="username" placeholder="Username" required>
-  <input type="number" name="phone" placeholder="Phone Number" required>
-  <input type="text" name="country" placeholder="country " required>
+  <input type="number" name= phone placeholder="Phone Number" required>
   <input type="email" name="email" placeholder="Email" required>
   <input type="password" name="password" placeholder="Password" required>
-  <input type="password" name="confirm-password" placeholder="Re Password" required>
-  <button type='submit'>Register</button>
+  <input type="password" name="confirm_password" placeholder="Re Password" required>
+  <button name="submit" id="submit">Register</button> 
   <a href="login.html">Already a member ? Sign In..</a>
     <br/>
   <br/>
 
 </form>
 </div>
+<script src="../js/home.js"></script>
 </body>
 </html> 
