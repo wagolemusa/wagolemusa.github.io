@@ -101,27 +101,21 @@
   <!-- Modal content -->
   <div class="modal-content">
     <span class="close">&times;</span>
+    <h3 id="msg"></h3>
     <h1>Create Delivery Prices</h1>
-    <form  action="create_price.html">
-      <input type="text" placeholder="From......" required>
-      <input type="text" placeholder="To........" required>
-      <input type="number" placeholder="price" required>
-      <button type='submit'>Create price</button>
+    <form name="create" id="prices">
+      <input type="text" name="car_number" placeholder="Car Number">
+      <input type="text" name="from_location" placeholder="From......" required>
+      <input type="text" name="to_location" placeholder="To........" required>
+      <input type="number" name="price" placeholder="price" required>
+      <input type="time" name="day_time">
+      <button type='submit' id="submit">Create price</button>
     </form>
 <br/>
   </div>
 
 </div>
-<script src="js/script.js"></script>
-
-
-
-
-
-
-
-
-
-
+<script src="../js/script.js"></script>
+<script src="../js/create_price.js"></script>
 </body>
 </html> 
