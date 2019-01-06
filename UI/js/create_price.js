@@ -36,3 +36,66 @@ function fetchprice(event){
 .catch(error => console.log('error:', error));
 
 })
+
+
+
+
+fetch("https://senditparcel.herokuapp.com/api/admin/v2/locations",{
+    method: "GET",
+    headers: {
+        "Content-Type":"application/json",
+        "Accept":"applicaton/json",
+        "Authorization":access_token
+    },
+
+})
+.then((response)=>{
+    response.json().then((collection)=>{ 
+
+        console.log(collection)
+
+            collection = collection["collection"];
+            let output = `
+            <table id="NewTable">
+            <tr class="header">
+            <th style="width:15%;">Car number</th>
+            <th style="width:25%;">From</th>
+            <th style="width:25%;">To</th>
+            <th style="width:20%;">Price</th>
+            <th style="width:30%;">Time</th>
+            <th style="width:20%;"></th>
+        
+            `;
+
+            Object.keys(collection).forEach(function(pric){
+                
+                let car_number = collection[pric]["car_number"];
+                let from_location = collection[pric]["from_location"];
+                let to_location = collection[pric]["to_location"];
+                let price = collection[pric]["price"];
+                let day_time = collection[pric]["day_time"];
+
+                output +=`
+               
+                    <tr>
+                
+                    <td>${collection[pric]["car_number"]}</td>
+                    <td>${collection[pric]["from_location"]}</td>
+                    <td>${collection[pric]["to_location"]}</td>
+                    <td>${collection[pric]["price"]}</td>
+                    <td>${collection[pric]["day_time"]}</td>
+                    <td><button style="color: #ffffff; background-color:#00C851; font-size: 18px;  border: none;
+                    " id="myBtn">Update</button></td>`
+            
+            });
+            // if (collection){
+            //     document.getElementById("msgerror").innerText = collection["message"]
+            //     // window/location.replace("login.html")
+            // }
+            // else{
+            document.getElementById("shows").innerHTML = output + `</table>`;
+            // }
+        
+    })
+    .catch(err => console.log(err));
+})
