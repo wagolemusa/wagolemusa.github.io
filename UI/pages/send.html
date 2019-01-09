@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SendIT</title>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+<body>
+<div class="top">
+<img src="../img/delivery.png">
+ <div class="dropdown">
+    <button class="dropbtn">Delivery Order Menu
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="new_delivery.html">New Delivery</a>
+      <a href="profile.html">Profile</a>
+      <a href="my_order.html">My Orders</a>
+      <a href="history-delivery.html">Orders History</a>
+      <hr/>
+			<a href="../../index.html">Logout</a>
+    </div>
+
+  </div>
+  <a href="dashboard.html">Hello: Refuge Wise</a>
+
+  <a href="send.html">Send parcel</a>
+
+  </div>
+
+<div class="contianer">
+  <div class="new_delivery1">
+      <h3 id="errors"></h3>
+    <h1>Send parcels</h1>
+    <form name="sendit" id="send">
+      <input type="text" name="title" placeholder="Title">
+      <input type="text" name="pickup" placeholder="Pickup">
+      <input type="text" name="rec_id" placeholder="Receiver ID">
+      <input type="number" name="rec_phone" placeholder="Receiver Phone Number">
+      <input type="text" name="rec_name" placeholder="Receiver Name">
+      <input type="text" name="destination" placeholder="Destination">
+      <input type="number" name="weight" placeholder="Weight" required>
+      <button type='submit' id="submit">Send IT</button>
+    </form>
+
+  </div>
+</div>
+
+</div>
+<script src="../js/send_parcel.js"></script>
+
+  <iframe src="https://www.google.com/maps/d/embed?mid=1OuXI5fmsHUdCNT4j2QMapfT5tELUAklj" width="1300" height="770"></iframe>
+</body>
+</html> 

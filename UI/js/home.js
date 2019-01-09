@@ -8,7 +8,7 @@ headers:{"Content-Type":"application/json"}})
 .then((data) => {
     document.getElementById("output").innerHTML = data["message"]
 })
-.catch((er) => console.log(err))
+.catch((err) => console.log(err))
 }
 
 // Function User Registration
