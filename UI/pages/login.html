@@ -14,22 +14,29 @@
   </div> 
 <div class="outer">
 
-<h2 style="text-align: center; font-size: 25px;">Login</h2>
+<h2 style="text-align: center; font-size: 25px;">Login</h2><br/>
+<h4 id="loginMsg"></h4>
+
 <input type='checkbox' id='form-switch'>
 
-<form action="dashboard.html" id='login-form'>
-  <input type="text" placeholder="Username" required>
-  <input type="password" placeholder="Password" required>
-  <button type='submit'>Login</button>
+<form name="login" id="loginform">
+  <input type="text" name="username" placeholder="Username" required>
+  <input type="password" name="password" placeholder="Password" required>
+  <button type='submit' id="submit">Login</button>
+
   <label for='form-switch' style="color: #0099CC; padding-left: 50px;"><span>Forget Password</span></label><br/><br/>
     <a href="register.html">Don't have an account? Sign up</a>
 </form>
+
+
 <form id='register-form' action="" method='post'>
   <input type="email" placeholder="Email" required>
   <button type='submit'>Send</button>
  
 </form>
 </div>
+<script src="../js/login.js"></script>
+
 </body>
 </html> 
 

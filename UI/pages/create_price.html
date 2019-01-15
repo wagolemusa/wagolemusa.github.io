@@ -32,67 +32,13 @@
 " id="myBtn">Create Price</button></td>
 <h1>Parcel prices</h1> 
 
+
+<h3 id="msgerror"></h3>
    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search by Dates..">
-
-<table id="NewTable">
-  <tr class="header">
-    <th style="width:30%;">From</th>
-    <th style="width:30%;">To</th>
-    <th style="width:30%;">Price</th>
-    <th style="width:30%;"></th>
+  <div id="shows">
 
 
-
-  </tr>
-  <tr>
-    <td>Nairobi</td>
-    <td>Kisumu</td>
-    <td>2500</td>
-
-  <td><button style="color: #ffffff; background-color:#00C851; font-size: 18px;  border: none;
-" id="myBtn">Update</button></td>
-
- 
-
-
-
-
-  </tr>
-  <tr>
-  
-    <td>Nakuru</td>
-    <td>Mombasa</td>
-    <td>3600</td>
- <td><button style="color: #ffffff; background-color:#00C851; font-size: 18px;  border: none;
-" id="myBtn">Update</button></td>
-
-
-
-
-  </tr>
-  <tr>
-
-    <td>Busia</td>
-    <td>Kakamega</td>
-    <td>2000</td>
- <td><button style="color: #ffffff; background-color:#00C851; font-size: 18px;  border: none;
-" id="myBtn">Update</button></td>
-
-
-
-  </tr>
-  <tr>
-
-    <td>Kisi</td>
-    <td>Nairobi</td>
-    <td>1500</td>
-   <td><button style="color: #ffffff; background-color:#00C851; font-size: 18px;  border: none;
-" id="myBtn">Update</button></td>
-
-
-
-  </tr>
-</table> 
+  </div>
 </div>
 
 
@@ -101,27 +47,43 @@
   <!-- Modal content -->
   <div class="modal-content">
     <span class="close">&times;</span>
+    <h3 id="msg"></h3>
     <h1>Create Delivery Prices</h1>
-    <form  action="create_price.html">
-      <input type="text" placeholder="From......" required>
-      <input type="text" placeholder="To........" required>
-      <input type="number" placeholder="price" required>
-      <button type='submit'>Create price</button>
+    <form name="create" id="prices">
+      <input type="text" name="car_number" placeholder="Car Number">
+      <input type="text" name="from_location" placeholder="From......" required>
+      <input type="text" name="to_location" placeholder="To........" required>
+      <input type="number" name="price" placeholder="price" required>
+      <input type="time" name="day_time">
+      <button type='submit' id="submit">Create price</button>
     </form>
 <br/>
   </div>
 
 </div>
-<script src="js/script.js"></script>
 
+<div id="myModal1" class="modal1">
 
+  Modal content
+  <div class="modal-content1">
+    <span class="close1">&times;</span>
+    <h3 id="msge"></h3>
+    <h1>Update</h1>
+    <form name="create" id="prices">
+      <input type="text" name="car_number" placeholder="Car Number">
+      <input type="text" name="from_location" placeholder="From......">
+      <input type="text" name="to_location" placeholder="To........">
+      <input type="number" name="price" placeholder="price">
+      <input type="time" name="day_time">
+      <button type='submit' id="submit">Update price</button>
 
+      <div id="editor"></div>    
+    </form>
+<br/>
+  </div>
+</div>
 
-
-
-
-
-
-
+<script src="../js/script.js"></script>
+<script src="../js/create_price.js"></script>
 </body>
 </html> 
