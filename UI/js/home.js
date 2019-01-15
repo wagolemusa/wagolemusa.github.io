@@ -36,10 +36,9 @@ function fetchuser(event){
         if (data){
             document.getElementById("reg").innerText = data["message"];
 
-            window.location.replace("login.html")        
         }
         else {
-            document.getElementById("reg").innerText = data["message"];
+            window.location.replace("login.html")        
 
         }
 })
