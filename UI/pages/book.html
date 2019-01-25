@@ -21,7 +21,7 @@
     </div>
 
   </div>
-  <a href="#contact">Hello: Refuge Wise</a>
+  <a href="dashboard.html">Hello: Refuge Wise</a>
 
   <a href="send.html">Send parcel</a>
   <a href="book.html">Book</a>
@@ -31,23 +31,23 @@
   </div>
 
 <div class="contianer">
-  <div class="new_delivery">
-    <h1>New Delivery Orders</h1>
-    <form id='post' action="" method='post'>
-      <input type="text" placeholder="From......" required>
-      <input type="text" placeholder="To........" required>
-      <input type="number" placeholder="Weight" required>
-      <button type='submit'>Deliver</button>
+      <h3 id="errors"></h3>
+    <h1>Book </h1>
+    <form name="booking" id="book">
+      <input type="text" name="car_number" placeholder="Car Nnumber">
+      <input type="text" name="from_location" placeholder="From ........">
+      <input type="text" name="to_location" placeholder="To ............">
+      <input type="number" name="price" placeholder="Price">
+      <input type="number" name="quality" placeholder="How many sits?">
+      <input type="date" name="dates" placeholder="date">
+      <button type='submit' id="submit">Book</button>
     </form>
-
-  </div>
 </div>
 
 
 
-</div>
-<script src="../js/script.js"></script>
 
-  <iframe src="https://www.google.com/maps/d/embed?mid=1OuXI5fmsHUdCNT4j2QMapfT5tELUAklj" width="1300" height="570"></iframe>
+<script src="../js/send_parcel.js"></script>
+
 </body>
 </html> 

@@ -1,7 +1,7 @@
 let token = JSON.parse(localStorage.getItem("access_token"));
 let access_token = "Bearer " + token
 // Fetch sent data
-fetch("https://senditparcel.herokuapp.com/api/v2/parcels",{
+fetch("https://senditparcel.herokuapp.com/api/admin/v2/parcels",{
     method: "GET",
     headers: {
         "Content-Type":"application/json",
@@ -19,6 +19,7 @@ fetch("https://senditparcel.herokuapp.com/api/v2/parcels",{
         <tr class="header">
         <th style="width:20%;">Date</th>
         <th style="width:25%;">title</th>
+        <th style="width:20%;">username</th>
         <th style="width:25%;">pickup</th>
         <th style="width:25%;">Receiver ID</th>
         <th style="width:25%;">Receiver Phone</th>
@@ -32,6 +33,7 @@ fetch("https://senditparcel.herokuapp.com/api/v2/parcels",{
         Object.keys(data).forEach(function(sendt){
             let  created_on = data[sendt]["created_on"];
             let title = data[sendt]["title"];
+            let username = data[sendt]["username"]
             let pickup = data[sendt]["pickup"];
             let rec_id = data[sendt]["rec_id"];
             let rec_phone = data[sendt]["rec_phone"];
@@ -46,6 +48,7 @@ fetch("https://senditparcel.herokuapp.com/api/v2/parcels",{
 
             <td>${data[sendt]["created_on"]}</td>
             <td>${data[sendt]["title"]}</td>
+            <td>${data[sendt]["username"]}</td>
             <td>${data[sendt]["pickup"]}</td>
             <td>${data[sendt]["rec_id"]}</td>
             <td>${data[sendt]["rec_phone"]}</td>
@@ -53,10 +56,10 @@ fetch("https://senditparcel.herokuapp.com/api/v2/parcels",{
             <td>${data[sendt]["destination"]}</td>
             <td>${data[sendt]["weight"]}</td>
             <td>${data[sendt]["status"]}</td>
+
             <td><button style="color: #ffffff; background-color:#00C851; font-size: 18px;  border: none;
-            "id="myBtn2" value="edit" onclick="edit('${data[sendt]["parcel_id"]}','${data[sendt]["destination"]}')">Change-Destination</button></td>`
-        })
-        document.getElementById("sendthis").innerHTML = output + `</table>`;
+            "id="myBtn2" value="edit" onclick="edit('${data[sendt]["parcel_id"]}','${data[sendt]["status"]}')">ChangeStatus</button></td>`})
+        document.getElementById("histories").innerHTML = output + `</table>`;
 
     })
     .catch(err => console.log(err));
@@ -64,16 +67,16 @@ fetch("https://senditparcel.herokuapp.com/api/v2/parcels",{
 })
 
 
-function edit(parcel_id, destination){
+function edit(parcel_id, status){
     modal2.style.display="block";
     document.getElementById("single").innerText = "";
-    document.getElementById("destination").innerText = "";
+    document.getElementById("status").innerText = "";
     document.getElementById("editor").innerHTML =`
 
 
     <form name="modify" id="id">
-    <textarea maxlength="20" rows ="2" cols = "33" name="destination">${destination}</textarea><br><br>
-      <button type='submit' id="submit">change destination</button>
+    <textarea maxlength="20" rows ="2" cols = "33" name="status">${status}</textarea><br><br>
+      <button type='submit' id="submit">change status</button>
     </form>
     <br/>
 
@@ -82,12 +85,14 @@ function edit(parcel_id, destination){
 
     function modifyEntry(event){
         event.preventDefault();
-        let url = "https://senditparcel.herokuapp.com/api/v2/parcels/"+parcel_id
+        let url = "https://senditparcel.herokuapp.com/api/admin/v2/parcels/"+parcel_id
 
-            let  destination = document.forms["modify"]["destination"].value;
-            let data = {destination:destination}
+            let  status = document.forms["modify"]["status"].value;
 
-            fetch(`${url}/destination`, {
+
+            let data = {status:status}
+
+            fetch(`${url}/status`, {
                 method:"PUT", headers: {"Contant-Type":"application/json","Authorization":access_token},
                 body:JSON.stringify(data)
             })

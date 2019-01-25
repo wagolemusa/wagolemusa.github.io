@@ -50,12 +50,12 @@
     <h3 id="msg"></h3>
     <h1>Create Delivery Prices</h1>
     <form name="create" id="prices">
-      <input type="text" name="car_number" placeholder="Car Number">
+      <input type="text" name="car_number" placeholder="Car Number" required>
       <input type="text" name="from_location" placeholder="From......" required>
       <input type="text" name="to_location" placeholder="To........" required>
       <input type="number" name="price" placeholder="price" required>
-      <input type="time" name="day_time">
-      <button type='submit' id="submit">Create price</button>
+      <input type="time" name="day_time" required>
+      <button type='submit' id="prices">Create price</button>
     </form>
 <br/>
   </div>
@@ -64,24 +64,37 @@
 
 <div id="myModal1" class="modal1">
 
-  Modal content
   <div class="modal-content1">
     <span class="close1">&times;</span>
     <h3 id="msge"></h3>
     <h1>Update</h1>
-    <form name="create" id="prices">
-      <input type="text" name="car_number" placeholder="Car Number">
-      <input type="text" name="from_location" placeholder="From......">
-      <input type="text" name="to_location" placeholder="To........">
-      <input type="number" name="price" placeholder="price">
-      <input type="time" name="day_time">
-      <button type='submit' id="submit">Update price</button>
-
-      <div id="editor"></div>    
-    </form>
+    <h5 class="modalText" id = "car_number"></h5><p class="modalText" id ="single"></p>
+    <h5 class="modalText" id = "from_location"></h5></h5><p class="modalText" id ="location"></p>
+    <h5 class="modalText" id = "to_location"></h5></h5><p class="modalText" id ="too"></p>
+    <h5 class="modalText" id = "price"></h5></h5><p class="modalText" id ="pessa"></p>
+    <h5 class="modalText" id = "day_time"></h5></h5><p class="modalText" id ="timee"></p>
+     <div id="editor"></div>    
 <br/>
   </div>
 </div>
+
+<script>
+var modal1 = document.getElementById('myModal1');
+var btn1 = document.getElementById("myBtn1");
+var span1 = document.getElementsByClassName("close1")[0];
+btn1.onclick = function() {
+    modal1.style.display = "block";
+}
+span.onclick = function() {
+    modal1.style.display = "none";
+}
+window.onclick = function(event) {
+    if (event.target == modal1) {
+        modal1.style.display = "none";
+    }
+}
+</script>
+
 
 <script src="../js/script.js"></script>
 <script src="../js/create_price.js"></script>
