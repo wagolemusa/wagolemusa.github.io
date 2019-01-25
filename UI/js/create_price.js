@@ -84,8 +84,7 @@ fetch("https://senditparcel.herokuapp.com/api/admin/v2/locations",{
                     <td>${collection[pric]["price"]}</td>
                     <td>${collection[pric]["day_time"]}</td>
                     <td><button style="color: #ffffff; background-color:#00C851; font-size: 18px;  border: none;
-                    "id="myBtn1" value="Edit" onclick="edit(
-                        '${collection[pric]["price_id"]}','${collection[pric]["car_number"]}','${collection[pric]["from_location"]}','${collection[pric]["to_location"]}','${collection[pric]["price"]}','${collection[pric]["day_number"]}')">Update</button></td>`
+                    "id="myBtn1" value="Edit"onclick="edit('${collection[pric]["price_id"]}','${collection[pric]["car_number"]}','${collection[pric]["from_location"]}','${collection[pric]["to_location"]}','${collection[pric]["price"]}','${collection[pric]["day_time"]}')">Update</button></td>`
             
             });
             // if (collection){
@@ -100,37 +99,36 @@ fetch("https://senditparcel.herokuapp.com/api/admin/v2/locations",{
     .catch(err => console.log(err));
 })
 
-function edit(car_number, from_location, to_location, price, day_time){
+function edit(price_id, car_number, from_location, to_location, price, day_time){
 
     modal1.style.display="block";
     document.getElementById("single").innerText = "";
     document.getElementById("car_number").innerText = "";
+    document.getElementById("location").innerHTML = "";
     document.getElementById("from_location").innerText = "";
+    document.getElementById("too").innerHTML = "";
     document.getElementById("to_location").innerText = "";
+    document.getElementById("pessa").innerHTML = "";
     document.getElementById("price").innerText = "";
+    document.getElementById("timee").innerHTML = "";
     document.getElementById("day_time").innerText = "";
-
     document.getElementById("editor").innerHTML =`
-    <div id="myModal1" class="modal1">
-    <div class="modal-content1">
 
-    <form name="modify" id="prices">
-      <input type="text" name="car_number">${car_number} />
-      <input type="text" name="from_location">${from_location} />
-      <input type="text" name="to_location">${to_location} />
-      <input type="number" name="price">${price} />
-      <input type="time" name="day_time">${day_time} />
-      <button type='submit' id="submit">Update price</button>
-    </form>
+    <form name="modify"><br><p id="id"></p><br>
+    <textarea maxlength="20" rows ="2" cols = "33" name="car_number">${car_number}</textarea><br><br>
+    <textarea maxlength="20" rows ="2" cols = "33" name="from_location">${from_location}</textarea><br><br>
+    <textarea maxlength="20" rows ="2" cols = "33" name="to_location">${to_location}</textarea><br><br>
+    <textarea maxlength="20" rows ="2" cols = "33" name="price">${price}</textarea><br><br>
+    <textarea maxlength="20" rows ="2" cols = "33" name="day_time">${day_time}</textarea><br><br>
+     <button type='submit'  id="submit">Update price</button></form>
     <br/>
   </div>
 </div>
-    `;
+`;
     document.getElementById("submit").addEventListener("click",
-
     function modifyEntry(event){
         event.preventDefault();
-        let url = "https://senditparcel.herokuapp.com/api/admin/v2/locations/"+price_id/"dddddddd";
+        let url = "https://senditparcel.herokuapp.com/api/admin/v2/locations/"+price_id;
 
             let  car_number = document.forms["modify"]["car_number"].value;
             let from_location = document.forms["modify"]["from_location"].value;
@@ -140,14 +138,14 @@ function edit(car_number, from_location, to_location, price, day_time){
 
             let data = {car_number:car_number, from_location:from_location, to_location:to_location, price:price, day_time:day_time}
 
-            fetch(url, {
-                method:"PUT", headers: {"Contant-Type":"application/json","Authorization":access_token},
+            fetch(`${url}`, {
+                method:'PUT', headers: {"Contant-Type":"application/json","Authorization":access_token},
                 body:JSON.stringify(data)
             })
             .then((response)=>response.json())
             .then((data)=>{
                 document.getElementById("msge").innerText = data["message"]
-                window.location.replace("create_price.html")
+                // window.location.replace("create_price.html")
 
             })
             .catch((error)=>console.log(error))

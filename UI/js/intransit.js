@@ -1,7 +1,7 @@
 let token = JSON.parse(localStorage.getItem("access_token"));
 let access_token = "Bearer " + token
 // Fetch sent data
-fetch("https://senditparcel.herokuapp.com/api/v2/parcels",{
+fetch("https://senditparcel.herokuapp.com/api/admin/v2/intransit",{
     method: "GET",
     headers: {
         "Content-Type":"application/json",
@@ -12,6 +12,11 @@ fetch("https://senditparcel.herokuapp.com/api/v2/parcels",{
 .then((response) =>{
     response.json().then((data)=>{
         console.log(data)
+    //     if (data){
+    //         document.getElementById("msgerrors").innerText = data["message"]
+    //         // window/location.replace("login.html")
+    //     }
+    // else{
 
         data = data["data"]
         let output = `
@@ -19,6 +24,7 @@ fetch("https://senditparcel.herokuapp.com/api/v2/parcels",{
         <tr class="header">
         <th style="width:20%;">Date</th>
         <th style="width:25%;">title</th>
+        <th style="width:20%;">username</th>
         <th style="width:25%;">pickup</th>
         <th style="width:25%;">Receiver ID</th>
         <th style="width:25%;">Receiver Phone</th>
@@ -32,6 +38,7 @@ fetch("https://senditparcel.herokuapp.com/api/v2/parcels",{
         Object.keys(data).forEach(function(sendt){
             let  created_on = data[sendt]["created_on"];
             let title = data[sendt]["title"];
+            let username = data[sendt]["username"]
             let pickup = data[sendt]["pickup"];
             let rec_id = data[sendt]["rec_id"];
             let rec_phone = data[sendt]["rec_phone"];
@@ -46,6 +53,7 @@ fetch("https://senditparcel.herokuapp.com/api/v2/parcels",{
 
             <td>${data[sendt]["created_on"]}</td>
             <td>${data[sendt]["title"]}</td>
+            <td>${data[sendt]["username"]}</td>
             <td>${data[sendt]["pickup"]}</td>
             <td>${data[sendt]["rec_id"]}</td>
             <td>${data[sendt]["rec_phone"]}</td>
@@ -53,53 +61,28 @@ fetch("https://senditparcel.herokuapp.com/api/v2/parcels",{
             <td>${data[sendt]["destination"]}</td>
             <td>${data[sendt]["weight"]}</td>
             <td>${data[sendt]["status"]}</td>
-            <td><button style="color: #ffffff; background-color:#00C851; font-size: 18px;  border: none;
-            "id="myBtn2" value="edit" onclick="edit('${data[sendt]["parcel_id"]}','${data[sendt]["destination"]}')">Update</button></td>`
-        })
-        document.getElementById("sendthis").innerHTML = output + `</table>`;
 
+            <td><button style="color: #ffffff; background-color:#ff4444; font-size: 18px;  border: none; value="delete" onclick="deletehistory(${data[sendt]["parcel_id"]})">Remove</button></td>`
+        })
+        document.getElementById("intransit").innerHTML = output + `</table>`;
+
+    // }
     })
     .catch(err => console.log(err));
 
 })
 
-
-function edit(parcel_id, destination){
-    modal2.style.display="block";
-    document.getElementById("single").innerText = "";
-    document.getElementById("destination").innerText = "";
-    document.getElementById("editor").innerHTML =`
-
-
-    <form name="modify" id="id">
-    <textarea maxlength="20" rows ="2" cols = "33" name="destination">${destination}</textarea><br><br>
-      <button type='submit' id="submit">change destination</button>
-    </form>
-    <br/>
-
-    `;
-    document.getElementById("submit").addEventListener("click",
-
-    function modifyEntry(event){
-        event.preventDefault();
-        let url = "https://senditparcel.herokuapp.com/api/v2/parcels/"+parcel_id
-
-            let  destination = document.forms["modify"]["destination"].value;
-
-
-            let data = {destination:destination}
-
-            fetch(`${url}/destination`, {
-                method:"PUT", headers: {"Contant-Type":"application/json","Authorization":access_token},
-                body:JSON.stringify(data)
-            })
-            .then((response)=>response.json())
-            .then((data)=>{
-                document.getElementById("change").innerText = data["message"]
-                // window.location.replace("create_price.html")
-
-            })
-            .catch((error)=>console.log(error))
-
-    });
+function deletehistory(parcel_id){
+    let url = "https://senditparcel.herokuapp.com/api/admin/v2/parcels/"+parcel_id;
+    if  (window.confirm("Are you sure, you want to delete?")){
+        fetch(url, {
+            method:"DELETE",
+            headers:{"Content-Type":"application/json", "Authorization":access_token}
+        })
+        .then((res)=> res.json())
+        .then((data)=> {
+            window.location.replace("intransit.html")
+        })
+        
+    }
 }
