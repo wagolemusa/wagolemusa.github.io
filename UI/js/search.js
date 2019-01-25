@@ -85,8 +85,8 @@ function books(book_id, car_number, from_location, to_location, price){
     <textarea maxlength="20" rows ="2" cols = "33" name="from_location">${from_location}</textarea><br><br>
     <textarea maxlength="20" rows ="2" cols = "33" name="to_location">${to_location}</textarea><br><br>
     <textarea maxlength="20" rows ="2" cols = "33" name="price">${price}</textarea><br><br>
-    <textarea maxlength="20" rows ="2" cols = "33" name="quality"></textarea><br><br>
-    <textarea maxlength="20" rows ="2" cols = "33" name="dates"></textarea><br><br>
+    <textarea maxlength="20" rows ="2" cols = "33" name="quality" placeholder="How many sits"></textarea><br><br>
+    <textarea type="date" maxlength="20" rows ="2" cols = "33" name="dates" placeholder="Date"></textarea><br><br>
 
      <button class="view" name="save" id="search">Book</button></form>
     <br/>

@@ -12,11 +12,11 @@ fetch("https://senditparcel.herokuapp.com/api/admin/v2/delivered",{
 .then((response) =>{
     response.json().then((data)=>{
         console.log(data)
-        if (data){
-            document.getElementById("msgerrors").innerText = data["message"]
-            // window/location.replace("login.html")
-        }
-    else{
+    //     if (data){
+    //         document.getElementById("msgerrors").innerText = data["message"]
+    //         // window/location.replace("login.html")
+    //     }
+    // else{
 
         data = data["data"]
         let output = `
@@ -66,7 +66,7 @@ fetch("https://senditparcel.herokuapp.com/api/admin/v2/delivered",{
         })
         document.getElementById("delivery").innerHTML = output + `</table>`;
 
-    }
+    // }
     })
     .catch(err => console.log(err));
 

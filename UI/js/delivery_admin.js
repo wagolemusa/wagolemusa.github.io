@@ -85,7 +85,7 @@ function edit(parcel_id, status){
 
     function modifyEntry(event){
         event.preventDefault();
-        let url = "https://senditparcel.herokuapp.com/admin/v2/parcels/"+parcel_id
+        let url = "https://senditparcel.herokuapp.com/api/admin/v2/parcels/"+parcel_id
 
             let  status = document.forms["modify"]["status"].value;
 

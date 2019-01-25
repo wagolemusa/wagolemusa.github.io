@@ -54,7 +54,7 @@ fetch("https://senditparcel.herokuapp.com/api/v2/parcels",{
             <td>${data[sendt]["weight"]}</td>
             <td>${data[sendt]["status"]}</td>
             <td><button style="color: #ffffff; background-color:#00C851; font-size: 18px;  border: none;
-            "id="myBtn2" value="edit" onclick="edit('${data[sendt]["parcel_id"]}','${data[sendt]["destination"]}')">Update</button></td>`
+            "id="myBtn2" value="edit" onclick="edit('${data[sendt]["parcel_id"]}','${data[sendt]["destination"]}')">Change-Destination</button></td>`
         })
         document.getElementById("sendthis").innerHTML = output + `</table>`;
 
@@ -85,8 +85,6 @@ function edit(parcel_id, destination){
         let url = "https://senditparcel.herokuapp.com/api/v2/parcels/"+parcel_id
 
             let  destination = document.forms["modify"]["destination"].value;
-
-
             let data = {destination:destination}
 
             fetch(`${url}/destination`, {
