@@ -7,47 +7,77 @@
 <body>
 <div class="top">
 <img src="../img/delivery.png">
+
  <div class="dropdown">
     <button class="dropbtn">Delivery Order Menu
       <i class="fa fa-caret-down"></i>
     </button>
-    <div class="dropdown-content">
+     <div class="dropdown-content">
       <a href="new_delivery.html">New Delivery</a>
       <a href="profile.html">Profile</a>
-      <a href="my_order.html">My Orders</a>
-      <a href="history-delivery.html">Orders History</a>
+      <a href="book.html">Bookings</a>
+      <a href="my_order.html">Delivery Orders</a>
+      <a href="history-delivery.html">Delivery Histories</a>
       <hr/>
-			<a href="../../index.html">Logout</a>
+			<a href="index.html">Logout</a>
     </div>
-
   </div>
-  <a href="dashboard.html">Hello: Refuge Wise</a>
-
-  <a href="send.html">Send parcel</a>
-  <a href="book.html">Book</a>
-  <a href="search.html">Search</a>
+    <a href="dashboard.html">Hello: Refuge Wise</a>
+    <a href="delivery_price.html">Prices</a>
+    <a href="send.html">Send Parcel</a>
 
 
-  </div>
-
+</div>
+<br/><br/>
 <div class="contianer">
-      <h3 id="errors"></h3>
-    <h1>Book </h1>
-    <form name="booking" id="book">
-      <input type="text" name="car_number" placeholder="Car Nnumber">
-      <input type="text" name="from_location" placeholder="From ........">
-      <input type="text" name="to_location" placeholder="To ............">
-      <input type="number" name="price" placeholder="Price">
-      <input type="number" name="quality" placeholder="How many sits?">
-      <input type="date" name="dates" placeholder="date">
-      <button type='submit' id="submit">Book</button>
-    </form>
+<a href="new_delivery.html">My bookings</a>
+<br/><br/>
+
+   <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search by Dates..">
+
+   <div id="sendthis"></div>
+
 </div>
 
 
+<div id="myModal5" class="modal5">
 
+  <!-- Modal content -->
+  <div class="modal-content5">
+      <div id="sendthis"></div>
 
-<script src="../js/send_parcel.js"></script>
+    <span class="close2">&times;</span>
+          <h1>Postpond</h1>
+          <h3 id="change"></h3>
+          <h5 class="modalText" id = "dates"></h5><p class="modalText" id ="single"></p>
+          <h5 class="modalText" id = "status"></h5><p class="modalText" id ="sate"></p>
+
+      <div id="editor"></div>
+
+    </form>
+<br/>
+  </div>
+
+</div>
+<script>
+    var modal5 = document.getElementById('myModal5');
+    var btn5 = document.getElementById("myBtn5");
+    var span5 = document.getElementsByClassName("close")[0];
+    btn.onclick = function() {
+        modal5.style.display = "block";
+    }
+    span5.onclick = function() {
+        modal5.style.display = "none";
+    }
+    window.onclick = function(event) {
+        if (event.target == modal5) {
+            modal5.style.display = "none";
+        }
+    }
+
+</script>
+<!-- <script src="../js/script.js"></script> -->
+<script src="../js/books.js"></script>
 
 </body>
 </html> 

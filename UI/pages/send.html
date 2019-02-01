@@ -14,8 +14,9 @@
     <div class="dropdown-content">
       <a href="new_delivery.html">New Delivery</a>
       <a href="profile.html">Profile</a>
-      <a href="my_order.html">My Orders</a>
-      <a href="history-delivery.html">Orders History</a>
+      <a href="book.html">Bookings</a>
+      <a href="my_order.html">Delivery Orders</a>
+      <a href="history-delivery.html">Delivery Histories</a>
       <hr/>
 			<a href="../../index.html">Logout</a>
     </div>
@@ -24,6 +25,8 @@
   <a href="dashboard.html">Hello: Refuge Wise</a>
 
   <a href="send.html">Send parcel</a>
+  <a href="search.html">Book</a>
+
 
   </div>
 
@@ -32,12 +35,12 @@
       <h3 id="errors"></h3>
     <h1>Send parcels</h1>
     <form name="sendit" id="send">
-      <input type="text" name="title" placeholder="Title">
-      <input type="text" name="pickup" placeholder="Pickup">
-      <input type="text" name="rec_id" placeholder="Receiver ID">
-      <input type="number" name="rec_phone" placeholder="Receiver Phone Number">
-      <input type="text" name="rec_name" placeholder="Receiver Name">
-      <input type="text" name="destination" placeholder="Destination">
+      <input type="text" name="title" placeholder="Title" required>
+      <input type="text" name="pickup" placeholder="Pickup" required>
+      <input type="text" name="rec_id" placeholder="Receiver ID" required>
+      <input type="number" name="rec_phone" placeholder="Receiver Phone Number" required>
+      <input type="text" name="rec_name" placeholder="Receiver Name" required>
+      <input type="text" name="destination" placeholder="Destination" required>
       <input type="number" name="weight" placeholder="Weight" required>
       <button type='submit' id="submit">Send IT</button>
     </form>

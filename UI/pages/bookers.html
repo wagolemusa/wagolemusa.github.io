@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SendIT</title>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+<body>
+<div class="top">
+<img src="../img/delivery.png">
+ <div class="dropdown">
+    <button class="dropbtn">Admin: Wagole wise
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Profile</a>
+
+      <hr/>
+			<a href="index.html">Logout</a>
+    </div>
+
+  </div>
+  <a href="admin_dashboard.html">Back To Admin</a>
+
+  </div>
+<br/>
+<div class="contianer">
+  <h1>Search By Serial Unque Number </h1>
+  <h3 id="reg"></h3>
+
+  <form name="search" id="searches">
+    <input type="number" name="bookingref" placeholder="Search Serial Number">
+    <button type='submit' id="submit">Search</button>
+  </form>
+</br> 
+  <div id="showsearch"></div>
+</div>
+</body>
+
+<script src="../js/bookers.js"></script>
+</html>

@@ -73,7 +73,6 @@ function edit(parcel_id, status){
     document.getElementById("status").innerText = "";
     document.getElementById("editor").innerHTML =`
 
-
     <form name="modify" id="id">
     <textarea maxlength="20" rows ="2" cols = "33" name="status">${status}</textarea><br><br>
       <button type='submit' id="submit">change status</button>
@@ -88,8 +87,6 @@ function edit(parcel_id, status){
         let url = "https://senditparcel.herokuapp.com/api/admin/v2/parcels/"+parcel_id
 
             let  status = document.forms["modify"]["status"].value;
-
-
             let data = {status:status}
 
             fetch(`${url}/status`, {
@@ -100,7 +97,6 @@ function edit(parcel_id, status){
             .then((data)=>{
                 document.getElementById("change").innerText = data["message"]
                 // window.location.replace("create_price.html")
-
             })
             .catch((error)=>console.log(error))
 

@@ -78,8 +78,8 @@ function edit(parcel_id, destination){
     <br/>
 
     `;
-    document.getElementById("submit").addEventListener("click",
 
+    document.getElementById("submit").addEventListener("click",
     function modifyEntry(event){
         event.preventDefault();
         let url = "https://senditparcel.herokuapp.com/api/v2/parcels/"+parcel_id

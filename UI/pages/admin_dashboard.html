@@ -4,7 +4,7 @@
 	<title>SendIT</title>
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
-<body>
+<body onload="fetchnumbers()">
 <div class="top">
 <img src="../img/delivery.png">
  <div class="dropdown">
@@ -25,6 +25,8 @@
  <div class="sidenav">
   <a href="create_price.html">Create Prices</a><br/>
   <a href="all_users.html">All Users</a><br/>
+  <a href="bookers.html">Search Bookers</a>
+  <a href="dates.html">Day's books</a>
   <a href="delivery_orders.html">Delivery Orders</a><br/>
   <a href="history_orders.html">Orders History</a><br/>
   <a href="intransit.html">InTransit</a><br/>
@@ -38,21 +40,21 @@
   <div class="row">
     <div class="col-md-4">
       <div class="color-block">
-        <h2>37</h2>
-        <p>Users</p>
+        <h2 id="output"></h2>
+        <b>Users</b>
       </div>
     </div>
     <div class="col-md-4">
       <div class="color-block1">
-        <h2>60</h2>
-        <p>Delivery Orders</p>
+        <h2 id="orders"></h2>
+        <p>Bookings</p>
       </div>
     </div>
     <div class="col-md-4">
 
       <div class="color-block2">
-        <h2>90</h2>
-        <p>History Orders</p>
+        <h2 id="parcel"></h2>
+        <p>Parcel Orders</p>
       </div>
     </div>
   </div>
@@ -60,3 +62,5 @@
 </div>
 </body>
 </html> 
+
+<script src="../js/number.js"></script>
