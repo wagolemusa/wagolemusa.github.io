@@ -1,5 +1,12 @@
 let token = JSON.parse(localStorage.getItem("access_token"));
 let access_token = "Bearer " + token
+
+
+// check if token exist during load
+if (token === "") {
+    window.location.replace("login.html")
+}
+
 // Fetch sent data
 fetch("https://senditparcel.herokuapp.com/api/v2/parcels",{
     method: "GET",

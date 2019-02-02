@@ -17,9 +17,16 @@ function fetchlogin(event){
 })
 .then((response)=> response.json())
 .then((data)=>{
-    if (data["access_token"]){
-        localStorage.setItem("access_token", JSON.stringify(data["access_token"]));
-        window.location.assign("dashboard.html");
+    localStorage.setItem('access_token', data.access_token)
+    localStorage.setItem('current_user', username)
+    if (data.access_token){
+        if(data.access_token){
+            if(username == "admin"){
+                window.location.replace("admin_dashboard.html")
+            }else{
+                window.location.replace("dashboard.html")
+            }
+        }
     }
     else {
         document.getElementById("loginMsg").innerText = data["message"];
@@ -30,3 +37,5 @@ function fetchlogin(event){
 
 
 });
+
+

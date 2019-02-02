@@ -5,6 +5,12 @@ let route = "https://senditparcel.herokuapp.com/api";
 let token = JSON.parse(localStorage.getItem("access_token"));
 let access_token = "Bearer " + token
 
+// check if token exist during load
+if (token === null) {
+    window.location.replace("login.html")
+}
+
+
 document.getElementById("send").addEventListener("click",
 function fetchsend(event){
     event.preventDefault()

@@ -1,6 +1,10 @@
 let token = JSON.parse(localStorage.getItem("access_token"));
 let access_token = "Bearer " + token
 
+if (token === null){
+    redirect: window.location.replace("./pages/login")
+}
+
 
 fetch("https://senditparcel.herokuapp.com/api/admin/v2/users",{
     method:"GET",

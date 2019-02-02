@@ -1,4 +1,4 @@
-let token = JSON.parse(localStorage.getItem("access_token"));
+let token = localStorage.getItem('access_token')
 let access_token = "Bearer " + token
 // Fetch sent data
 fetch("https://senditparcel.herokuapp.com/api/v2/book",{
