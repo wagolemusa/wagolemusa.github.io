@@ -1,7 +1,8 @@
 let route2 = "https://senditparcel.herokuapp.com/api";
 
-// let token = JSON.parse(localStorage.getItem("access_token"));
-// let access_token = "Bearer " + token
+let token = localStorage.getItem('access_token')
+let current_user = localStorage.getItem('current_user')
+let access_token = "Bearer " + token
 
 let url = route2+"/admin/v2/locations"
 
