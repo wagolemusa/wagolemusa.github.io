@@ -5,8 +5,6 @@ let access_token = "Bearer " + token
 // let token = localStorage.getItem("access_token");
 let route = "https://senditparcel.herokuapp.com/api";
 
-let token = JSON.parse(localStorage.getItem("access_token"));
-let access_token = "Bearer " + token
 
 document.getElementById("prices").addEventListener("click",
 function fetchprice(event){
@@ -101,6 +99,7 @@ fetch("https://senditparcel.herokuapp.com/api/admin/v2/locations",{
     })
     .catch(err => console.log(err));
 })
+
 
 function edit(price_id, car_number, from_location, to_location, price, day_time){
 

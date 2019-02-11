@@ -67,7 +67,9 @@ function searchfetch(event){
             <td>${data[searchme]["total"]}</td>
             <td>${data[searchme]["status"]}</td>
             <td>${data[searchme]["created_on"]}</td>
-            <td><button style="color: #ffffff; background-color:#00C851; font-size: 18px;  border: none;">Print</button></td>`;
+            
+            <td><button style="color: #ffffff; background-color:#00C851; font-size: 18px;  border: none;
+           "id="myBtn6" value="Edit" onclick="viewSingle(${data[searchme]["book_id"]})">Show</button></td>        `;
         })
         document.getElementById("showsearch").innerHTML = output + `</table>`;
             // if (data){
@@ -78,4 +80,65 @@ function searchfetch(event){
 
 })
 .catch(error => console.log('error:',error));
-})
+});
+
+
+
+
+function viewSingle(book_id){
+    fetch("https://senditparcel.herokuapp.com/api/admin/v2/booking/"+book_id,{
+    method: "GET",
+    headers: {
+        "Content-Type":"application/json",
+        "Accept":"applicaton/json",
+        "Authorization":access_token
+    },
+    })
+    .then((res)=>res.json())
+    .then((data)=>{
+
+    data = data["data"];
+    console.log(data)
+
+    let show = `
+
+
+    `;
+    Object.keys(data).forEach(function(searchme){
+        let bookingref = data[searchme]["bookingref"]
+        let car_number = data[searchme]["car_number"];
+        let username = data[searchme]["username"];
+        let from_location = data[searchme]["from_location"];
+        let to_location = data[searchme]["to_location"];
+        let price = data[searchme]["price"];
+        let quality = data[searchme]["quality"];
+        let dates = data[searchme]["dates"];
+        let total = data[searchme]["total"];
+        let status = data[searchme]["status"];
+        let created_on = data[searchme]["created_on"];
+
+        show +=`
+        
+        <b>Serial</b> ${data[searchme]["bookingref"]}</br>
+        <b>Car Number </b>${data[searchme]["car_number"]}</br>
+        <b>Customer Name</b> ${data[searchme]["username"]}</br>
+        <b>From</b> ${data[searchme]["from_location"]}</br>
+        <b>To</b> ${data[searchme]["to_location"]}</br>
+        <b>Price </b>${data[searchme]["price"]}</br>
+        <b>Quantity </b>${data[searchme]["quality"]}</br>
+        <b> Travel Date</b> ${data[searchme]["dates"]}</br>
+        <b> Total</b> ${data[searchme]["total"]}</br>
+        <b>Status</b> ${data[searchme]["status"]}</br>
+        <b>Booked Date</b> ${data[searchme]["created_on"]}</br>
+
+        `;
+        
+        })
+        document.getElementById("showme").innerHTML = show 
+        modal6.style.display = "block";
+
+
+    })
+    .catch(error => console.log('error:',error));
+    }
+

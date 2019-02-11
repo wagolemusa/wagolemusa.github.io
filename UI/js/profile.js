@@ -4,6 +4,9 @@ let token = localStorage.getItem('access_token')
 let current_user = localStorage.getItem('current_user')
 let access_token = "Bearer " + token
 
+if(!token){
+    window.location.replace("login.html");
+}
 
 fetch("https://senditparcel.herokuapp.com/api/v2/profile",{
     method:"GET",
@@ -103,3 +106,6 @@ function edit(user_id, first_name, last_name, username, phone, email){
 
     });
 }
+
+
+

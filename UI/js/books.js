@@ -47,7 +47,6 @@ fetch("https://senditparcel.herokuapp.com/api/v2/book",{
             output +=`
 
             <tr>
-
             <td>${book[sendt]["bookingref"]}</td>
             <td>${book[sendt]["car_number"]}</td>
             <td>${book[sendt]["from_location"]}</td>
@@ -58,9 +57,10 @@ fetch("https://senditparcel.herokuapp.com/api/v2/book",{
             <td>${book[sendt]["total"]}</td>
             <td>${book[sendt]["status"]}</td>
             <td>${book[sendt]["created_on"]}</td>
+            ]
             <td><button style="color: #ffffff; background-color:#00C851; font-size: 18px;  border: none;
             "id="myBtn5" value="edit" onclick="edit('${book[sendt]["book_id"]}','${book[sendt]["dates"]}','${book[sendt]["status"]}')">Postpond</button></td>
-             <td><button style="color: #ffffff; background-color:#00C851; font-size: 18px;  border: none;">Print</button></td>`
+           `
         })
         document.getElementById("sendthis").innerHTML = output + `</table>`;
 

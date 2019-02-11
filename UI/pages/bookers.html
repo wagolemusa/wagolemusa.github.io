@@ -2,7 +2,8 @@
 <html>
 <head>
 	<title>SendIT</title>
-	<link rel="stylesheet" type="text/css" href="../css/style.css">
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+  <link rel="stylesheet" type="text/css" href="../css/print.min.css">
 </head>
 <body>
 <div class="top">
@@ -33,8 +34,47 @@
   </form>
 </br> 
   <div id="showsearch"></div>
+
+
 </div>
-</body>
+
+
+  <div id="myModal6" class="modal6" >
+    <div class="modal-content6" id="printJS-form">
+      <span class="close6">&times;</span>
+
+      <img src="../img/delivery.png" style="width: 8em;">
+
+      <div id="showme"></div>
+
+      </div>
+      <button type="button" onclick="printJS('printJS-form', 'html')">
+        Print Form
+     </button>  
+     <br/>
+  </div>
+
+  
+<script>
+  var modal6 = document.getElementById('myModal6');
+  var btn6 = document.getElementById("myBtn6");
+  var span6 = document.getElementsByClassName("close")[0];
+  btn6.onclick = function() {
+      modal6.style.display = "block";
+  }
+  span6.onclick = function() {
+      modal6.style.display = "none";
+  }
+  window.onclick = function(event) {
+      if (event.target == modal6) {
+          modal6.style.display = "none";
+      }
+  }
+</script>
+
 
 <script src="../js/bookers.js"></script>
+<script src="../js/print.min.js"></script>
+</body>
+
 </html>
