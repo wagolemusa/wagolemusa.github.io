@@ -11,6 +11,7 @@ headers:{"Content-Type":"application/json"}})
 .catch((err) => console.log(err))
 }
 
+
 // Function User Registration
 document.getElementById("submit").addEventListener("click",
 function fetchuser(event){
@@ -32,12 +33,10 @@ function fetchuser(event){
     })
     .then((res)=>res.json())
     .then((data) =>{
-      
         if (data){
             document.getElementById("reg").innerText = data["message"];
 
-        }
-        else {
+        }else{
             window.location.replace("login.html")        
 
         }

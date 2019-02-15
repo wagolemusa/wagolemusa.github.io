@@ -4,12 +4,20 @@ let token = localStorage.getItem('access_token')
 let current_user = localStorage.getItem('current_user')
 let access_token = "Bearer " + token
 
+
+
+
 //Function for searching
 document.getElementById("submit").addEventListener("click",
 function searchfetch(event){
     event.preventDefault()
     let url = route +"/v2/search/bookers"
     let bookingref = document.forms["search"]["bookingref"].value;
+
+    if(isNaN(bookingref)){
+        window.alert("Fill in onl;y numbers");
+ 
+    }
     let data = {bookingref:bookingref};
     fetch (url, {method:"POST",
     headers:{
@@ -22,6 +30,9 @@ function searchfetch(event){
 .then((res)=>res.json())
 .then((data)=>{
     document.getElementById("reg").innerText = data["message"];
+    // if (data.message == 'Internal Server Error'){
+    //     window.location.replace("login.html")
+    // }
 
     // else{
         data = data["data"];
