@@ -20,7 +20,9 @@ fetch("https://senditparcel.herokuapp.com/api/admin/v2/parcels",{
 .then((response) =>{
     response.json().then((data)=>{
         console.log(data)
-
+        if (data.message == 'Internal Server Error'){
+            window.location.replace("login.html")
+        }
         data = data["data"]
         let output = `
         <table id="NewTable">

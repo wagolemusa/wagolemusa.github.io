@@ -30,6 +30,9 @@ function searchfetch(event){
 .then((data)=>{
     
     document.getElementById("reg").innerText = data["message"];
+    if (data.message == 'Internal Server Error'){
+        window.location.replace("login.html")
+    }
 
     // else{
         data = data["data"];
@@ -88,12 +91,12 @@ function books(book_id, car_number, from_location, to_location, price){
     document.getElementById("editor").innerHTML =`
 
     <form name="modify"><br><p id="id"></p><br>
-    <textarea maxlength="20" rows ="2" cols = "33" name="car_number">${car_number}</textarea><br><br>
-    <textarea maxlength="20" rows ="2" cols = "33" name="from_location">${from_location}</textarea><br><br>
-    <textarea maxlength="20" rows ="2" cols = "33" name="to_location">${to_location}</textarea><br><br>
-    <textarea maxlength="20" rows ="2" cols = "33" name="price">${price}</textarea><br><br>
-    <textarea maxlength="20" rows ="2" cols = "33" name="quality" placeholder="How many sits"></textarea><br><br>
-    <textarea type="date" maxlength="20" rows ="2" cols = "33" name="dates" placeholder="Date"></textarea><br><br>
+    <textarea maxlength="20" rows ="2" cols = "38" name="car_number">${car_number}</textarea><br><br>
+    <textarea maxlength="20" rows ="2" cols = "38" name="from_location">${from_location}</textarea><br><br>
+    <textarea maxlength="20" rows ="2" cols = "38" name="to_location">${to_location}</textarea><br><br>
+    <textarea maxlength="20" rows ="2" cols = "38" name="price">${price}</textarea><br><br>
+    <input type="number" maxlength="20" rows ="2" cols = "33" name="quality" placeholder="How many seats"><br><br>
+    <input type="date" maxlength="20" rows ="2" cols = "33" name="dates" placeholder="Date"><br><br>
 
      <button class="view" name="save" id="search">Book</button></form>
     <br/>

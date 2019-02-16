@@ -23,6 +23,9 @@ fetch("https://senditparcel.herokuapp.com/api/admin/v2/bookings",{
 .then((response) =>{
     response.json().then((book)=>{
         console.log(book)
+        if (data.message == 'Internal Server Error'){
+            window.location.replace("login.html")
+        }
 
         book = book["book"]
         let output = `

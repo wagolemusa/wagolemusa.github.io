@@ -24,6 +24,9 @@ fetch("https://senditparcel.herokuapp.com/api/admin/v2/delivered",{
             document.getElementById("msgerrors").innerText = data["message"]
             // window/location.replace("login.html")
         }
+        if (data.message == 'Internal Server Error'){
+            window.location.replace("login.html")
+        }
     else{
 
         data = data["data"]

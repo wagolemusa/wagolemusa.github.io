@@ -19,6 +19,9 @@ fetch("https://senditparcel.herokuapp.com/api/v2/parcels",{
 .then((response) =>{
     response.json().then((data)=>{
         console.log(data)
+        if (data.message == 'Internal Server Error'){
+            window.location.replace("login.html")
+        }
 
         data = data["data"]
         let output = `

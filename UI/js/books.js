@@ -21,6 +21,9 @@ fetch("https://senditparcel.herokuapp.com/api/v2/book",{
 .then((response) =>{
     response.json().then((book)=>{
         console.log(book)
+        if (data.message == 'Internal Server Error'){
+            window.location.replace("login.html")
+        }
 
         book = book["book"]
         let output = `
@@ -88,7 +91,7 @@ function edit(book_id, dates, status){
 
 
     <form name="modify" id="id">
-    <textarea maxlength="20" rows ="2" cols = "33" name="dates">${dates}</textarea><br><br>
+    <textarea type='date' maxlength="20" rows ="2" cols = "33" name="dates">${dates}</textarea><br><br>
     <textarea maxlength="20" rows ="2" cols = "33" name="status">${status}</textarea><br><br>
       <button type='submit' id="submit">Postpond</button>
     </form>

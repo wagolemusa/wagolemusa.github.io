@@ -28,6 +28,9 @@ function searchfetch(event){
 .then((res)=>res.json())
 .then((data)=>{
     document.getElementById("reg").innerText = data["message"];
+    if (data.message == 'Internal Server Error'){
+        window.location.replace("login.html")
+    }
 
     // else{
         data = data["data"];
