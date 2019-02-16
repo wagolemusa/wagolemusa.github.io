@@ -6,6 +6,11 @@ let access_token = "Bearer " + token
 if(!token){
     window.location.replace("login.html");
 }
+// Set username on topnav
+function setUserName(){
+    document.getElementById('current-user').innerHTML = current_user;
+  }
+
 
 // Get All users
 fetch("https://senditparcel.herokuapp.com/api/admin/v2/users",{
@@ -19,6 +24,10 @@ fetch("https://senditparcel.herokuapp.com/api/admin/v2/users",{
 .then((response)=>{
     response.json().then((all_users)=>{
         console.log(all_users)
+        if (data.message == 'Internal Server Error'){
+            window.location.replace("login.html")
+        }
+    
 
         all_users = all_users["all_users"]
         let output =`

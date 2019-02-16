@@ -5,6 +5,11 @@ let access_token = "Bearer " + token
 // let token = localStorage.getItem("access_token");
 let route = "https://senditparcel.herokuapp.com/api";
 
+// Set username on topnav
+function setUserName(){
+    document.getElementById('current-user').innerHTML = current_user;
+  }
+
 
 document.getElementById("prices").addEventListener("click",
 function fetchprice(event){

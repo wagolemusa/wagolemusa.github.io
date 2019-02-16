@@ -8,6 +8,11 @@ if (token === "") {
     window.location.replace("login.html")
 }
 
+// Set username on topnav
+function setUserName(){
+    document.getElementById('current-user').innerHTML = current_user;
+  }
+
 // Fetch sent data
 fetch("https://senditparcel.herokuapp.com/api/v2/parcels",{
     method: "GET",

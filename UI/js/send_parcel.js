@@ -13,6 +13,10 @@ if (token === null) {
 }
 
 
+function userget(){
+    document.getElementById('current_user').innerHTML = current_user
+}
+
 document.getElementById("send").addEventListener("click",
 function fetchsend(event){
     event.preventDefault()

@@ -4,8 +4,10 @@ let token = localStorage.getItem('access_token')
 let current_user = localStorage.getItem('current_user')
 let access_token = "Bearer " + token
 
-
-
+// Set username on topnav
+function setUserName(){
+    document.getElementById('current-user').innerHTML = current_user;
+  }
 
 //Function for searching
 document.getElementById("submit").addEventListener("click",
@@ -15,7 +17,7 @@ function searchfetch(event){
     let bookingref = document.forms["search"]["bookingref"].value;
 
     if(isNaN(bookingref)){
-        window.alert("Fill in onl;y numbers");
+        window.alert("Fill in only numbers");
  
     }
     let data = {bookingref:bookingref};
@@ -30,10 +32,9 @@ function searchfetch(event){
 .then((res)=>res.json())
 .then((data)=>{
     document.getElementById("reg").innerText = data["message"];
-    // if (data.message == 'Internal Server Error'){
-    //     window.location.replace("login.html")
-    // }
-
+    if (data.message == 'Internal Server Error'){
+        window.location.replace("login.html")
+    }
     // else{
         data = data["data"];
         console.log(data)
@@ -80,7 +81,7 @@ function searchfetch(event){
             <td>${data[searchme]["created_on"]}</td>
             
             <td><button style="color: #ffffff; background-color:#00C851; font-size: 18px;  border: none;
-           "id="myBtn6" value="Edit" onclick="viewSingle(${data[searchme]["book_id"]})">Show</button></td>        `;
+           "id="myBtn6" value="Edit" onclick="viewSingle(${data[searchme]["book_id"]})">Show</button></td>`;
         })
         document.getElementById("showsearch").innerHTML = output + `</table>`;
             // if (data){

@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>SendIT</title>
+	<title>SendIT</title>
   <link rel="stylesheet" type="text/css" href="../css/style.css">
+  <link rel="stylesheet" type="text/css" href="../css/print.min.css">
 </head>
 <body>
 <div class="top">
@@ -13,80 +14,67 @@
     </button>
     <div class="dropdown-content">
       <a href="#">Profile</a>
-    
+
       <hr/>
-      <a href="../../index.html">Logout</a>
+			<a href="../../index.html">Logout</a>
     </div>
 
   </div>
-    <a href="admin_dashboard.html">Back To Admin</a>
+  <a href="admin_dashboard.html">Back To Admin</a>
 
   </div>
-
-
+<br/>
 <div class="contianer">
-<h1>Delivery History Orders</h1>
+  <h1>Search Bookings By Serial Unque Number </h1>
+  <h3 id="reg"></h3>
 
-   <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search by Dates..">
-
-<table id="NewTable">
-  <tr class="header">
-    <th style="width:20%;">Date</th>
-    <th style="width:20%;">User</th>
-    <th style="width:25%;">Deliveries</th>
-    <th style="width:30%;">From</th>
-    <th style="width:30%;">To</th>
-    <th style="width:30%;"></th>
+  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Serial Number.">
+</br> 
+  <div id="showsbookings"></div>
 
 
-
-  </tr>
-  <tr>
-    <td>2018/08/10</td>
-    <td>Homie</td>
-    <td>Tv</td>
-    <td>Nairobi</td>
-    <td>Kisumu</td>
-
-  <td><button style="color: #ffffff; background-color:#ff4444; font-size: 18px;  border: none;">Remove</button></td>
-
-
-
-
-  </tr>
-  <tr>
-    <td>2018/19/08</td>
-    <td>musa</td>
-    <td>Laptops</td>
-    <td>Nakuru</td>
-    <td>Mombasa</td>
-  <td><button style="color: #ffffff; background-color:#ff4444; font-size: 18px;  border: none;">Remove</button></td>
-
-  </tr>
-  <tr>
-    <td>2018/30/10</td>
-    <td>Wise</td>
-    <td>package</td>
-    <td>Busia</td>
-    <td>Kakamega</td>
-  <td><button style="color: #ffffff; background-color:#ff4444; font-size: 18px;  border: none;">Remove</button></td>
-
-
-  </tr>
-  <tr>
-    <td>2018/01/12</td>
-    <td>Refuge</td>
-    <td>Tables</td>
-    <td>Kisi</td>
-    <td>Nairobi</td>
-    <td><button style="color: #ffffff; background-color:#ff4444; font-size: 18px;  border: none;">Remove</button></td>
-
-
-
-
-  </tr>
-</table> 
 </div>
 
+
+  <div id="myModal6" class="modal6" >
+    <div class="modal-content6" id="printJS-form">
+      <span class="close6">&times;</span>
+
+      <img src="../img/delivery.png" style="width: 8em;">
+
+      <div id="showme"></div>
+
+      </div>
+      <button type="button" onclick="printJS('printJS-form', 'html')">
+        Print Form
+     </button>  
+     <br/>
+  </div>
+
+  
+<script>
+  var modal6 = document.getElementById('myModal6');
+  var btn6 = document.getElementById("myBtn6");
+  var span6 = document.getElementsByClassName("close")[0];
+  btn6.onclick = function() {
+      modal6.style.display = "block";
+  }
+  span6.onclick = function() {
+      modal6.style.display = "none";
+  }
+  window.onclick = function(event) {
+      if (event.target == modal6) {
+          modal6.style.display = "none";
+      }
+  }
+</script>
+
+
+<script src="../js/bookings.js"></script>
+<script src="../js/print.min.js"></script>
+<script src="../js/script.js"></script>
 </body>
-</html> 
+
+</html>
+
+

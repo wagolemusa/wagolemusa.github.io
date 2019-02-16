@@ -6,6 +6,12 @@ if(!token){
     window.location.replace("login.html");
 }
 
+// Set username on topnav
+function setUserName(){
+    document.getElementById('current-user').innerHTML = current_user;
+  }
+
+
 fetch("https://senditparcel.herokuapp.com/api/admin/v2/users",{
     method:"GET",
     headers:{

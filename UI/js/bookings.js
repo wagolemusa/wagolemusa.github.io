@@ -1,7 +1,8 @@
+let route = "https://senditparcel.herokuapp.com/api";
+
 let token = localStorage.getItem('access_token')
 let current_user = localStorage.getItem('current_user')
 let access_token = "Bearer " + token
-
 
 // Set username on topnav
 function setUserName(){
@@ -9,8 +10,9 @@ function setUserName(){
   }
 
 
-// Fetch sent data
-fetch("https://senditparcel.herokuapp.com/api/v2/book",{
+
+//Function for searching
+fetch("https://senditparcel.herokuapp.com/api/admin/v2/bookings",{
     method: "GET",
     headers: {
         "Content-Type":"application/json",
@@ -28,6 +30,7 @@ fetch("https://senditparcel.herokuapp.com/api/v2/book",{
         <tr class="header">
         <th style="width:20%;">bookingref</th>
         <th style="width:25%;">car_number</th>
+        <th style="width:25%;">Name</th>
         <th style="width:25%;">From</th>
         <th style="width:25%;">To</th>
         <th style="width:25%;">price</th>
@@ -43,6 +46,7 @@ fetch("https://senditparcel.herokuapp.com/api/v2/book",{
         Object.keys(book).forEach(function(sendt){
             let  bookingref = book[sendt]["bookingref"];
             let car_number = book[sendt]["car_number"];
+            let username = book[sendt]["username"];
             let from_location = book[sendt]["from_location"];
             let to_location = book[sendt]["to_location"];
             let price = book[sendt]["price"];
@@ -57,6 +61,7 @@ fetch("https://senditparcel.herokuapp.com/api/v2/book",{
             <tr>
             <td>${book[sendt]["bookingref"]}</td>
             <td>${book[sendt]["car_number"]}</td>
+            <td>${book[sendt]["username"]}</td>
             <td>${book[sendt]["from_location"]}</td>
             <td>${book[sendt]["to_location"]}</td>
             <td>${book[sendt]["price"]}</td>
@@ -65,12 +70,11 @@ fetch("https://senditparcel.herokuapp.com/api/v2/book",{
             <td>${book[sendt]["total"]}</td>
             <td>${book[sendt]["status"]}</td>
             <td>${book[sendt]["created_on"]}</td>
-            ]
+            
             <td><button style="color: #ffffff; background-color:#00C851; font-size: 18px;  border: none;
-            "id="myBtn5" value="edit" onclick="edit('${book[sendt]["book_id"]}','${book[sendt]["dates"]}','${book[sendt]["status"]}')">Postpond</button></td>
-           `
+           "id="myBtn6" value="Edit" onclick="viewSingle(${book[sendt]["book_id"]})">Show</button></td>`;
         })
-        document.getElementById("sendthis").innerHTML = output + `</table>`;
+        document.getElementById("showsbookings").innerHTML = output + `</table>`;
 
     })
     .catch(err => console.log(err));
@@ -78,45 +82,60 @@ fetch("https://senditparcel.herokuapp.com/api/v2/book",{
 })
 
 
-function edit(book_id, dates, status){
-    modal5.style.display="block";
-    document.getElementById("single").innerText = "";
-    document.getElementById("dates").innerText = "";
-    document.getElementById("sate").innerText = "";
-    document.getElementById("status").innerText = "";
-    document.getElementById("editor").innerHTML =`
+function viewSingle(book_id){
+    fetch("https://senditparcel.herokuapp.com/api/admin/v2/booking/"+book_id,{
+    method: "GET",
+    headers: {
+        "Content-Type":"application/json",
+        "Accept":"applicaton/json",
+        "Authorization":access_token
+    },
+    })
+    .then((res)=>res.json())
+    .then((data)=>{
 
+    data = data["data"];
+    console.log(data)
 
-    <form name="modify" id="id">
-    <textarea maxlength="20" rows ="2" cols = "33" name="dates">${dates}</textarea><br><br>
-    <textarea maxlength="20" rows ="2" cols = "33" name="status">${status}</textarea><br><br>
-      <button type='submit' id="submit">Postpond</button>
-    </form>
-    <br/>
+    let show = `
+
 
     `;
+    Object.keys(data).forEach(function(searchme){
+        let bookingref = data[searchme]["bookingref"]
+        let car_number = data[searchme]["car_number"];
+        let username = data[searchme]["username"];
+        let from_location = data[searchme]["from_location"];
+        let to_location = data[searchme]["to_location"];
+        let price = data[searchme]["price"];
+        let quality = data[searchme]["quality"];
+        let dates = data[searchme]["dates"];
+        let total = data[searchme]["total"];
+        let status = data[searchme]["status"];
+        let created_on = data[searchme]["created_on"];
 
-    document.getElementById("submit").addEventListener("click",
-    function modifyEntry(event){
-        event.preventDefault();
-        let url = "https://senditparcel.herokuapp.com/api/v2/book/"+book_id
+        show +=`
+        
+        <b>Serial</b> ${data[searchme]["bookingref"]}</br>
+        <b>Car Number </b>${data[searchme]["car_number"]}</br>
+        <b>Customer Name</b> ${data[searchme]["username"]}</br>
+        <b>From</b> ${data[searchme]["from_location"]}</br>
+        <b>To</b> ${data[searchme]["to_location"]}</br>
+        <b>Price </b>${data[searchme]["price"]}</br>
+        <b>Quantity </b>${data[searchme]["quality"]}</br>
+        <b> Travel Date</b> ${data[searchme]["dates"]}</br>
+        <b> Total</b> ${data[searchme]["total"]}</br>
+        <b>Status</b> ${data[searchme]["status"]}</br>
+        <b>Booked Date</b> ${data[searchme]["created_on"]}</br>
 
-            let  dates = document.forms["modify"]["dates"].value;
-            let status = document.forms["modify"]["status"].value;
-            let data = {dates:dates, status:status}
+        `;
+        
+        })
+        document.getElementById("showme").innerHTML = show 
+        modal6.style.display = "block";
 
-            fetch(`${url}/postpond`, {
-                method:"PUT", headers: {"Contant-Type":"application/json","Authorization":access_token},
-                body:JSON.stringify(data)
-            })
-            .then((response)=>response.json())
-            .then((data)=>{
-                document.getElementById("change").innerText = data["message"]
-                // window.location.replace("create_price.html")
 
-            })
-            .catch((error)=>console.log(error))
-
-    });
-}
+    })
+    .catch(error => console.log('error:',error));
+    }
 

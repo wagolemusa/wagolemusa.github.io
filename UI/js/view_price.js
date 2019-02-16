@@ -5,6 +5,11 @@ let current_user = localStorage.getItem('current_user')
 let access_token = "Bearer " + token
 
 let url = route2+"/admin/v2/locations"
+// Set username on topnav
+function setUserName(){
+    document.getElementById('current-user').innerHTML = current_user;
+  }
+
 
 fetch("https://senditparcel.herokuapp.com/api/admin/v2/locations",{
     method: "GET",
