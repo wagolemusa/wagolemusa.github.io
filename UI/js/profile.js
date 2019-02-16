@@ -4,15 +4,17 @@ let token = localStorage.getItem('access_token')
 let current_user = localStorage.getItem('current_user')
 let access_token = "Bearer " + token
 
-if(!token){
-    window.location.replace("login.html");
+if (token === null) {
+    window.location.replace("login.html")
 }
 
-// Set username on topnav
-function userget(){
-    document.getElementById('current-user').innerHTML = current_user;
-  }
+if (data.message == 'Internal Server Error'){
+    window.location.replace("login.html")
+}
 
+function userget(){
+    document.getElementById('current_user').innerHTML = current_user
+}
 
 fetch("https://senditparcel.herokuapp.com/api/v2/profile",{
     method:"GET",

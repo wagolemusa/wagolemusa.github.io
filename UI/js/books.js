@@ -3,10 +3,17 @@ let current_user = localStorage.getItem('current_user')
 let access_token = "Bearer " + token
 
 
-// Set username on topnav
+if (token === null) {
+    window.location.replace("login.html")
+}
+
+if (data.message == 'Internal Server Error'){
+    window.location.replace("login.html")
+}
+
 function userget(){
-    document.getElementById('current-user').innerHTML = current_user;
-  }
+    document.getElementById('current_user').innerHTML = current_user
+}
 
 
 // Fetch sent data
@@ -21,7 +28,7 @@ fetch("https://senditparcel.herokuapp.com/api/v2/book",{
 .then((response) =>{
     response.json().then((book)=>{
         console.log(book)
-        if (data.message == 'Internal Server Error'){
+        if (book.message == 'Internal Server Error'){
             window.location.replace("login.html")
         }
 
@@ -68,7 +75,6 @@ fetch("https://senditparcel.herokuapp.com/api/v2/book",{
             <td>${book[sendt]["total"]}</td>
             <td>${book[sendt]["status"]}</td>
             <td>${book[sendt]["created_on"]}</td>
-            ]
             <td><button style="color: #ffffff; background-color:#00C851; font-size: 18px;  border: none;
             "id="myBtn5" value="edit" onclick="edit('${book[sendt]["book_id"]}','${book[sendt]["dates"]}','${book[sendt]["status"]}')">Postpond</button></td>
            `
