@@ -7,7 +7,7 @@ if(!token){
 }
 
 // Set username on topnav
-function setUserName(){
+function userget(){
     document.getElementById('current-user').innerHTML = current_user;
   }
 
