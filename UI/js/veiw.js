@@ -7,9 +7,7 @@ if (token === null) {
     window.location.replace("login.html")
 }
 
-if (data.message == 'Internal Server Error'){
-    window.location.replace("login.html")
-}
+
 
 function userget(){
     document.getElementById('current_user').innerHTML = current_user
@@ -27,6 +25,7 @@ fetch("https://senditparcel.herokuapp.com/api/v2/parcels",{
 .then((response) =>{
     response.json().then((data)=>{
         console.log(data)
+        
         if (data.message == 'Internal Server Error'){
             window.location.replace("login.html")
         }

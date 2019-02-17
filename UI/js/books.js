@@ -7,9 +7,6 @@ if (token === null) {
     window.location.replace("login.html")
 }
 
-if (data.message == 'Internal Server Error'){
-    window.location.replace("login.html")
-}
 
 function userget(){
     document.getElementById('current_user').innerHTML = current_user
