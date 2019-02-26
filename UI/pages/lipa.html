@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SendIT</title>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+<body >
+ <div class="top">
+<img src="../img/delivery.png">
+ <div class="dropdown">
+    <button class="dropbtn">Delivery Order Menu
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="new_delivery.html">New Delivery</a>
+      <a href="profile.html">Profile</a>
+      <a href="book.html">Bookings</a>
+
+      <a href="my_order.html">Delivery Orders</a>
+      <a href="history-delivery.html">Delivery Histories</a>
+      <hr/>
+			<a href="../../index.html">Logout</a>
+    </div>
+
+  </div>
+  <a id='current_user' style="color:chartreuse;font-size: 30px;"></a>
+
+  <a href="send.html">Send parcel</a>
+
+  </div>
+
+<div class="contianer">
+      <h3 id="reg"></h3>
+    <h1>Click on Lipa na mpesa and pay </h1>
+    
+  </br> 
+    <div id="showsearch"></div>
+</div>
+
+
+
+<div id="myModal4" class="modal4">
+
+  <!-- Modal content -->
+  <div class="modal-content4">
+      <div id="sendthis"></div>
+
+    <span class="close4">&times;</span>
+          <h1>Bookings </h1>
+          <h3 id="msge"></h3>
+          <h5 class="modalText" id = "bookingref"></h5><p class="modalText" id ="ref"></p>
+          <h5 class="modalText" id = "car_number"></h5><p class="modalText" id ="single"></p>
+          <h5 class="modalText" id = "from_location"></h5></h5><p class="modalText" id ="location"></p>
+          <h5 class="modalText" id = "to_location"></h5></h5><p class="modalText" id ="too"></p>
+          <h5 class="modalText" id = "price"></h5></h5><p class="modalText" id ="pessa"></p>
+          <h5 class="modalText" id = "quality"></h5></h5><p class="modalText" id ="qua"></p>
+          <h5 class="modalText" id = "dates"></h5></h5><p class="modalText" id ="calender"></p>
+          <h5 class="modalText" id = "total"></h5></h5><p class="modalText" id ="many"></p>
+
+      <div id="editor"></div>
+
+    </form>
+<br/>
+  </div>
+
+</div>
+<script>
+    var modal4 = document.getElementById('myModal4');
+    var btn4 = document.getElementById("myBtn4");
+    var span4 = document.getElementsByClassName("close4")[0];
+    btn4.onclick = function() {
+        modal4.style.display = "block";
+    }
+    span.onclick = function() {
+        modal2.style.display = "none";
+    }
+    window.onclick = function(event) {
+        if (event.target == modal4) {
+            modal4.style.display = "none";
+        }
+    }
+</script>
+
+
+<script src="../js/lipa.js"></script>
+<!-- <script src="../js/script.js"></script> -->
+
+</body>
+</html> 

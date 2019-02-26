@@ -58,9 +58,7 @@ fetch("https://senditparcel.herokuapp.com/api/admin/v2/locations",{
     response.json().then((collection)=>{ 
 
         console.log(collection)
-        if (data.message == 'Internal Server Error'){
-            window.location.replace("login.html")
-        }
+    
 
             collection = collection["collection"];
             let output = `

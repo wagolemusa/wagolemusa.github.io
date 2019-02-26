@@ -4,9 +4,9 @@ let token = localStorage.getItem('access_token')
 let current_user = localStorage.getItem('current_user')
 let access_token = "Bearer " + token
 
-if (token === null) {
-    window.location.replace("login.html")
-}
+// if (token === null) {
+//     window.location.replace("login.html")
+// }
 
 
 
@@ -100,6 +100,7 @@ function books(book_id, car_number, from_location, to_location, price){
     <textarea maxlength="20" rows ="2" cols = "38" name="from_location">${from_location}</textarea><br><br>
     <textarea maxlength="20" rows ="2" cols = "38" name="to_location">${to_location}</textarea><br><br>
     <textarea maxlength="20" rows ="2" cols = "38" name="price">${price}</textarea><br><br>
+
     <input type="number" maxlength="20" rows ="2" cols = "33" name="quality" placeholder="How many seats"><br><br>
     <input type="date" maxlength="20" rows ="2" cols = "33" name="dates" placeholder="Date"><br><br>
 
@@ -131,7 +132,7 @@ document.getElementById("search").addEventListener("click",
             .then((response)=>response.json())
             .then((data)=>{
                 document.getElementById("msge").innerText = data["message"]
-                // window.location.replace("create_price.html")
+                window.location.replace("lipa.html")
 
             })
             .catch((error)=>console.log(error))

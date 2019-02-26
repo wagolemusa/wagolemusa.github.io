@@ -12,15 +12,15 @@ if (token === null) {
     window.location.replace("login.html")
 }
 
-if (data.message == 'Internal Server Error'){
-    window.location.replace("login.html")
-}
+// if (data.message == 'Internal Server Error'){
+//     window.location.replace("login.html")
+// }
 
 function userget(){
     document.getElementById('current_user').innerHTML = current_user
 }
 
-document.getElementById("send").addEventListener("click",
+document.getElementById("submit").addEventListener("click",
 function fetchsend(event){
     event.preventDefault()
     let url = route +"/v2/parcels"
