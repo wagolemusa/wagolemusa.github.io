@@ -25,9 +25,9 @@ fetch("https://senditparcel.herokuapp.com/api/admin/v2/users",{
     response.json().then((all_users)=>{
         console.log(all_users)
         
-        if (data.message == 'Internal Server Error'){
-            window.location.replace("login.html")
-        }
+        // if (data.message == 'Internal Server Error'){
+        //     window.location.replace("login.html")
+        // }
     
 
         all_users = all_users["all_users"]
