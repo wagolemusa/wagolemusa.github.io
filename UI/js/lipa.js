@@ -59,10 +59,9 @@ fetch("https://senditparcel.herokuapp.com/api/admin/v2/bookings",{
             <td>${book[sendt]["price"]}</td>
             <td>${book[sendt]["quality"]}</td>
             <td>${book[sendt]["dates"]}</td>
-            <td>${book[sendt]["total"]}</td>
-            
+            <td>${book[sendt]["total"]}</td>            
             <td><button style="color: #ffffff; background-color:#00C851; font-size: 18px;  border: none;
-           "id="myBtn6" value="Edit" onclick="mpesa('${book[sendt]["payment_id"]}','${book[sendt]["bookingref"]}','${book[sendt]["car_number"]}',
+           "id="myBtn6" value="Edit" onclick="mpesa('${book[sendt]["book_id"]}','${book[sendt]["bookingref"]}','${book[sendt]["car_number"]}',
            '${book[sendt]["from_location"]}','${book[sendt]["to_location"]}','${book[sendt]["price"]}','${book[sendt]["quality"]}','${book[sendt]["dates"]}','${book[sendt]["total"]}')">Show</button></td>`;
         })
         document.getElementById("showsearch").innerHTML = output + `</table>`;
@@ -73,12 +72,13 @@ fetch("https://senditparcel.herokuapp.com/api/admin/v2/bookings",{
 })
 
 
+function mpesa(book_id, bookingref, car_number, from_location, to_location, price, quality, dates, total) {
 
-function mpesa(payment_id, bookingref, car_number, from_location, to_location, price, quality, dates, total) {
-    
     modal4.style.display="block";
-    document.getElementById("ref").innerHTML = "";
-    document.getElementById("bookingref").innerHTML ="";
+    document.getElementById("book").innerHTML = "";   
+    document.getElementById("book_id").innerText = "";
+    document.getElementById("ref").innerHTML = "";   
+    document.getElementById("bookingref").innerText = "";
     document.getElementById("single").innerText = "";
     document.getElementById("car_number").innerText = "";
     document.getElementById("location").innerHTML = "";
@@ -96,6 +96,7 @@ function mpesa(payment_id, bookingref, car_number, from_location, to_location, p
     document.getElementById("editor").innerHTML =`
 
     <form name="modify"><br><p id="id"></p><br>
+    <textarea maxlength="20" rows ="2" cols = "38" name="book_id">${book_id}</textarea><br><br>
     <textarea maxlength="20" rows ="2" cols = "38" name="bookingref">${bookingref}</textarea><br><br>
     <textarea maxlength="20" rows ="2" cols = "38" name="car_number">${car_number}</textarea><br><br>
     <textarea maxlength="20" rows ="2" cols = "38" name="from_location">${from_location}</textarea><br><br>
@@ -111,13 +112,15 @@ function mpesa(payment_id, bookingref, car_number, from_location, to_location, p
   </div>
 </div>
 `;
+
 document.getElementById("search").addEventListener("click",
     function modifyEntry(event){
         event.preventDefault();
         let url = "https://senditparcel.herokuapp.com/api/v2/lipa";
         // console.log(modify)
-            let  bookingref = document.forms["modify"]["bookingref"].value;
-            let  car_number = document.forms["modify"]["car_number"].value;
+            let book_id = document.forms["modify"]["book_id"].value;
+            let bookingref = document.forms["modify"]["bookingref"].value;
+            let car_number = document.forms["modify"]["car_number"].value;
             let from_location = document.forms["modify"]["from_location"].value;
             let to_location = document.forms["modify"]["to_location"].value;
             let price = document.forms["modify"]["price"].value;
@@ -126,7 +129,7 @@ document.getElementById("search").addEventListener("click",
             let amount = total
             let phone = document.forms["modify"]["phone"].value;
 
-            let data = {bookingref:bookingref,car_number:car_number, from_location:from_location, to_location:to_location, price:price, quality:quality,dates:dates, total:total, amount:amount, phone:phone}
+            let data = {book_id:book_id,bookingref:bookingref,car_number:car_number, from_location:from_location, to_location:to_location, price:price, quality:quality,dates:dates, total:total, amount:amount, phone:phone}
             console.log(data)
             fetch(url, {
                 method:"POST", headers: {"Contant-Type":"application/json","Authorization":access_token},

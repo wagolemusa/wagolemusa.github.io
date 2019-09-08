@@ -19,26 +19,78 @@
   <link href="../css/style.css" rel="stylesheet">
 </head>
 <body>
-<div class="top">
-<img src="../img/delivery.png">
-  	<a href="login.html">Login</a>
-  	<a href="register.html">Register</a>
-          <a href="../../index.html">Home</a>  
+  
+  <nav class="navbar navbar-expand-lg navbar-dark primary-color">
+    <a class="navbar-brand" href="#">
+       <img src="../img/delivery.png">
+    </a>
+  
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+      aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="basicExampleNav">
+  
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="../../index.html">Home
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Stations</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Pricing</a>
+        </li>
+ 
+    
+  
+      </ul>
+      <!-- Links -->
+  
+      <form class="form-inline">
+       
+          <a class="nav-link" href="login.html">Login</a>
+          <a class="nav-link" href="register.html">Register</a>
+ 
+ 
+      </form> 
+    </div>
+    <!-- Collapsible content -->
+  
+  </nav>
+  <!--/.Navbar-->
+ <br/>
+<div class="card">
 
-</div>
-<div class="outer">
+    <h5 class="card-header info-color white-text text-center py-4">
+        <strong>Create Account</strong>
+    </h5>
+  <div class="card-body px-lg-5 pt-0">
 
-<h2 style="text-align: center; font-size: 25px;">Create Account</h2>
 <h2 id="reg"></h2>
 <form name="register" id="regform">
-  <input type="text" name="first_name" placeholder="Firstname" required>
-  <input type="text" name="last_name" placeholder="Lastname" required>
-  <input type="text" name="username" placeholder="Username" required>
-  <input type="number" name= phone placeholder="Phone Number" required>
-  <input type="email" name="email" placeholder="Email" required>
-  <input type="password" name="password" placeholder="Password" required>
-  <input type="password" name="confirm_password" placeholder="Re Password" required>
-  <button name="submit" id="submit">Register</button> 
+
+        <input type="text" name="first_name" id="defaultContactFormName" class="form-control mb-4" placeholder="First Name">
+       
+        <input type="text" name="last_name" id="defaultContactFormName" class="form-control mb-4" placeholder="Last Name">
+
+    
+        <input type="text" name="username" id="defaultContactFormEmail" class="form-control mb-4" placeholder="Username">
+
+        <input type="number" name="phone" id="defaultContactFormEmail" class="form-control mb-4" placeholder="Phone Number">
+
+        <input type="email" name="email" id="defaultContactFormEmail" class="form-control mb-4" placeholder="Email">
+
+   
+        <input type="password" name="password" id="defaultContactFormEmail" class="form-control mb-4" placeholder="Password">
+
+
+        <input type="password" name="confirm_password" id="defaultContactFormEmail" class="form-control mb-4" placeholder="Confirm Password">
+
+
+  <button name="submit" id="submit" class="btn btn-info btn-block my-4">Register</button> 
   <a href="login.html">Already a member ? Sign In..</a>
     <br/>
   <br/>
@@ -46,5 +98,15 @@
 </form>
 </div>
 <script src="../js/home.js"></script>
+
+<!-- JQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.7/js/mdb.min.js"></script>
+
 </body>
 </html> 

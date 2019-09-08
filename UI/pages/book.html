@@ -1,7 +1,6 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -19,31 +18,58 @@
   <link href="../css/style.css" rel="stylesheet">
 </head>
 <body onload="userget()">
- <div class="top">
-<img src="../img/delivery.png">
+    <nav class="navbar navbar-expand-lg navbar-dark primary-color">
+        <a class="navbar-brand" href="#">
+            <img src="../img/delivery.png">
+         </a>
+       
+    
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+        aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="basicExampleNav">
+    
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="dashboard.html">Dashboard
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="search.html">Book</a>
+  
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="send.html">Send parcels</a>
+            </li>
+    
+          <!-- Dropdown -->
+    
+    
+        </ul>
+        <!-- Links -->
+        <a id='current_user' style="color:chartreuse;font-size: 30px;"></a>
 
- <div class="dropdown">
-    <button class="dropbtn">Delivery Order Menu
-      <i class="fa fa-caret-down"></i>
-    </button>
-     <div class="dropdown-content">
-      <a href="new_delivery.html">New Delivery</a>
-      <a href="profile.html">Profile</a>
-      <a href="book.html">Bookings</a>
-      <a href="my_order.html">Delivery Orders</a>
-      <a href="history-delivery.html">Delivery Histories</a>
-      <hr/>
-      <a href="../../index.html">Logout</a>
-    </div>
-  </div>
-  <a id='current_user' style="color:chartreuse;     font-size: 30px;"></a>
-
-    <a href="delivery_price.html">Prices</a>
-    <a href="send.html">Send Parcel</a>
-
-
-</div>
-<br/><br/>
+        <div class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">MY MENU</a>
+            <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="book.html">Bookings</a>
+              <a class="dropdown-item" href="my_order.html">Delivery Orders</a>
+              <a class="dropdown-item" href="history-delivery.html">Delivery Histories</a>
+              <a class="dropdown-item" href="payments.html">Payments</a>
+              <a class="dropdown-item" href="profile.html">Profile</a>
+              <a class="dropdown-item" href="#">Logout</a>
+  
+  
+            </div>
+          </div>
+      <!-- Collapsible content -->
+    
+    </nav>
+    <!--/.Navbar-->
 <div class="contianer">
 <a href="new_delivery.html">My bookings</a>
 <br/><br/>
@@ -93,6 +119,15 @@
 </script>
 <!-- <script src="../js/script.js"></script> -->
 <script src="../js/books.js"></script>
+<!-- JQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.7/js/mdb.min.js"></script>
+
 
 </body>
 </html> 

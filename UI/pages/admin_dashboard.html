@@ -7,49 +7,67 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
 	<title>SendIT</title>
-  <!-- Font Awesome -->
-  <link rel="stylesheet" type="text/css" href="../css/style.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
 
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-  <!-- Bootstrap core CSS -->
-  <link href="../css/bootstrap.min.css" rel="stylesheet">
-  <!-- Material Design Bootstrap -->
-  <link href="../css/mdb.min.css" rel="stylesheet">
-  <!-- Your custom styles (optional) -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.7/css/mdb.min.css" rel="stylesheet">
   <link href="../css/style.css" rel="stylesheet">
 </head>
-<body onload="fetchnumbers()">
-<div class="top">
-<img src="../img/delivery.png">
- <div class="dropdown">
-    <button class="dropbtn">Admin: Wagole wise
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content">
-      <a href="#">Profile</a>
 
-      <hr/>
-			<a href="../../index.html">Logout</a>
+<nav class="navbar navbar-expand-lg navbar-dark warning-color-dark static-top font-weight-bold">
+  <a class="navbar-brand" href="#">
+      <img src="../img/delivery.png">
+   </a>
+ 
+
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+  aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="basicExampleNav">
+
+  <ul class="navbar-nav mr-auto">
+
+
+
+
+  </ul>
+  <!-- Links -->
+  <a id='current_user' style="color:chartreuse;font-size: 30px;"></a>
+
+  <i class="fab fa-btc"></i>&nbsp;&nbsp; <a href="today_clients.html">Clients</a>  &nbsp;&nbsp;&nbsp;&nbsp;
+  <i class="fab fa-btc"></i>&nbsp;&nbsp; <a href="desk.html">Desk Customers</a>  &nbsp;&nbsp;&nbsp;&nbsp;
+
+  <i class="far fa-calendar-plus"></i>&nbsp;&nbsp; <a href="create_price.html">Create Price</a>  &nbsp;&nbsp;&nbsp;&nbsp;
+  <i class="fab fa-btc"></i>&nbsp;&nbsp; <a href="bookingcustomer.html"> Bookings Passengers</a>  &nbsp;&nbsp;&nbsp;&nbsp;
+
+  <i class="fas fa-sign-out-alt"></i> &nbsp;&nbsp;<a href="#">Logout</a>  
+
     </div>
+<!-- Collapsible content -->
 
-  </div>
-  </div>
+</nav>
+<!--/.Navbar-->
+
+
+
+
+
+<nav class="navbar1 navbar-expand navbar-dark white static-top font-weight-bold">
+  <i class="fas fa-search-dollar"></i><a href="bookers.html">Search Passengers</a>&nbsp;&nbsp; 
+  <i class="fab fa-searchengin"></i><a href="dates.html">Search By Date</a>&nbsp;&nbsp; 
+  <i class="fas fa-dollar-sign"></i><a href="payment_admin.html">Payments</a>&nbsp;&nbsp; 
+  <i class="fab fa-galactic-senate"></i><a href="intransit.html">Parcels Details</a>&nbsp;&nbsp; 
+
+  <i class="fas fa-biohazard"></i><a href="charts.html">Analıysıs</a>&nbsp;&nbsp; 
+  <i class="fas fa-sms"></i><a href="sms.html">SMS</a>&nbsp;&nbsp; 
+  </nav>
+<body onload="fetchnumbers()">
 <br/>
 
- <div class="sidenav">
-  <a href="create_price.html">Create Prices</a><br/>
-  <a href="all_users.html">All Users</a><br/>
-  <a href="bookers.html">Search Bookers</a>
-  <a href="dates.html">Day's books</a>
-  <a href="delivery_orders.html">Delivery Orders</a><br/>
-  <a href="history_orders.html">Bookings Orders</a><br/>
-  <a href="payment_admin.html">Payments</a>
-  <a href="intransit.html">InTransit</a><br/>
-  <a href="delivered.html">Delivered</a><br/>
-  <a href="canlced.html">Canceled</a><br/>
-</div>
 
-<div class="main">
 <h3 style="color: #999;
 ">Admin Dashboard</h3> 
   <div class="row">
@@ -81,3 +99,11 @@
 </html> 
 
 <script src="../js/number.js"></script>
+<!-- JQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.7/js/mdb.min.js"></script>

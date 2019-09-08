@@ -19,37 +19,101 @@
   <link href="../css/style.css" rel="stylesheet">
 </head>
 <body>
-<div class="top">
-<img src="../img/delivery.png">
-  <a href="login.html">Login</a>
-  <a href="register.html">Register</a>
-  <a href="../../index.html">Home</a>  
 
-  </div> 
-<div class="outer">
 
-<h2 style="text-align: center; font-size: 25px;">Login</h2><br/>
+  <nav class="navbar navbar-expand-lg navbar-dark primary-color">
+    <a class="navbar-brand" href="#">
+       <img src="../img/delivery.png">
+    </a>
+  
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+      aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="basicExampleNav">
+  
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="../../index.html">Home
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Stations</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Pricing</a>
+        </li>
+ 
+    
+  
+      </ul>
+      <!-- Links -->
+  
+      <form class="form-inline">
+       
+          <a class="nav-link" href="login.html">Login</a>
+          <a class="nav-link" href="register.html">Register</a>
+ 
+ 
+      </form> 
+    </div>
+    <!-- Collapsible content -->
+  
+  </nav>
+  <!--/.Navbar-->
+  <br/>
+
+  <div class="card">
+      <h5 class="card-header info-color white-text text-center py-4">
+          <strong>Login</strong>
+      </h5>
+  <div class="card-body px-lg-5 pt-0">
 <h4 id="loginMsg"></h4>
 
 <input type='checkbox' id='form-switch'>
 
 <form name="login" id="loginform">
-  <input type="text" name="username" placeholder="Username" required>
-  <input type="password" name="password" placeholder="Password" required>
-  <button type='submit' id="submit">Login</button>
+      <input type="text"  name="username" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="Username">
 
-  <label for='form-switch' style="color: #0099CC; padding-left: 50px;"><span>Forget Password</span></label><br/><br/>
-    <a href="register.html">Don't have an account? Sign up</a>
-</form>
+      <input type="password"  name="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Password">
 
-
-<form id='register-form' action="" method='post'>
-  <input type="email" placeholder="Email" required>
-  <button type='submit'>Send</button>
  
-</form>
+
+<div class="d-flex justify-content-around">
+    <div>
+        <!-- Remember me -->
+        <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="defaultLoginFormRemember">
+            <label class="custom-control-label" for="defaultLoginFormRemember">Remember me</label>
+        </div>
+    </div>
+    <div>
+        <!-- Forgot password -->
+        <a href="">Forgot password?</a>
+    </div>
 </div>
+
+<button type='submit' id="submit"class="btn btn-info btn-block my-4">Login</button>
+
+</form>
+<a href="register.html">Don't have an account? Sign up</a>
+
+
+</div>
+</div>
+
+
 <script src="../js/login.js"></script>
+<!-- JQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.7/js/mdb.min.js"></script>
+
 
 </body>
 </html> 

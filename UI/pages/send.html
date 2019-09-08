@@ -1,7 +1,6 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -18,159 +17,197 @@
   <!-- Your custom styles (optional) -->
   <link href="../css/style.css" rel="stylesheet">
 </head>
-	<title>SendIT</title>
-	<link rel="stylesheet" type="text/css" href="../css/style.css">
-</head>
 <body onload="userget()">
-   <div class="top">
-<img src="../img/delivery.png">
- <div class="dropdown">
-    <button class="dropbtn">Delivery Order Menu
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content">
-      <a href="new_delivery.html">New Delivery</a>
-      <a href="profile.html">Profile</a>
-      <a href="book.html">Bookings</a>
-      <a href="my_order.html">Delivery Orders</a>
-      <a href="history-delivery.html">Delivery Histories</a>
-      <hr/>
-			<a href="../../index.html">Logout</a>
-    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark primary-color">
+        <a class="navbar-brand" href="#">
+            <img src="../img/delivery.png">
+         </a>
+       
+    
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+        aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="basicExampleNav">
+    
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="dashboard.html">Dashboard
+            </a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="search.html">Book</a>
+  
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="send.html">Send parcels</a>
+            </li>
+    
+          <!-- Dropdown -->
+    
+    
+        </ul>
+        <!-- Links -->
+        <a id='current_user' style="color:chartreuse;font-size: 30px;"></a>
 
-  </div>
-  <a id='current_user' style="color:chartreuse; font-size: 30px;"></a>
+        <div class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">MY MENU</a>
+            <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="book.html">Bookings</a>
+              <a class="dropdown-item" href="my_order.html">Delivery Orders</a>
+              <a class="dropdown-item" href="history-delivery.html">Delivery Histories</a>
+              <a class="dropdown-item" href="payments.html">Payments</a>
+              <a class="dropdown-item" href="profile.html">Profile</a>
+              <a class="dropdown-item" href="#">Logout</a>
+  
+  
+            </div>
+          </div>
+      <!-- Collapsible content -->
+    
+    </nav>
+    <!--/.Navbar-->
 
-  <a href="send.html">Send parcel</a>
-  <a href="search.html">Book</a>
-
-
-  </div>
-
-<div class="contianer">
-  <div class="new_delivery1">
+    <div class="container">
+        <div class="row">
+      <div class="col-lg-8">
+        <div class="card1">
       <h3 id="errors"></h3>
     <h1>Send parcels</h1>
     <form name="sendit" id="submit">
-      <input type="text" name="title" placeholder="Title" required>
-      <input list="hosting" type="text" name="pickup" placeholder="Pickup" required>
-      <input type="text" name="rec_id" placeholder="Receiver ID" required>
-      <input type="number" name="rec_phone" placeholder="Receiver Phone Number" required>
-      <input type="text" name="rec_name" placeholder="Receiver Name" required>
-      <input list="hosting" type="text" name="destination" placeholder="Destination" required>
-      <input type="number" name="weight" placeholder="Weight" required>
-      <button type='submit' id="submit">Send IT</button>
+      <input type="text" name="title" class="form-control form-control-lg" type="text" placeholder="Parcel Name">
+      <input list="hosting" type="text" name="pickup" class="form-control form-control-lg" type="text" placeholder="Pickup" required>
+      <input type="text" name="rec_id" class="form-control form-control-lg" type="text" placeholder="Receiver ID" required>
+      <input type="number" name="rec_phone" class="form-control form-control-lg" type="text" placeholder="Receiver Phone Number" required>
+      <input type="text" name="rec_name" class="form-control form-control-lg" type="text" placeholder="Receiver Name" required>
+      <input list="hosting" type="text" name="destination" class="form-control form-control-lg" type="text" placeholder="Destination" required>
+      <input type="number" name="weight" class="form-control form-control-lg" type="text" placeholder="Weight" required>
+      <button type='submit' id="submit" class="btn btn-info">Send IT</button>
 
       <datalist id="hosting">
-        <option value="Nairobi" />
-        <option value="Mombasa"/>
-        <option value="Kisumu" />
-        <option value="Nakuru" />
-        <option value="Eldoret" />
-        <option value="Kehancha"/>
-        <option value="Ruiru" />
-        <option value="Kikuyu" />
-        <option value="Kangundo-Tala" />
-        <option value="Malindi" />
-        <option value="Naivasha" />
-        <option value="Kitui"/>
-        <option value="Machakos" />
-        <option value="Thika" />
-        <option value="Athi River"/>
-        <option value="Karuri" />
-        <option value="Nyeri"/>
-        <option value="Kilifi"/>
-        <option value="Garissa" />
-        <option value="Vihiga" />
-        <option value="Mumias" />
-        <option value="Bomet"/>
-        <option value="Molo"/>
-        <option value="Ngong"/>
-        <option value="Kitale"/>
-        <option value="Litein"/>
-        <option value="Limuru"/>
-        <option value="Kericho"/>
-        <option value="Kimilili"/>
-        <option value="Awasi"/>
-        <option value="Kakamega"/>
-        <option value="Kapsabet"/>
-        <option value="Mariakani"/>
-        <option value="Kiambu"/>
-        <option value="Mandera"/>
-        <option value="Nyamira"/>
-        <option value="Mwingi"/>
-        <option value="Kisii"/>
-        <option value="Wajir"/>
-        <option value="Rongo"/>
-        <option value="Bungoma"/>
-        <option value="Ahero"/>
-        <option value="Nandi Hills"/>
-        <option value="Makuyu"/>
-        <option value="Kapenguria"/>
-        <option value="Taveta"/>
-        <option value="Narok"/>
-        <option value="Ol Kalou"/>
-        <option value="Kakuma"/>
-        <option value="Webuye"/>
-        <option value="Malaba"/>
-        <option value="Mbita Point"/>
-        <option value="Ukunda"/>
-        <option value="Wundanyi"/>
-        <option value="Busia"/>
-        <option value="Runyenjes"/>
-        <option value="Migori"/>
-        <option value="Malava"/>
-        <option value="Suneka"/>
-        <option value="Embu"/>
-        <option value="Ogembo"/>
-        <option value="Homa Bay"/>
-        <option value="Lodwar"/>
-        <option value="Kitengela"/>
-        <option value="Ukwala"/>
-        <option value="Keroka"/>
-        <option value="Meru"/>
-        <option value="Matuu"/>
-        <option value="Oyugis"/>
-        <option value="Nyahururu"/>
-        <option value="Kipkelion"/>
-        <option value="Luanda"/>
-        <option value="Nanyuki"/>
-        <option value="Maua"/>
-        <option value="Mtwapa"/>
-        <option value="Isiolo"/>
-        <option value="Eldama Ravine"/>
-        <option value="Voi"/>
-        <option value="Siaya"/>
-        <option value="Nyansiongo"/>
-        <option value="Londiani"/>
-        <option value="Iten/Tambach"/>
-        <option value="Chuka"/>
-        <option value="Malakisi"/>
-        <option value="Juja"/>
-        <option value="Ongata Rongai"/>
-        <option value="Bondo"/>
-        <option value="Moyale"/>
-        <option value="Maralal"/>
-        <option value="Gilgil"/>
-        <option value="Nambale"/>
-        <option value="Tabaka"/>
-        <option value="Muhoroni"/>
-        <option value="Kerugoya/Kutus"/>
-        <option value="Ugunja"/>
-        <option value="Yala"/>
-        <option value="Rumuruti"/>
-        <option value="Burnt Forest"/>
-        <option value="Maragua"/>
-        <option value="Kendu Bay"/>
+        <option value="nairobi" />
+        <option value="mombasa"/>
+        <option value="kisumu" />
+        <option value="nakuru" />
+        <option value="eldoret" />
+        <option value="kehancha"/>
+        <option value="ruiru" />
+        <option value="kikuyu" />
+        <option value="kangundo-Tala" />
+        <option value="malindi" />
+        <option value="naivasha" />
+        <option value="kitui"/>
+        <option value=machakos" />
+        <option value="thika" />
+        <option value="athi River"/>
+        <option value="karuri" />
+        <option value="nyeri"/>
+        <option value="kilifi"/>
+        <option value="garissa" />
+        <option value="vihiga" />
+        <option value="mumias" />
+        <option value="bomet"/>
+        <option value="molo"/>
+        <option value="ngong"/>
+        <option value="kitale"/>
+        <option value="litein"/>
+        <option value="limuru"/>
+        <option value="lericho"/>
+        <option value="kimilili"/>
+        <option value="awasi"/>
+        <option value="kakamega"/>
+        <option value="kapsabet"/>
+        <option value="mariakani"/>
+        <option value="kiambu"/>
+        <option value="mandera"/>
+        <option value="nyamira"/>
+        <option value="mwingi"/>
+        <option value="kisii"/>
+        <option value="wajir"/>
+        <option value="rongo"/>
+        <option value="bungoma"/>
+        <option value="ahero"/>
+        <option value="nandi Hills"/>
+        <option value="makuyu"/>
+        <option value="kapenguria"/>
+        <option value="taveta"/>
+        <option value="narok"/>
+        <option value="olKalou"/>
+        <option value="kakuma"/>
+        <option value="webuye"/>
+        <option value="malaba"/>
+        <option value="mbita Point"/>
+        <option value="ukunda"/>
+        <option value="wundanyi"/>
+        <option value="busia"/>
+        <option value="runyenjes"/>
+        <option value="migori"/>
+        <option value="malava"/>
+        <option value="suneka"/>
+        <option value="embu"/>
+        <option value="ogembo"/>
+        <option value="homa Bay"/>
+        <option value="lodwar"/>
+        <option value="kitengela"/>
+        <option value="ukwala"/>
+        <option value="keroka"/>
+        <option value="meru"/>
+        <option value="matuu"/>
+        <option value="oyugis"/>
+        <option value="nyahururu"/>
+        <option value="kipkelion"/>
+        <option value="luanda"/>
+        <option value="nanyuki"/>
+        <option value="maua"/>
+        <option value="mtwapa"/>
+        <option value="isiolo"/>
+        <option value="eldama Ravine"/>
+        <option value="voi"/>
+        <option value="siaya"/>
+        <option value="nyansiongo"/>
+        <option value="londiani"/>
+        <option value="iten/Tambach"/>
+        <option value="chuka"/>
+        <option value="malakisi"/>
+        <option value="juja"/>
+        <option value="ongata Rongai"/>
+        <option value="bondo"/>
+        <option value="moyale"/>
+        <option value="maralal"/>
+        <option value="gilgil"/>
+        <option value="nambale"/>
+        <option value="tabaka"/>
+        <option value="muhoroni"/>
+        <option value="kerugoya/Kutus"/>
+        <option value="ugunja"/>
+        <option value="yala"/>
+        <option value="rumuruti"/>
+        <option value="burnt Forest"/>
+        <option value="maragua"/>
+        <option value="kendu Bay"/>
     </datalist>
     </form>
-
   </div>
+      </div>
+<div class="col col-md-4">
+  <h1>wise refuge</h1>
+</div>
+</div>
 </div>
 
-</div>
+</body>
+
 <script src="../js/send_parcel.js"></script>
 
-  <iframe src="https://www.google.com/maps/d/embed?mid=1OuXI5fmsHUdCNT4j2QMapfT5tELUAklj" width="1300" height="770"></iframe>
-</body>
+<!-- JQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.7/js/mdb.min.js"></script>
+
 </html> 

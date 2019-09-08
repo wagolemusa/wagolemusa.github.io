@@ -7,35 +7,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
 	<title>SendIT</title>
-  <!-- Font Awesome -->
-  <link rel="stylesheet" type="text/css" href="../css/style.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
 
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-  <!-- Bootstrap core CSS -->
-  <link href="../css/bootstrap.min.css" rel="stylesheet">
-  <!-- Material Design Bootstrap -->
-  <link href="../css/mdb.min.css" rel="stylesheet">
-  <!-- Your custom styles (optional) -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.7/css/mdb.min.css" rel="stylesheet">
   <link href="../css/style.css" rel="stylesheet">
 </head>
-<body>
-<div class="top">
-<img src="../img/delivery.png">
- <div class="dropdown">
-    <button class="dropbtn">Admin: Wagole wise
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content">
-      <a href="#">Profile</a>
-    
-      <hr/>
-			<a href="../../index.html">Logout</a>
+
+<nav class="navbar navbar-expand-lg navbar-dark warning-color-dark static-top font-weight-bold">
+  <a class="navbar-brand" href="#">
+      <img src="../img/delivery.png">
+   </a>
+ 
+
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+  aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="basicExampleNav">
+
+  <ul class="navbar-nav mr-auto">
+
+  </ul>
+  <!-- Links -->
+  <a id='current_user' style="color:chartreuse;font-size: 30px;"></a>
+
+  
+  <i class="fab fa-btc"></i>&nbsp;&nbsp; <a href="admin_dashboard.html">DASHBOARD</a>  &nbsp;&nbsp;&nbsp;&nbsp;
+
+  <i class="fas fa-sign-out-alt"></i> &nbsp;&nbsp;<a href="#">Logout</a>  
+
     </div>
+<!-- Collapsible content -->
 
-  </div>
-        <a href="admin_dashboard.html">Back To Admin</a>
-
-  </div>
+</nav>
+<!--/.Navbar-->
 
 
 <div class="contianer">
@@ -81,13 +89,18 @@
 
 </div>
 
-
-
-
 <script src="../js/payment_admin.js"></script>
 <script src="../js/print.min.js"></script>
 
-<!-- <script src="../js/script.js"></script> -->
+<!-- JQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.7/js/mdb.min.js"></script>
 
 </body>
-</html> 
+
+</html>

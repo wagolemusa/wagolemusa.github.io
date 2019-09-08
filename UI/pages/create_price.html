@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,38 +6,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
 	<title>SendIT</title>
-  <!-- Font Awesome -->
-  <link rel="stylesheet" type="text/css" href="../css/style.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
 
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-  <!-- Bootstrap core CSS -->
-  <link href="../css/bootstrap.min.css" rel="stylesheet">
-  <!-- Material Design Bootstrap -->
-  <link href="../css/mdb.min.css" rel="stylesheet">
-  <!-- Your custom styles (optional) -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.7/css/mdb.min.css" rel="stylesheet">
   <link href="../css/style.css" rel="stylesheet">
 </head>
-<body>
-<div class="top">
-<img src="../img/delivery.png">
- <div class="dropdown">
-    <button class="dropbtn">Admin: Wagole wise
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content">
+
+<nav class="navbar navbar-expand-lg navbar-dark warning-color-dark static-top font-weight-bold">
+  <a class="navbar-brand" href="#">
+      <img src="../img/delivery.png">
+   </a>
+ 
+
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+  aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="basicExampleNav">
+
+  <ul class="navbar-nav mr-auto">
+
+  </ul>
+  <!-- Links -->
+  <a id='current_user' style="color:chartreuse;font-size: 30px;"></a>
+
   
-      <a href="#">Profile</a>
-  
-      <hr/>
-			<a href="../../index.html">Logout</a>
+  <i class="fab fa-btc"></i>&nbsp;&nbsp; <a href="admin_dashboard.html">DASHBOARD</a>  &nbsp;&nbsp;&nbsp;&nbsp;
+
+  <i class="fas fa-sign-out-alt"></i> &nbsp;&nbsp;<a href="#">Logout</a>  
+
     </div>
+<!-- Collapsible content -->
 
-  </div>
-        <a href="admin_dashboard.html">Back To Admin</a>
+</nav>
+<!--/.Navbar-->
 
-  </div>
-
-<br/>
 
 <div class="contianer">
       
@@ -70,107 +75,107 @@
       <input type="number" name="price" placeholder="price" required>
       <input type="time" name="day_time" required>
       <datalist id="hosting">
-        <option value="Nairobi" />
-        <option value="Mombasa"/>
-        <option value="Kisumu" />
-        <option value="Nakuru" />
-        <option value="Eldoret" />
-        <option value="Kehancha"/>
-        <option value="Ruiru" />
-        <option value="Kikuyu" />
-        <option value="Kangundo-Tala" />
-        <option value="Malindi" />
-        <option value="Naivasha" />
-        <option value="Kitui"/>
-        <option value="Machakos" />
-        <option value="Thika" />
-        <option value="Athi River"/>
-        <option value="Karuri" />
-        <option value="Nyeri"/>
-        <option value="Kilifi"/>
-        <option value="Garissa" />
-        <option value="Vihiga" />
-        <option value="Mumias" />
-        <option value="Bomet"/>
-        <option value="Molo"/>
-        <option value="Ngong"/>
-        <option value="Kitale"/>
-        <option value="Litein"/>
-        <option value="Limuru"/>
-        <option value="Kericho"/>
-        <option value="Kimilili"/>
-        <option value="Awasi"/>
-        <option value="Kakamega"/>
-        <option value="Kapsabet"/>
-        <option value="Mariakani"/>
-        <option value="Kiambu"/>
-        <option value="Mandera"/>
-        <option value="Nyamira"/>
-        <option value="Mwingi"/>
-        <option value="Kisii"/>
-        <option value="Wajir"/>
-        <option value="Rongo"/>
-        <option value="Bungoma"/>
-        <option value="Ahero"/>
-        <option value="Nandi Hills"/>
-        <option value="Makuyu"/>
-        <option value="Kapenguria"/>
-        <option value="Taveta"/>
-        <option value="Narok"/>
-        <option value="Ol Kalou"/>
-        <option value="Kakuma"/>
-        <option value="Webuye"/>
-        <option value="Malaba"/>
-        <option value="Mbita Point"/>
-        <option value="Ukunda"/>
-        <option value="Wundanyi"/>
-        <option value="Busia"/>
-        <option value="Runyenjes"/>
-        <option value="Migori"/>
-        <option value="Malava"/>
-        <option value="Suneka"/>
-        <option value="Embu"/>
-        <option value="Ogembo"/>
-        <option value="Homa Bay"/>
-        <option value="Lodwar"/>
-        <option value="Kitengela"/>
-        <option value="Ukwala"/>
-        <option value="Keroka"/>
-        <option value="Meru"/>
-        <option value="Matuu"/>
-        <option value="Oyugis"/>
-        <option value="Nyahururu"/>
-        <option value="Kipkelion"/>
-        <option value="Luanda"/>
-        <option value="Nanyuki"/>
-        <option value="Maua"/>
-        <option value="Mtwapa"/>
-        <option value="Isiolo"/>
-        <option value="Eldama Ravine"/>
-        <option value="Voi"/>
-        <option value="Siaya"/>
-        <option value="Nyansiongo"/>
-        <option value="Londiani"/>
-        <option value="Iten/Tambach"/>
-        <option value="Chuka"/>
-        <option value="Malakisi"/>
-        <option value="Juja"/>
-        <option value="Ongata Rongai"/>
-        <option value="Bondo"/>
-        <option value="Moyale"/>
-        <option value="Maralal"/>
-        <option value="Gilgil"/>
-        <option value="Nambale"/>
-        <option value="Tabaka"/>
-        <option value="Muhoroni"/>
-        <option value="Kerugoya/Kutus"/>
-        <option value="Ugunja"/>
-        <option value="Yala"/>
-        <option value="Rumuruti"/>
-        <option value="Burnt Forest"/>
-        <option value="Maragua"/>
-        <option value="Kendu Bay"/>
-    </datalist>
+          <option value="nairobi" />
+          <option value="mombasa"/>
+          <option value="kisumu" />
+          <option value="nakuru" />
+          <option value="eldoret" />
+          <option value="kehancha"/>
+          <option value="ruiru" />
+          <option value="kikuyu" />
+          <option value="kangundo-Tala" />
+          <option value="malindi" />
+          <option value="naivasha" />
+          <option value="kitui"/>
+          <option value=machakos" />
+          <option value="thika" />
+          <option value="athi River"/>
+          <option value="karuri" />
+          <option value="nyeri"/>
+          <option value="kilifi"/>
+          <option value="garissa" />
+          <option value="vihiga" />
+          <option value="mumias" />
+          <option value="bomet"/>
+          <option value="molo"/>
+          <option value="ngong"/>
+          <option value="kitale"/>
+          <option value="litein"/>
+          <option value="limuru"/>
+          <option value="lericho"/>
+          <option value="kimilili"/>
+          <option value="awasi"/>
+          <option value="kakamega"/>
+          <option value="kapsabet"/>
+          <option value="mariakani"/>
+          <option value="kiambu"/>
+          <option value="mandera"/>
+          <option value="nyamira"/>
+          <option value="mwingi"/>
+          <option value="kisii"/>
+          <option value="wajir"/>
+          <option value="rongo"/>
+          <option value="bungoma"/>
+          <option value="ahero"/>
+          <option value="nandi Hills"/>
+          <option value="makuyu"/>
+          <option value="kapenguria"/>
+          <option value="taveta"/>
+          <option value="narok"/>
+          <option value="olKalou"/>
+          <option value="kakuma"/>
+          <option value="webuye"/>
+          <option value="malaba"/>
+          <option value="mbita Point"/>
+          <option value="ukunda"/>
+          <option value="wundanyi"/>
+          <option value="busia"/>
+          <option value="runyenjes"/>
+          <option value="migori"/>
+          <option value="malava"/>
+          <option value="suneka"/>
+          <option value="embu"/>
+          <option value="ogembo"/>
+          <option value="homa Bay"/>
+          <option value="lodwar"/>
+          <option value="kitengela"/>
+          <option value="ukwala"/>
+          <option value="keroka"/>
+          <option value="meru"/>
+          <option value="matuu"/>
+          <option value="oyugis"/>
+          <option value="nyahururu"/>
+          <option value="kipkelion"/>
+          <option value="luanda"/>
+          <option value="nanyuki"/>
+          <option value="maua"/>
+          <option value="mtwapa"/>
+          <option value="isiolo"/>
+          <option value="eldama Ravine"/>
+          <option value="voi"/>
+          <option value="siaya"/>
+          <option value="nyansiongo"/>
+          <option value="londiani"/>
+          <option value="iten/Tambach"/>
+          <option value="chuka"/>
+          <option value="malakisi"/>
+          <option value="juja"/>
+          <option value="ongata Rongai"/>
+          <option value="bondo"/>
+          <option value="moyale"/>
+          <option value="maralal"/>
+          <option value="gilgil"/>
+          <option value="nambale"/>
+          <option value="tabaka"/>
+          <option value="muhoroni"/>
+          <option value="kerugoya/Kutus"/>
+          <option value="ugunja"/>
+          <option value="yala"/>
+          <option value="rumuruti"/>
+          <option value="burnt Forest"/>
+          <option value="maragua"/>
+          <option value="kendu Bay"/>
+      </datalist>
       <button type='submit' id="prices">Create price</button>
     </form>
 <br/>
@@ -214,5 +219,15 @@ window.onclick = function(event) {
 
 <script src="../js/script.js"></script>
 <script src="../js/create_price.js"></script>
+<!-- JQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.7/js/mdb.min.js"></script>
+
 </body>
-</html> 
+
+</html>

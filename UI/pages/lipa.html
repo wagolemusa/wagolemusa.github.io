@@ -1,7 +1,6 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -18,30 +17,58 @@
   <!-- Your custom styles (optional) -->
   <link href="../css/style.css" rel="stylesheet">
 </head>
-<body >
- <div class="top">
-<img src="../img/delivery.png">
- <div class="dropdown">
-    <button class="dropbtn">Delivery Order Menu
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content">
-      <a href="new_delivery.html">New Delivery</a>
-      <a href="profile.html">Profile</a>
-      <a href="book.html">Bookings</a>
+<body onload="userget()">
+    <nav class="navbar navbar-expand-lg navbar-dark primary-color">
+        <a class="navbar-brand" href="#">
+            <img src="../img/delivery.png">
+         </a>
+       
+    
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+        aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="basicExampleNav">
+    
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="dashboard.html">Dashboard
+            </a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="search.html">Book</a>
+  
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="send.html">Send parcels</a>
+            </li>
+    
+          <!-- Dropdown -->
+    
+    
+        </ul>
+        <!-- Links -->
+        <a id='current_user' style="color:chartreuse;font-size: 30px;"></a>
 
-      <a href="my_order.html">Delivery Orders</a>
-      <a href="history-delivery.html">Delivery Histories</a>
-      <hr/>
-			<a href="../../index.html">Logout</a>
-    </div>
-
-  </div>
-  <a id='current_user' style="color:chartreuse;font-size: 30px;"></a>
-
-  <a href="send.html">Send parcel</a>
-
-  </div>
+        <div class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">MY MENU</a>
+            <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="book.html">Bookings</a>
+              <a class="dropdown-item" href="my_order.html">Delivery Orders</a>
+              <a class="dropdown-item" href="history-delivery.html">Delivery Histories</a>
+              <a class="dropdown-item" href="payments.html">Payments</a>
+              <a class="dropdown-item" href="profile.html">Profile</a>
+              <a class="dropdown-item" href="#">Logout</a>
+  
+  
+            </div>
+          </div>
+      <!-- Collapsible content -->
+    
+    </nav>
+    <!--/.Navbar-->
 
 <div class="contianer">
       <h3 id="reg"></h3>
@@ -62,8 +89,9 @@
     <span class="close4">&times;</span>
           <h1>Bookings </h1>
           <h3 id="msge"></h3>
+          <h5 class="modalText" id = "book_id"></h5><p class="modalText" id ="book"></p>
           <h5 class="modalText" id = "bookingref"></h5><p class="modalText" id ="ref"></p>
-          <h5 class="modalText" id = "car_number"></h5><p class="modalText" id ="single"></p>
+           <h5 class="modalText" id = "car_number"></h5><p class="modalText" id ="single"></p>
           <h5 class="modalText" id = "from_location"></h5></h5><p class="modalText" id ="location"></p>
           <h5 class="modalText" id = "to_location"></h5></h5><p class="modalText" id ="too"></p>
           <h5 class="modalText" id = "price"></h5></h5><p class="modalText" id ="pessa"></p>
@@ -98,6 +126,17 @@
 
 <script src="../js/lipa.js"></script>
 <!-- <script src="../js/script.js"></script> -->
+
+<!-- JQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.7/js/mdb.min.js"></script>
+
+
 
 </body>
 </html> 

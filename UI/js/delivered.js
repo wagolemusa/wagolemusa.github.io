@@ -1,6 +1,6 @@
-let token = localStorage.getItem('access_token')
-let current_user = localStorage.getItem('current_user')
-let access_token = "Bearer " + token
+// let token = localStorage.getItem('access_token')
+// let current_user = localStorage.getItem('current_user')
+// let access_token = "Bearer " + token
 
 // Set username on topnav
 function userget(){

@@ -19,6 +19,7 @@
   <a class="navbar-brand" href="#">
       <img src="../img/delivery.png">
    </a>
+ 
 
 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
   aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -28,9 +29,12 @@
 <div class="collapse navbar-collapse" id="basicExampleNav">
 
   <ul class="navbar-nav mr-auto">
+
   </ul>
   <!-- Links -->
   <a id='current_user' style="color:chartreuse;font-size: 30px;"></a>
+
+  
   <i class="fab fa-btc"></i>&nbsp;&nbsp; <a href="admin_dashboard.html">DASHBOARD</a>  &nbsp;&nbsp;&nbsp;&nbsp;
 
   <i class="fas fa-sign-out-alt"></i> &nbsp;&nbsp;<a href="#">Logout</a>  
@@ -42,59 +46,11 @@
 <!--/.Navbar-->
 
 
+<div class="container">
 
-
-<div class="contianer">
-  <h1>Search By Serial Unque Number </h1>
-  <h3 id="reg"></h3>
-
-  <form name="search" id="searches">
-    <input type="number" name="bookingref" placeholder="Search Serial Number">
-    <button type='submit' id="submit">Search</button>
-  </form>
-</br> 
-  <div id="showsearch"></div>
-
-
+    <h1>To Day's Clients</h1>
 </div>
 
-
-  <div id="myModal6" class="modal6" >
-    <div class="modal-content6" id="printJS-form">
-      <span class="close6">&times;</span>
-
-      <img src="../img/delivery.png" style="width: 8em;">
-
-      <div id="showme"></div>
-
-      </div>
-      <button type="button" onclick="printJS('printJS-form', 'html')">
-        Print Form
-     </button>  
-     <br/>
-  </div>
-
-  
-<script>
-  var modal6 = document.getElementById('myModal6');
-  var btn6 = document.getElementById("myBtn6");
-  var span6 = document.getElementsByClassName("close")[0];
-  btn6.onclick = function() {
-      modal6.style.display = "block";
-  }
-  span6.onclick = function() {
-      modal6.style.display = "none";
-  }
-  window.onclick = function(event) {
-      if (event.target == modal6) {
-          modal6.style.display = "none";
-      }
-  }
-</script>
-
-
-<script src="../js/bookers.js"></script>
-<script src="../js/print.min.js"></script>
 <!-- JQuery -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <!-- Bootstrap tooltips -->
