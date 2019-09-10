@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>SendIT</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="../css/mdb.min.css" rel="stylesheet">
+  <!-- Your custom styles (optional) -->
+  <link href="../css/style.css" rel="stylesheet">
+</head>
+<body onload="userget()">
+    <nav class="navbar navbar-expand-lg navbar-dark primary-color">
+        <a class="navbar-brand" href="#">
+            <img src="../img/delivery.png">
+         </a>
+       
+    
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+        aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="basicExampleNav">
+    
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="dashboard.html">Dashboard
+            </a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="search.html">Book</a>
+  
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="send.html">Send parcels</a>
+            </li>
+    
+          <!-- Dropdown -->
+    
+    
+        </ul>
+        <!-- Links -->
+        <a id='current_user' style="color:chartreuse;font-size: 30px;"></a>
+
+        <div class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">MY MENU</a>
+            <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="book.html">Bookings</a>
+              <a class="dropdown-item" href="my_order.html">Delivery Orders</a>
+              <a class="dropdown-item" href="history-delivery.html">Delivery Histories</a>
+              <a class="dropdown-item" href="payments.html">Payments</a>
+              <a class="dropdown-item" href="profile.html">Profile</a>
+              <a class="dropdown-item" href="#">Logout</a>
+  
+  
+            </div>
+          </div>
+      <!-- Collapsible content -->
+    
+    </nav>
+    <!--/.Navbar-->
+<div class="contianer">
+      <h3 id="reg"></h3>
+    <h1>Your payments</h1>
+    
+  </br> 
+    <div id="showsearch"></div>
+
+    <div id="myModal6" class="modal6" >
+        <div class="modal-content6" id="printJS-form">
+          <span class="close6">&times;</span>
+    
+          <img src="../img/delivery.png" style="width: 8em;">
+    
+          <div id="showme"></div>
+    
+          </div>
+          <button type="button" onclick="printJS('printJS-form', 'html')">
+            Print Form
+         </button>  
+         <br/>
+      </div>
+    
+      
+    <script>
+      var modal6 = document.getElementById('myModal6');
+      var btn6 = document.getElementById("myBtn6");
+      var span6 = document.getElementsByClassName("close")[0];
+      btn6.onclick = function() {
+          modal6.style.display = "block";
+      }
+      span6.onclick = function() {
+          modal6.style.display = "none";
+      }
+      window.onclick = function(event) {
+          if (event.target == modal6) {
+              modal6.style.display = "none";
+          }
+      }
+    </script>
+
+
+</div>
+
+
+
+
+<script src="../js/printdata.js"></script>
+<script src="../js/print.min.js"></script>
+
+<!-- <script src="../js/script.js"></script> -->
+<!-- JQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.7/js/mdb.min.js"></script>
+
+
+</body>
+</html> 
