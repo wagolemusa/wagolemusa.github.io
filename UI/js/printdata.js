@@ -67,7 +67,7 @@ fetch("https://senditparcel.herokuapp.com/api/v2/print/data",{
             <td>${book[sendt]["status"]}</td>
 
             <td><button style="color: #ffffff; background-color:#00C851; font-size: 18px;  border: none;
-           "id="myBtn6" value="Edit" onclick="viewSingle(${book[sendt]["payment_id"]})">Show</button></td>`;
+           "id="myBtn6" value="Edit" onclick="viewSingle(${book[sendt]["payment_id"]})">Print Receipt</button></td>`;
         })
         document.getElementById("showsearch").innerHTML = output + `</table>`;
 
