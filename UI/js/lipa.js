@@ -138,7 +138,7 @@ document.getElementById("search").addEventListener("click",
             .then((response)=>response.json())
             .then((data)=>{
                 document.getElementById("msge").innerText = data["message"]
-                // window.location.replace("create_price.html")
+                window.location.replace("printdata.html")
 
             })
             .catch((error)=>console.log(error))
