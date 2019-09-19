@@ -889,7 +889,7 @@ min-height: 1px;
   font-weight: 500;
   padding-top: 1em;
   padding-bottom: 1em;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 5px 0 rgba(143, 100, 100, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
 .navbar1 a {
   color: #4285f4;
@@ -912,4 +912,53 @@ min-height: 1px;
 .nav-link {
   display: block;
   padding: 1rem;
+}
+
+.conts{
+  background-color: #ffffff;
+padding: 2em;
+box-shadow: 0 2px 5px 0 rgba(143, 100, 100, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+border: 1px solid transparent;
+
+border-top-left-radius: 1rem;
+border-top-right-radius: 1rem;
+box-shadow: 1px 2px 14px rgba(0,0,0,.1);
+padding: .9375rem 1.4rem 4rem;
+padding-bottom: 2em;
+
+}
+
+.dat{
+  font-size: 1.5em;
+}
+
+.dat2 {
+  font-size: 1.5em;
+}
+
+.nav-item b{
+  color:#4285F4;
+  font-weight: bold;
+  font-size: 1em;
+
+}
+
+.nav-item i {
+
+ font-size: 1.5em;
+ color: #FF8800;
+}
+.padd{
+  padding: 1em;
+}
+
+.padd button{
+  font-size: 1em;
+  size: 8em;  
+}
+.padd b {
+  color: #00C851;
+  font-weight: bold;
+  font-size: 1.3em;
+
 }

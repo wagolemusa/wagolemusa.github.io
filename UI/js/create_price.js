@@ -90,6 +90,7 @@ fetch("https://senditparcel.herokuapp.com/api/admin/v2/locations",{
                     <td>${collection[pric]["to_location"]}</td>
                     <td>${collection[pric]["price"]}</td>
                     <td>${collection[pric]["day_time"]}</td>
+                    
                     <td><button style="color: #ffffff; background-color:#00C851; font-size: 18px;  border: none;
                     "id="myBtn1" value="Edit"onclick="edit('${collection[pric]["price_id"]}','${collection[pric]["car_number"]}','${collection[pric]["from_location"]}','${collection[pric]["to_location"]}','${collection[pric]["price"]}','${collection[pric]["day_time"]}')">Update</button></td>`
             

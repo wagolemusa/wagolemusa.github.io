@@ -49,7 +49,67 @@
 <div class="container">
 
     <h1>Desk Services for unbooked clients</h1>
+
+
+    <h2 id="reg"></h2>
+    <form name="create" id="price">
+
+        <div class="form-group">
+            <label for="formGroupExampleInput">Customer Name</label>
+            <input type="text" name="customer_name" class="form-control" id="formGroupExampleInput" placeholder="Customer Name">
+    
+        </div>
+    
+         <div class="form-group">
+            <label for="formGroupExampleInput">Customer Number</label>
+            <input type="number" name="customer_number" class="form-control" id="formGroupExampleInput" placeholder="Customer Number">
+          </div>
+    
+          <div class="form-group">
+              <label for="formGroupExampleInput">From</label>
+              <input type="text" name="from_location" class="form-control" id="formGroupExampleInput" placeholder="From">
+            </div>
+      
+            <div class="form-group">
+                <label for="formGroupExampleInput">To</label>
+                <input type="text" name="to_location" class="form-control" id="formGroupExampleInput" placeholder="To">
+              </div>
+             
+          <div class="form-group">
+            <label for="formGroupExampleInput">How many seats</label>
+             <input type="number" name="quantiy" class="form-control" id="formGroupExampleInput" placeholder="How many seats">
+          </div>
+    
+          <div class="form-group">
+            <label for="formGroupExampleInput">price</label>
+            <input type="number" name="price" class="form-control" id="formGroupExampleInput" placeholder="Price">
+          </div>        
+
+          <div class="form-group">
+              <label for="formGroupExampleInput">Phone</label>
+              <input type="number" name="phone" class="form-control" id="formGroupExampleInput" placeholder="Phone">
+            </div>      
+
+          <div class="form-group">
+            <label for="formGroupExampleInput">Date</label>
+             <input type="date" name="date_when" class="form-control" id="formGroupExampleInput" placeholder="Date">
+          </div>
+    
+        <div class="form-group">
+           <label for="formGroupExampleInput">Time</label>
+            <input type="time" name="time_at" class="form-control" id="formGroupExampleInput" placeholder="Time">
+        </div>
+
+      <button name="submit" id="submit" class="btn btn-info btn-block my-4">Register</button> 
+        <br/>
+      <br/>
+    
+    </form>
+    </div>
+    
+    
 </div>
+<script src="../js/desk.js"></script>
 
 <!-- JQuery -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
