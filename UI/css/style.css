@@ -930,10 +930,12 @@ padding-bottom: 2em;
 
 .dat{
   font-size: 1.5em;
+  color: #37474F;
 }
 
 .dat2 {
   font-size: 1.5em;
+  color: #263238;
 }
 
 .nav-item b{
@@ -961,4 +963,15 @@ padding-bottom: 2em;
   font-weight: bold;
   font-size: 1.3em;
 
+}
+
+.reciept b{
+  color:#3E4551;
+  font-size: 20px;
+}
+
+.reciept span{
+  padding-left: 1em;
+  font-size: 19px;
+  color: #4B515D;
 }

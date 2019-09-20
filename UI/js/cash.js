@@ -27,7 +27,7 @@ fetch("https://senditparcel.herokuapp.com/api/admin/v2/bookings",{
             output +=`
 
             <div class="padd">
-            <button class="btn btn-dark-green "id="myBtn6" value="Edit" onclick="cash('${book[sendt]["book_id"]}')">Pay Na Mpesa</button> </div>`;
+            <button class="btn btn-dark-green "id="myBtn6" value="Edit" onclick="cash('${book[sendt]["book_id"]}')">Pay Cash</button> </div>`;
         
         })
         document.getElementById("showsme1").innerHTML = output;
@@ -49,9 +49,8 @@ function cash(book_id){
     .then((response)=>response.json())
     .then((data)=>{
     document.getElementById("msge").innerText = data["message"]
-       setTimeout(window.location.replace("create_price.html"), 3000);
     
-
+       setTimeout(window.location.replace("printcash.html"), 10000);
 
     })
    .catch((error)=>console.log(error))

@@ -5,7 +5,7 @@ let current_user = localStorage.getItem('current_user')
 let access_token = "Bearer " + token
 
 //Function for searching
-fetch("https://senditparcel.herokuapp.com/api/v2/print/data",{
+fetch("https://senditparcel.herokuapp.com/api/admin/v2/bookings",{
     method: "GET",
     headers: {
         "Content-Type":"application/json",
@@ -32,7 +32,6 @@ fetch("https://senditparcel.herokuapp.com/api/v2/print/data",{
         <th>Price</th>
         <th>Quantity</th>
         <th>Amount</th>
-        <th>Status</th>
         <th>Print</th>
         </tr>
         </thead>
@@ -49,10 +48,9 @@ fetch("https://senditparcel.herokuapp.com/api/v2/print/data",{
             <td>${book[sendt]["to_location"]}</td>
             <td>${book[sendt]["price"]}</td>
             <td>${book[sendt]["quality"]}</td>
-            <td>${book[sendt]["amount"]}</td>
-            <td>${book[sendt]["status"]}</td>
+            <td>${book[sendt]["total"]}</td>
 
-            <td><button class="btn btn-default" id="myBtn6" value="Edit" onclick="viewSingle(${book[sendt]["payment_id"]})">Print Receipt</button></td> <tbody>`;
+            <td><button class="btn btn-default" id="myBtn6" value="Edit" onclick="viewSingle(${book[sendt]["book_id"]})">Print Receipt</button></td> <tbody>`;
         })
         document.getElementById("showsearch").innerHTML = output + `</table>`;
 
@@ -63,8 +61,8 @@ fetch("https://senditparcel.herokuapp.com/api/v2/print/data",{
 
 
 // function query payments by ID
-function viewSingle(payment_id){
-    fetch("https://senditparcel.herokuapp.com/api/v2/payments/"+payment_id,{
+function viewSingle(book_id){
+    fetch("https://senditparcel.herokuapp.com/api/v2/print/cash/"+book_id,{
     method: "GET",
     headers: {
         "Content-Type":"application/json",
@@ -99,15 +97,12 @@ function viewSingle(payment_id){
             <div class="col">
                 <b>Price : </b> <span>${data[searchme]["price"]} <strong>Ksh</strong></span></br>
                 <b>Quantity : </b> <span>${data[searchme]["quality"]}</span></br>
-                <b> Amount :</b> <span>${data[searchme]["amount"]} <strong>Ksh</strong></span></br>
-                <b> Phone Number :</b> <span>${data[searchme]["phone"]}</span></br>
+                <b> Amount :</b> <span>${data[searchme]["total"]} <strong>Ksh</strong></span></br>
                 <b> Travel Date :</b> <span>${data[searchme]["dates"]}</span></br>
             </div>
             <div class="col">
-                <b>Status :</b> <span>${data[searchme]["status"]}</span></br>
-                <b>Mpesa Status :</b> <span>${data[searchme]["mpesa_reciept"]}</span></br>
-                <b>Message Recieved :</b> <span>${data[searchme]["resultdesc"]}</span></br>
-                <b>Paid On :</b> <span>${data[searchme]["created_on"]}</span></br>
+                <b>Payment Status :</b> <span>${data[searchme]["payments"]}</span></br>
+                <b>Booked On :</b> <span>${data[searchme]["created_on"]}</span></br>
             </div>
         </div>
         </div>
