@@ -22,35 +22,26 @@ fetch("https://senditparcel.herokuapp.com/api/v2/lipa",{
 
         book = book["book"]
         let output = `
-        <table id="NewTable">
-        <tr class="header">
-        <th style="width:20%;">bookingref</th>
-        <th style="width:25%;">car_number</th>
-        <th style="width:25%;">From</th>
-        <th style="width:25%;">To</th>
-        <th style="width:25%;">Price</th>
-        <th style="width:25%;">Quantity</th>
-        <th style="width:30%;">Amount</th>
-        <th style="width:30%;">Phone</th>
-        <th style="width:30%;">Booked On</th>
-        <th style="width:30%;">Paid On</th>
-        <th style="width:30%;">Status</th>
+        <div class="conts mb-5">
+        <h1>Historical payments</h1>
 
-        <th style="width:30%;">Print</th>
-        `;
+        <table id="dtBasicExample" class="table table-striped table-bordered table-sm" cellspacing="0" width="100%">
+        <thead>
+        <tr>
+    <th class="th-sm">Reciept Number</th>
+    <th class="th-sm">Car Number</th>
+    <th class="th-sm">From</th>
+    <th class="th-sm">To</th>
+    <th class="th-sm">Price</th>
+    <th class="th-sm">Quantity</th>
+    <th class="th-sm">Amount</th>
+    <th class="th-sm">Phone</th>
+    <th class="th-sm">Booked On</th>
+    <th class="th-sm">Paid On</th>
+    <th class="th-sm">Status</th> `;
 
         Object.keys(book).forEach(function(sendt){
-            let  bookingref = book[sendt]["bookingref"];
-            let car_number = book[sendt]["car_number"];
-            let from_location = book[sendt]["from_location"];
-            let to_location = book[sendt]["to_location"];
-            let price = book[sendt]["price"];
-            let quality = book[sendt]["quality"];
-            let amount = book[sendt]["amount"];
-            let phone = book[sendt]["phone"];
-            let dates = book[sendt]["dates"];
-            let created_on = book[sendt]["created_on"];
-            let status = book[sendt]["status"];
+
             output +=`
 
             <tr>
@@ -66,8 +57,7 @@ fetch("https://senditparcel.herokuapp.com/api/v2/lipa",{
             <td>${book[sendt]["created_on"]}</td>
             <td>${book[sendt]["status"]}</td>
 
-            <td><button style="color: #ffffff; background-color:#00C851; font-size: 18px;  border: none;
-           "id="myBtn6" value="Edit" onclick="viewSingle(${book[sendt]["payment_id"]})">Show</button></td>`;
+            `;
         })
         document.getElementById("showsearch").innerHTML = output + `</table>`;
 

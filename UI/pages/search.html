@@ -32,10 +32,7 @@
       <div class="collapse navbar-collapse" id="basicExampleNav">
     
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="dashboard.html">Dashboard
-            </a>
-          </li>
+     
           <li class="nav-item">
               <a class="nav-link" href="search.html">Book</a>
   
@@ -72,15 +69,28 @@
 
 
  
-
+<br/>
 <div class="contianer">
-      <h3 id="reg"></h3>
-    <h1>Where Do You Want To Go </h1>
-    <form name="search" id="searches">
-      <input list="hosting"  type="text" name="from_location" placeholder="From ........">
+    <div class="conts mb-5">
 
-      <input list="hosting" type="text" name="to_location" placeholder="To ............">
-      <datalist id="hosting">
+      <h3 id="reg"></h3>
+
+    <h1>Where Do You Want To Go </h1>
+    <div class="row">    
+        <div class="col">
+
+    <form name="search" id="searches">
+        <div class="md-form mt-0">
+          <input list="hosting"  type="text" name="from_location" placeholder="From ........">
+        </div>
+      </div>
+        <div class="col">
+            <div class="md-form mt-0">
+
+         <input list="hosting" type="text" name="to_location" placeholder="To ............">
+      </div>
+      </div>
+         <datalist id="hosting">
           <option value="nairobi" />
           <option value="mombasa"/>
           <option value="kisumu" />
@@ -182,11 +192,15 @@
           <option value="maragua"/>
           <option value="kendu Bay"/>
       </datalist>
-      <button type='submit' id="submit">Search</button>
+      <div class="col">
+      <button class="btn btn-default" type='submit' id="submit">Search</button>
+      </div>
     </form>
   </br> 
+    </div>
+      </div>
     <div id="showsearch"></div>
-</div>
+  </div>
 
 
 
@@ -210,7 +224,7 @@
 <br/>
   </div>
 
-</div>
+
 <script>
     var modal4 = document.getElementById('myModal4');
     var btn4 = document.getElementById("myBtn4");

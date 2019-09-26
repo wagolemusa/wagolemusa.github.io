@@ -24,7 +24,7 @@ function fetchlogin(event){
             if(username == "admin"){
                 window.location.replace("admin_dashboard.html")
             }else{
-                window.location.replace("dashboard.html")
+                window.location.replace("search.html")
             }
         }
     }

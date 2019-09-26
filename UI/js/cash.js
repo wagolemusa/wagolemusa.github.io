@@ -56,31 +56,3 @@ function cash(book_id){
    .catch((error)=>console.log(error))
 }
 
-
-
-// function cash(book_id) {
-//     document.getElementById("showsme").innerHTML =`
-//     <form>
-//     </b> <button type="submit" id="submit" class="btn btn-cyan">CASH</button>
-
-//     </form>`;
-
-// document.getElementById("submit").addEventListener("click",
-// function modifyEntry(event){
-//     event.preventDefault();
-//     let url = "https://senditparcel.herokuapp.com/api/v2/cash/payment/"+book_id;
-//         fetch(`${url}`, {
-//             method:'PUT', headers: {"Contant-Type":"application/json","Authorization":access_token},
-//             // body:JSON.stringify(data)
-//         })
-//         .then((response)=>response.json())
-//         .then((data)=>{
-//             document.getElementById("msge").innerText = data["message"]
-//             // window.location.replace("create_price.html")
-
-//         })
-//         .catch((error)=>console.log(error))
-
-// });
-
-// }

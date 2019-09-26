@@ -43,21 +43,21 @@ function searchfetch(event){
         data = data["data"];
         console.log(data)
         let output = `
-        <table id="NewTable">
-        <tr class="header">
-        <th style="width:20%;">Car Number</th>
-        <th style="width:30%;">from</th>
-        <th style="width:25%;">To</th>
-        <th style="width:25%;">Price</th>
-        <th style="width:30%;">Time</th>
-        <th style="width:35%;"></th>
+        <div class="conts mb-5">
+
+       <table id="tablePreview" class="table table-striped table-hover table-borderless">
+        <thead>
+        <tr>
+        <th>Car Number</th>
+        <th>from</th>
+        <th>To</th>
+        <th>Price</th>
+        <th>Time</th>
+        <th></th>
+        </tr>
+        </thead>
         `;
         Object.keys(data).forEach(function(searchme){
-            let car_number = data[searchme]["car_number"]
-            let from_location = data[searchme]["from_location"];
-            let to_location = data[searchme]["to_location"];
-            let price = data[searchme]["price"];
-            let day_time = data[searchme]["day_time"];
 
             output +=`
             <tr>
@@ -66,8 +66,7 @@ function searchfetch(event){
             <td>${data[searchme]["to_location"]}</td>
             <td>${data[searchme]["price"]}</td>
             <td>${data[searchme]["day_time"]}</td>
-            <td><button style="color: #ffffff; background-color:#00C851; font-size: 18px;  border: none;
-            "id="myBtn1" value="books"onclick="books('${data[searchme]["price_id"]}','${data[searchme]["car_number"]}','${data[searchme]["from_location"]}','${data[searchme]["to_location"]}','${data[searchme]["price"]}')">book</button></td>`
+            <td><button class="btn btn-default" "id="myBtn1" value="books"onclick="books('${data[searchme]["price_id"]}','${data[searchme]["car_number"]}','${data[searchme]["from_location"]}','${data[searchme]["to_location"]}','${data[searchme]["price"]}')">book</button></div></td>`
     
         })
         document.getElementById("showsearch").innerHTML = output + `</table>`;

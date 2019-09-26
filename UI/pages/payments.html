@@ -32,10 +32,6 @@
       <div class="collapse navbar-collapse" id="basicExampleNav">
     
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="dashboard.html">Dashboard
-            </a>
-          </li>
           <li class="nav-item">
               <a class="nav-link" href="search.html">Book</a>
   
@@ -71,7 +67,6 @@
     <!--/.Navbar-->
 <div class="contianer">
       <h3 id="reg"></h3>
-    <h1>Your payments</h1>
     
   </br> 
     <div id="showsearch"></div>
@@ -113,7 +108,12 @@
 </div>
 
 
-
+<script>
+$(document).ready(function () {
+$('#dtBasicExample').DataTable();
+$('.dataTables_length').addClass('bs-select');
+});
+</script>
 
 <script src="../js/payments.js"></script>
 <script src="../js/print.min.js"></script>
