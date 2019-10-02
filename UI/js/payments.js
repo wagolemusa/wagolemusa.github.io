@@ -22,7 +22,6 @@ fetch("https://senditparcel.herokuapp.com/api/v2/lipa",{
 
         book = book["book"]
         let output = `
-        <div class="conts mb-5">
         <h1>Historical payments</h1>
 
         <table id="dtBasicExample" class="table table-striped table-bordered table-sm" cellspacing="0" width="100%">
@@ -57,7 +56,7 @@ fetch("https://senditparcel.herokuapp.com/api/v2/lipa",{
             <td>${book[sendt]["created_on"]}</td>
             <td>${book[sendt]["status"]}</td>
 
-            `;
+           </tr> `;
         })
         document.getElementById("showsearch").innerHTML = output + `</table>`;
 
@@ -88,18 +87,7 @@ function viewSingle(payment_id){
 
     `;
     Object.keys(data).forEach(function(searchme){
-        let bookingref = data[searchme]["bookingref"]
-        let car_number = data[searchme]["car_number"];
-        let username = data[searchme]["username"];
-        let from_location = data[searchme]["from_location"];
-        let to_location = data[searchme]["to_location"];
-        let price = data[searchme]["price"];
-        let quality = data[searchme]["quality"];
-        let dates = data[searchme]["dates"];
-        let amount = data[searchme]["amount"];
-        let phone = data[searchme]["phone"];
-        let status = data[searchme]["status"];
-        let created_on = data[searchme]["created_on"];
+
 
         show +=`
         
@@ -127,3 +115,66 @@ function viewSingle(payment_id){
     .catch(error => console.log('error:',error));
     }
 
+
+
+
+// Fetching from bookings where payed by cash
+fetch("https://senditparcel.herokuapp.com/api/v2/book",{
+    method: "GET",
+    headers: {
+        "Content-Type":"application/json",
+        "Accept":"applicaton/json",
+        "Authorization":access_token
+    },
+})
+.then((response) =>{
+    response.json().then((book)=>{
+        console.log(book)
+        if (book.message == 'Internal Server Error'){
+            window.location.replace("login.html")
+        }
+
+        book = book["book"]
+        let output = `
+
+       <table id="tablePreview" class="table table-striped table-hover table-borderless">
+        <thead>
+        <tr>
+        <th>bookingref</th>
+        <th>car_number</th>
+        <th>From</th>
+        <th>To</th>
+        <th>price</th>
+        <th>quality</th>
+        <th>dates</th>
+        <th>total</th>
+        <th>Payemnts Status</th>
+        <th>Booked No</th>
+        <th style="width:30%;"></th>
+        </tr>
+        </thead>
+        `;
+
+        Object.keys(book).forEach(function(sendt){
+
+            output +=`
+
+            <tr>
+            <td>${book[sendt]["bookingref"]}</td>
+            <td>${book[sendt]["car_number"]}</td>
+            <td>${book[sendt]["from_location"]}</td>
+            <td>${book[sendt]["to_location"]}</td>
+            <td>${book[sendt]["price"]}</td>
+            <td>${book[sendt]["quality"]}</td>
+            <td>${book[sendt]["dates"]}</td>
+            <td>${book[sendt]["total"]}</td>
+            <td>${book[sendt]["payments"]}</td>
+            <td>${book[sendt]["created_on"]}</td>
+           </tr>`;
+        })
+        document.getElementById("sendthis").innerHTML = output + `</table>`;
+
+    })
+    .catch(err => console.log(err));
+
+})
