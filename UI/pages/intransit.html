@@ -61,41 +61,82 @@
   <div class="tab-pane fade show active" id="home-just" role="tabpanel" aria-labelledby="home-tab-just">
     
     <div class="contianer">
+        <div class="conts mb-5">
+
       <h1>Deliveries Orders InTransit</h1>
         <div id="msgerrors"></div><br/>
-         <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search by Dates..">
-      <div id="intransit"></div>
-
+         
+         <div id="histories"></div>
 
 </div>
   </div>
-
+  </div>
   <div class="tab-pane fade" id="profile-just" role="tabpanel" aria-labelledby="profile-tab-just">
    
     <div class="contianer">
+        <div class="conts mb-5">
+
       <h1>Delivery Orders</h1>
         <div id="msgerrors"></div><br/>
-         <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search by Dates..">
+         <!-- <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search by Dates.."> -->
       <div id="delivery"></div>
+  </div>
   </div>
   </div>
 
   <div class="tab-pane fade" id="contact-just" role="tabpanel" aria-labelledby="contact-tab-just">
     
     <div class="contianer">
+        <div class="conts mb-5">
+
       <h1>Cancled Orders</h1>
         <div id="msgerrors"></div><br/>
-         <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search by Dates..">
+         <!-- <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search by Dates.."> -->
         <div id="canceled"></div>
       
   </div>
 </div>
-
-
+</div>
 
 </div>
+
+
+<div id="myModal2" class="modal2">
+
+  <!-- Modal content -->
+  <div class="modal-content2">
+      <div id="sendthis"></div>
+
+    <span class="close2">&times;</span>
+          <h1>Change Status </h1>
+          <h3 id="change"></h3>
+          <h5 class="modalText" id = "status"></h5><p class="modalText" id ="single"></p>
+
+      <div id="editor"></div>
+
+    </form>
+<br/>
+  </div>
+
+</div>
+<script>
+    var modal2 = document.getElementById('myModal2');
+    var btn2 = document.getElementById("myBtn2");
+    var span2 = document.getElementsByClassName("close")[0];
+    btn.onclick = function() {
+        modal2.style.display = "block";
+    }
+    span2.onclick = function() {
+        modal2.style.display = "none";
+    }
+    window.onclick = function(event) {
+        if (event.target == modal2) {
+            modal2.style.display = "none";
+        }
+    }
+</script>
 <script src="../js/script.js"></script>
-<script src="../js/intransit.js"></script>
+<script src="../js/delivery_admin.js"></script>
 <script src="../js/delivered.js"></script>
 <script src="../js/canlced.js"></script>
 
