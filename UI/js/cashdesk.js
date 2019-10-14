@@ -50,7 +50,7 @@ function cash(desk_id){
     .then((data)=>{
     document.getElementById("msge").innerText = data["message"]
     
-       setTimeout(window.location.replace("printcash.html"), 10000);
+       setTimeout(window.location.replace("printcashdesk.html"), 10000);
 
     })
    .catch((error)=>console.log(error))
