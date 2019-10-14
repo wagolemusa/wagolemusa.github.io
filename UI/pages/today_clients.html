@@ -46,10 +46,181 @@
 <!--/.Navbar-->
 
 
-<div class="container">
+<br/>
+<div class="contianer">
+    <div class="conts mb-5">
 
-    <h1>To Day's Clients</h1>
-</div>
+      <h3 id="reg"></h3>
+
+    <h1>Where Do You Want To Go </h1>
+    <div class="row">    
+        <div class="col">
+
+    <form name="search" id="searches">
+        <div class="md-form mt-0">
+          <input list="hosting"  type="text" name="from_location" placeholder="From ........">
+        </div>
+      </div>
+        <div class="col">
+            <div class="md-form mt-0">
+
+         <input list="hosting" type="text" name="to_location" placeholder="To ............">
+      </div>
+      </div>
+         <datalist id="hosting">
+          <option value="nairobi" />
+          <option value="mombasa"/>
+          <option value="kisumu" />
+          <option value="nakuru" />
+          <option value="eldoret" />
+          <option value="kehancha"/>
+          <option value="ruiru" />
+          <option value="kikuyu" />
+          <option value="kangundo-Tala" />
+          <option value="malindi" />
+          <option value="naivasha" />
+          <option value="kitui"/>
+          <option value=machakos" />
+          <option value="thika" />
+          <option value="athi River"/>
+          <option value="karuri" />
+          <option value="nyeri"/>
+          <option value="kilifi"/>
+          <option value="garissa" />
+          <option value="vihiga" />
+          <option value="mumias" />
+          <option value="bomet"/>
+          <option value="molo"/>
+          <option value="ngong"/>
+          <option value="kitale"/>
+          <option value="litein"/>
+          <option value="limuru"/>
+          <option value="lericho"/>
+          <option value="kimilili"/>
+          <option value="awasi"/>
+          <option value="kakamega"/>
+          <option value="kapsabet"/>
+          <option value="mariakani"/>
+          <option value="kiambu"/>
+          <option value="mandera"/>
+          <option value="nyamira"/>
+          <option value="mwingi"/>
+          <option value="kisii"/>
+          <option value="wajir"/>
+          <option value="rongo"/>
+          <option value="bungoma"/>
+          <option value="ahero"/>
+          <option value="nandi Hills"/>
+          <option value="makuyu"/>
+          <option value="kapenguria"/>
+          <option value="taveta"/>
+          <option value="narok"/>
+          <option value="olKalou"/>
+          <option value="kakuma"/>
+          <option value="webuye"/>
+          <option value="malaba"/>
+          <option value="mbita Point"/>
+          <option value="ukunda"/>
+          <option value="wundanyi"/>
+          <option value="busia"/>
+          <option value="runyenjes"/>
+          <option value="migori"/>
+          <option value="malava"/>
+          <option value="suneka"/>
+          <option value="embu"/>
+          <option value="ogembo"/>
+          <option value="homa Bay"/>
+          <option value="lodwar"/>
+          <option value="kitengela"/>
+          <option value="ukwala"/>
+          <option value="keroka"/>
+          <option value="meru"/>
+          <option value="matuu"/>
+          <option value="oyugis"/>
+          <option value="nyahururu"/>
+          <option value="kipkelion"/>
+          <option value="luanda"/>
+          <option value="nanyuki"/>
+          <option value="maua"/>
+          <option value="mtwapa"/>
+          <option value="isiolo"/>
+          <option value="eldama Ravine"/>
+          <option value="voi"/>
+          <option value="siaya"/>
+          <option value="nyansiongo"/>
+          <option value="londiani"/>
+          <option value="iten/Tambach"/>
+          <option value="chuka"/>
+          <option value="malakisi"/>
+          <option value="juja"/>
+          <option value="ongata Rongai"/>
+          <option value="bondo"/>
+          <option value="moyale"/>
+          <option value="maralal"/>
+          <option value="gilgil"/>
+          <option value="nambale"/>
+          <option value="tabaka"/>
+          <option value="muhoroni"/>
+          <option value="kerugoya/Kutus"/>
+          <option value="ugunja"/>
+          <option value="yala"/>
+          <option value="rumuruti"/>
+          <option value="burnt Forest"/>
+          <option value="maragua"/>
+          <option value="kendu Bay"/>
+      </datalist>
+      <div class="col">
+      <button class="btn btn-default" type='submit' id="submit">Search</button>
+      </div>
+    </form>
+  </br> 
+    </div>
+      </div>
+    <div id="showsearch"></div>
+  </div>
+
+
+
+<div id="myModal4" class="modal4">
+
+  <!-- Modal content -->
+  <div class="modal-content4">
+      <div id="sendthis"></div>
+
+    <span class="close4">&times;</span>
+          <h1>Bookings </h1>
+          <h3 id="msge"></h3>
+          <h5 class="modalText" id = "car_number"></h5><p class="modalText" id ="single"></p>
+          <h5 class="modalText" id = "from_location"></h5></h5><p class="modalText" id ="location"></p>
+          <h5 class="modalText" id = "to_location"></h5></h5><p class="modalText" id ="too"></p>
+          <h5 class="modalText" id = "price"></h5></h5><p class="modalText" id ="pessa"></p>
+          
+      <div id="editor"></div>
+
+    </form>
+<br/>
+  </div>
+
+
+<script>
+    var modal4 = document.getElementById('myModal4');
+    var btn4 = document.getElementById("myBtn4");
+    var span4 = document.getElementsByClassName("close4")[0];
+    btn4.onclick = function() {
+        modal4.style.display = "block";
+    }
+    span.onclick = function() {
+        modal2.style.display = "none";
+    }
+    window.onclick = function(event) {
+        if (event.target == modal4) {
+            modal4.style.display = "none";
+        }
+    }
+</script>
+
+
+<script src="../js/today_client.js"></script>
 
 <!-- JQuery -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

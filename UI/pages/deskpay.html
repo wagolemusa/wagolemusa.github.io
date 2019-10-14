@@ -1,0 +1,167 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>SendIT</title>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.7/css/mdb.min.css" rel="stylesheet">
+  <link href="../css/style.css" rel="stylesheet">
+</head>
+
+<nav class="navbar navbar-expand-lg navbar-dark warning-color-dark static-top font-weight-bold">
+  <a class="navbar-brand" href="#">
+      <img src="../img/delivery.png">
+   </a>
+ 
+
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+  aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="basicExampleNav">
+
+  <ul class="navbar-nav mr-auto">
+
+  </ul>
+  <!-- Links -->
+  <a id='current_user' style="color:chartreuse;font-size: 30px;"></a>
+
+  
+  <i class="fab fa-btc"></i>&nbsp;&nbsp; <a href="admin_dashboard.html">DASHBOARD</a>  &nbsp;&nbsp;&nbsp;&nbsp;
+
+  <i class="fas fa-sign-out-alt"></i> &nbsp;&nbsp;<a href="#">Logout</a>  
+
+    </div>
+<!-- Collapsible content -->
+
+</nav>
+<!--/.Navbar-->
+<br/>
+<div class="contianer">
+
+  <div class="conts mb-5">
+      <h1>Would do you pay Lipa na mpesa OR Cash </h1>
+
+    <div class="row">
+        <div class="col-sm-6">
+        <h3 id="reg"></h3>
+      
+        <div id="showsearch"></div>
+      </div>
+
+      <div class="col-sm-6">
+        <!-- Nav tabs -->
+
+<ul class="nav nav-tabs md-tabs nav-justified" role="tablist">
+    <li class="nav-item">
+      <div class="nav-link active" data-toggle="tab" href="#panel555" role="tab">
+          <i class="fas fa-broadcast-tower"></i><b>LIPA NA MPESA</b></div>
+    </li>
+    <li class="nav-item">
+      <div class="nav-link" data-toggle="tab" href="#panel666" role="tab">
+          <i class="fab fa-amazon-pay pr-2"></i><b>LIPA NA CASH</b></div>
+    </li> 
+  </ul>
+  <!-- Nav tabs -->
+  
+  <div class="tab-content">
+    <div class="tab-pane fade in show active" id="panel555" role="tabpanel">
+  
+      <div class="row">
+        
+        <div id="showsput"></div>
+
+        </div>
+        </div>
+      
+   
+    <div class="tab-pane fade" id="panel666" role="tabpanel">
+        <div class="padd">
+
+      <b>Click Button if you will pay via <strong>CASH</strong>
+        <div id="showsme1"></div>
+
+</div>
+  
+    </div>
+    <!-- Panel 2 -->
+  
+  </div>
+  <!-- Tab panels -->
+
+          </div>
+      </div>
+    </div>
+  </div>
+
+
+
+<div id="myModal4" class="modal4">
+
+  <!-- Modal content -->
+  <div class="modal-content4">
+      <div id="sendthis"></div>
+
+    <span class="close4">&times;</span>
+          <h1>Bookings </h1>
+          <h3 id="msge"></h3>
+          <h5 class="modalText" id = "desk_id"></h5><p class="modalText" id ="book"></p>
+          <h5 class="modalText" id = "bookingref"></h5><p class="modalText" id ="ref"></p>
+           <h5 class="modalText" id = "car_number"></h5><p class="modalText" id ="single"></p>
+          <h5 class="modalText" id = "from_location"></h5></h5><p class="modalText" id ="location"></p>
+          <h5 class="modalText" id = "to_location"></h5></h5><p class="modalText" id ="too"></p>
+          <h5 class="modalText" id = "price"></h5></h5><p class="modalText" id ="pessa"></p>
+          <h5 class="modalText" id = "quantiy"></h5></h5><p class="modalText" id ="qua"></p>
+          <h5 class="modalText" id = "date_when"></h5></h5><p class="modalText" id ="calender"></p>
+          <h5 class="modalText" id = "amount"></h5></h5><p class="modalText" id ="many"></p>
+
+      <div id="editor"></div>
+
+    </form>
+<br/>
+  </div>
+
+</div>
+<script>
+    var modal4 = document.getElementById('myModal4');
+    var btn4 = document.getElementById("myBtn4");
+    var span4 = document.getElementsByClassName("close4")[0];
+    btn4.onclick = function() {
+        modal4.style.display = "block";
+    }
+    span.onclick = function() {
+        modal2.style.display = "none";
+    }
+    window.onclick = function(event) {
+        if (event.target == modal4) {
+            modal4.style.display = "none";
+        }
+    }
+</script>
+
+
+<script src="../js/deskpay.js"></script>
+<script src="../js/cashdesk.js"></script>
+<script src="../js/script.js"></script>
+
+<!-- JQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.7/js/mdb.min.js"></script>
+
+
+
+</body>
+</html> 
