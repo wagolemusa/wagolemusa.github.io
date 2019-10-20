@@ -46,27 +46,110 @@
 <!--/.Navbar-->
 
 
-<div class="contianer">
-    <h3 id="reg"></h3>
-  <h1>Check payments</h1>
-  
-</br> 
-  <div id="showsearch"></div>
+<!-- Classic tabs -->
+<div class="classic-tabs">
 
-  <div id="myModal6" class="modal6" >
-      <div class="modal-content6" id="printJS-form">
-        <span class="close6">&times;</span>
-  
-        <img src="../img/delivery.png" style="width: 8em;">
-  
-        <div id="showme"></div>
-  
+  <ul class="nav tabs-cyan" id="myClassicTab" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link  waves-light active show" id="profile-tab-classic" data-toggle="tab" href="#profile-classic"
+        role="tab" aria-controls="profile-classic" aria-selected="true"><button class="btn peach-gradient">M-PESA CLIENT PAYMENT</button></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link waves-light" id="follow-tab-classic" data-toggle="tab" href="#follow-classic" role="tab"
+        aria-controls="follow-classic" aria-selected="false"><button class="btn purple-gradient">CLIENT CASH PAYMENT</button> </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link waves-light" id="contact-tab-classic" data-toggle="tab" href="#contact-classic" role="tab"
+        aria-controls="contact-classic" aria-selected="false"><button class="btn blue-gradient">M-PSEA DESKTOP PAYMENT</button> </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link waves-light" id="awesome-tab-classic" data-toggle="tab" href="#awesome-classic" role="tab"
+        aria-controls="awesome-classic" aria-selected="false"><button class="btn aqua-gradient">CASH DESKTOP PAYMENT</button></a>
+    </li>
+  </ul>
+  <div class="container">
+      <div class="conts mb-5">
+
+  <div class="tab-content" id="myClassicTabContent">
+    <div class="tab-pane fade active show" id="profile-classic" role="tabpanel" aria-labelledby="profile-tab-classic">
+      <h2>Client Mpesa Payments</h2>
+      <br/>
+      <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
+            aria-selected="true">Success Payments</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
+            aria-selected="false">Faild Payments</a>
+        </li>
+        
+      </ul>
+      <br/>
+      <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+        
+          <div id="successpayements"></div>
         </div>
-        <button type="button" onclick="printJS('printJS-form', 'html')">
-          Print Form
-       </button>  
-       <br/>
+        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+          <div id="failedpayments"></div>
+
+        </div>
+        
+     </div>
     </div>
+    <div class="tab-pane fade" id="follow-classic" role="tabpanel" aria-labelledby="follow-tab-classic">
+      <h2>Client Cash Payments</h2>
+      <div id="cash"></div>
+    </div>
+
+
+
+    <div class="tab-pane fade" id="contact-classic" role="tabpanel" aria-labelledby="contact-tab-classic">
+      <h2>Mpesa Desktop Payments</h2>
+
+      <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" id="home-tab" data-toggle="tab" href="#xhome" role="tab" aria-controls="home"
+            aria-selected="true">Success Payments</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="profile-tab" data-toggle="tab" href="#tprofile" role="tab" aria-controls="profile"
+            aria-selected="false">Faild Payments</a>
+        </li>
+        
+      </ul>
+      <br/>
+      <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="xhome" role="tabpanel" aria-labelledby="home-tab">
+          <div id="payed"></div>
+        </div>
+        <div class="tab-pane fade" id="tprofile" role="tabpanel" aria-labelledby="profile-tab">
+          <div id="nomaney"></div>
+
+
+        </div>
+        
+     </div>
+
+
+    </div>
+
+
+    <div class="tab-pane fade" id="awesome-classic" role="tabpanel" aria-labelledby="awesome-tab-classic">
+      <h2>Cash Desktop Payments</h2>
+      <p>
+        <div id="showsearch4"></div>
+      </p>
+    </div>
+  </div>
+
+</div>
+<!-- Classic tabs -->
+
+
+
+ 
   
     
   <script>
@@ -89,8 +172,10 @@
 
 </div>
 
-<script src="../js/payment_admin.js"></script>
+<!-- <script src="../js/payment_admin.js"></script> -->
 <script src="../js/print.min.js"></script>
+<script src="../js/paymentsdata.js"></script>
+
 
 <!-- JQuery -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

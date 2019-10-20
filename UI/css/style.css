@@ -988,3 +988,16 @@ table.dataTable thead .sorting_desc_disabled:after,
 table.dataTable thead .sorting_desc_disabled:before {
   bottom: .5em;
 }
+
+.classic-tabs a{
+  color: #3f729b;
+  font-size: 1em;
+  font-weight: bold;
+  
+}
+
+.classic-tabs h2{
+  color:#fd7e14;
+  font-weight: bold;
+  font-size: 1.5em;
+}
