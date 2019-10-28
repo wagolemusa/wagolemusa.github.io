@@ -1001,3 +1001,17 @@ table.dataTable thead .sorting_desc_disabled:before {
   font-weight: bold;
   font-size: 1.5em;
 }
+
+.searchdiv h2{
+  color:#fd7e14;
+  font-weight: bold;
+  font-size: 1.5em;
+
+}
+.searchdiv button{
+  color:#fd7e14;
+  font-weight: bold;
+  font-size: 2em;
+
+}
+

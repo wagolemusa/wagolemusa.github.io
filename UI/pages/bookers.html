@@ -41,17 +41,26 @@
 </nav>
 <!--/.Navbar-->
 
+<br/>
+<div class="container">
+    <div class="conts mb-5">
+  <div class="searchdiv">
+    <h2>Search By Receipt Number</h2>
+ 
+  <br/>
 
-
-
-<div class="contianer">
-  <h1>Search By Serial Unque Number </h1>
   <h3 id="reg"></h3>
+  <form  name="search" id="searches" class="form-inline md-form form-sm mt-0 ">
+      <input type="number" name="bookingref" class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search"
+        aria-label="Search">
+        <button type='submit' class="fas fa-search" id="submit"></button>
 
-  <form name="search" id="searches">
+    </form>
+  </div>
+  <!-- <form name="search" id="searches">
     <input type="number" name="bookingref" placeholder="Search Serial Number">
     <button type='submit' id="submit">Search</button>
-  </form>
+  </form> -->
 </br> 
   <div id="showsearch"></div>
 

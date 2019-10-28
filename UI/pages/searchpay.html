@@ -19,7 +19,6 @@
   <a class="navbar-brand" href="#">
       <img src="../img/delivery.png">
    </a>
- 
 
 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
   aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,19 +28,10 @@
 <div class="collapse navbar-collapse" id="basicExampleNav">
 
   <ul class="navbar-nav mr-auto">
-
-
-
-
   </ul>
   <!-- Links -->
   <a id='current_user' style="color:chartreuse;font-size: 30px;"></a>
-
-  <i class="fab fa-btc"></i>&nbsp;&nbsp; <a href="today_clients.html">Clients</a>  &nbsp;&nbsp;&nbsp;&nbsp;
-  <i class="fab fa-btc"></i>&nbsp;&nbsp; <a href="desk.html">Desk Customers</a>  &nbsp;&nbsp;&nbsp;&nbsp;
-
-  <i class="far fa-calendar-plus"></i>&nbsp;&nbsp; <a href="create_price.html">Create Price</a>  &nbsp;&nbsp;&nbsp;&nbsp;
-  <i class="fab fa-btc"></i>&nbsp;&nbsp; <a href="bookingcustomer.html"> Bookings Passengers</a>  &nbsp;&nbsp;&nbsp;&nbsp;
+  <i class="fab fa-btc"></i>&nbsp;&nbsp; <a href="admin_dashboard.html">DASHBOARD</a>  &nbsp;&nbsp;&nbsp;&nbsp;
 
   <i class="fas fa-sign-out-alt"></i> &nbsp;&nbsp;<a href="#">Logout</a>  
 
@@ -51,56 +41,69 @@
 </nav>
 <!--/.Navbar-->
 
-
-
-
-
-<nav class="navbar1 navbar-expand navbar-dark white static-top font-weight-bold">
-  <i class="fas fa-search-dollar"></i><a href="bookers.html">Cash</a>&nbsp;&nbsp; 
-  <i class="fas fa-search-dollar"></i><a href="searchpay.html">Mpesa </a>&nbsp;&nbsp; 
-
-  <i class="fab fa-searchengin"></i><a href="dates.html">Search By Date</a>&nbsp;&nbsp; 
-  <i class="fas fa-dollar-sign"></i><a href="payment_admin.html">Payments</a>&nbsp;&nbsp; 
-  <i class="fab fa-galactic-senate"></i><a href="intransit.html">Parcels Details</a>&nbsp;&nbsp; 
-
-  <i class="fas fa-biohazard"></i><a href="charts.html">Analıysıs</a>&nbsp;&nbsp; 
-  <i class="fas fa-sms"></i><a href="sms.html">SMS</a>&nbsp;&nbsp; 
-  </nav>
-<body onload="fetchnumbers()">
 <br/>
+<div class="container">
+    <div class="conts mb-5">
+  <div class="searchdiv">
+    <h2>Search By Receipt Number</h2>
+ 
+  <br/>
+
+  <h3 id="reg"></h3>
+  <form  name="search" id="searches" class="form-inline md-form form-sm mt-0 ">
+      <input type="number" name="bookingref" class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search"
+        aria-label="Search">
+        <button type='submit' class="fas fa-search" id="submit"></button>
+
+    </form>
+  </div>
+  <!-- <form name="search" id="searches">
+    <input type="number" name="bookingref" placeholder="Search Serial Number">
+    <button type='submit' id="submit">Search</button>
+  </form> -->
+</br> 
+  <div id="searchpay"></div>
 
 
-<h3 style="color: #999;
-">Admin Dashboard</h3> 
-  <div class="row">
-    <div class="col-md-4">
-      <div class="color-block">
-        <h2 id="output"></h2>
-        <b>Users</b>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="color-block1">
-        <h2 id="orders"></h2>
-        <p>Bookings</p>
-      </div>
-    </div>
-    <div class="col-md-4">
+</div>
 
-      <div class="color-block2">
-        <h2 id="parcel"></h2>
-        <p>Parcel Orders</p>
+
+  <div id="myModal6" class="modal6" >
+    <div class="modal-content6" id="printJS-form">
+      <span class="close6">&times;</span>
+
+      <img src="../img/delivery.png" style="width: 8em;">
+
+      <div id="showme"></div>
+
       </div>
-    </div>
+      <button type="button" onclick="printJS('printJS-form', 'html')">
+        Print Form
+     </button>  
+     <br/>
   </div>
 
   
-  
-</div>
-</body>
-</html> 
+<script>
+  var modal6 = document.getElementById('myModal6');
+  var btn6 = document.getElementById("myBtn6");
+  var span6 = document.getElementsByClassName("close")[0];
+  btn6.onclick = function() {
+      modal6.style.display = "block";
+  }
+  span6.onclick = function() {
+      modal6.style.display = "none";
+  }
+  window.onclick = function(event) {
+      if (event.target == modal6) {
+          modal6.style.display = "none";
+      }
+  }
+</script>
 
-<script src="../js/number.js"></script>
+
+<script src="../js/searchpay.js"></script>
+<script src="../js/print.min.js"></script>
 <!-- JQuery -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <!-- Bootstrap tooltips -->
@@ -109,3 +112,7 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <!-- MDB core JavaScript -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.7/js/mdb.min.js"></script>
+
+</body>
+
+</html>

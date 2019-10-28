@@ -13,7 +13,7 @@ function userget(){
 document.getElementById("submit").addEventListener("click",
 function searchfetch(event){
     event.preventDefault()
-    let url = route +"/v2/search/bookers"
+    let url = route +"/v2/admin/search/pay"
     let bookingref = document.forms["search"]["bookingref"].value;
 
     if(isNaN(bookingref)){
@@ -70,14 +70,14 @@ function searchfetch(event){
             <td>${data[searchme]["price"]}</td>
             <td>${data[searchme]["quality"]}</td>
             <td>${data[searchme]["dates"]}</td>
-            <td>${data[searchme]["total"]}</td>
+            <td>${data[searchme]["amount"]}</td>
             <td>${data[searchme]["status"]}</td>
             <td>${data[searchme]["created_on"]}</td>
             
             <td><button type="button" class="btn btn-success"
-           "id="myBtn6" value="Edit" onclick="viewSingle(${data[searchme]["book_id"]})">Print Recient</button></td>`;
+           "id="myBtn6" value="Edit" onclick="viewSingle(${data[searchme]["payment_id"]})">Print Recient</button></td>`;
         })
-        document.getElementById("showsearch").innerHTML = output + `</table>`;
+        document.getElementById("searchpay").innerHTML = output + `</table>`;
             // if (data){
     //     document.getElementById("reg").innerText = data["message"];
 
@@ -91,8 +91,8 @@ function searchfetch(event){
 
 
 
-function viewSingle(book_id){
-    fetch("https://senditparcel.herokuapp.com/api/admin/v2/booking/"+book_id,{
+function viewSingle(payment_id){
+    fetch("https://senditparcel.herokuapp.com/api/admin/v2/query/"+payment_id,{
     method: "GET",
     headers: {
         "Content-Type":"application/json",
@@ -128,12 +128,15 @@ function viewSingle(book_id){
             <div class="col">
                 <b>Price : </b> <span>${data[searchme]["price"]} <strong>Ksh</strong></span></br>
                 <b>Quantity : </b> <span>${data[searchme]["quality"]}</span></br>
-                <b> Amount :</b> <span>${data[searchme]["total"]} <strong>Ksh</strong></span></br>
+                <b> Amount :</b> <span>${data[searchme]["amount"]} <strong>Ksh</strong></span></br>
+                <b> Phone Number :</b> <span>${data[searchme]["phone"]}</span></br>
                 <b> Travel Date :</b> <span>${data[searchme]["dates"]}</span></br>
             </div>
             <div class="col">
-                <b>Payment Status :</b> <span>${data[searchme]["status"]}</span></br>
-                <b>Booked On :</b> <span>${data[searchme]["created_on"]}</span></br>
+                <b>Status :</b> <span>${data[searchme]["status"]}</span></br>
+                <b>Mpesa Status :</b> <span>${data[searchme]["mpesa_reciept"]}</span></br>
+                <b>Message Recieved :</b> <span>${data[searchme]["resultdesc"]}</span></br>
+                <b>Paid On :</b> <span>${data[searchme]["created_on"]}</span></br>
             </div>
         </div>
         </div>
