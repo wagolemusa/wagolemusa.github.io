@@ -32,7 +32,7 @@ fetch("https://senditparcel.herokuapp.com/api/v2/print/data",{
         <th>Price</th>
         <th>Quantity</th>
         <th>Amount</th>
-        <th>Status</th>
+        <th>Payment Status</th>
         <th>Print</th>
         </tr>
         </thead>
