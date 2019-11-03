@@ -44,12 +44,37 @@
 
 </nav>
 <!--/.Navbar-->
-
+<br/>
 
 <div class="container">
+  <div class="row">
+     
+    <div class="col-6">
+    <div class="card1">
+      <div class="form-group shadow-textarea">
+          <h1>Send Messages to all users on their mobile phones</h1>
+          <br/>
+          <div id="msg"></div>
 
-    <h1>send SMS on both emails and Phone numbers</h1>
+        <form name="create" id="">
+        <textarea class="form-control z-depth-1" name="message" id="exampleFormControlTextarea6" rows="3"  placeholder="Write messages here..." required></textarea>
+        <button class="btn btn-info my-4 btn-block" type="submit" id="sms">Send Message</button>
+      </form>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-6">
+    <div class="card1">
+
+    <div id="showsearch"></div>
+    </div>
+  </div>
 </div>
+
+</div>
+
+<script src="../js/sms.js"></script>
 
 <!-- JQuery -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

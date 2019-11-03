@@ -729,6 +729,7 @@ font-size: 30 px;
 
 
 
+
 .card {
 
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -1015,3 +1016,25 @@ table.dataTable thead .sorting_desc_disabled:before {
 
 }
 
+.shadow-textarea textarea.form-control::placeholder {
+  font-weight: 300;
+}
+.shadow-textarea textarea.form-control {
+  padding-left: 0.8rem;
+  height: 10em;
+}
+
+.card1{
+
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  margin: auto;
+
+}
+
+
+.card1 h1{
+  color:#fd7e14;
+  font-weight: bold;
+  font-size: 1.5em;
+}
