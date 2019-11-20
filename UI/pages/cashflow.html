@@ -1,0 +1,186 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>SendIT</title>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.7/css/mdb.min.css" rel="stylesheet">
+  <link href="../css/style.css" rel="stylesheet">
+</head>
+
+<nav class="navbar navbar-expand-lg navbar-dark warning-color-dark static-top font-weight-bold">
+  <a class="navbar-brand" href="#">
+      <img src="../img/delivery.png">
+   </a>
+ 
+
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+  aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="basicExampleNav">
+
+  <ul class="navbar-nav mr-auto">
+
+  </ul>
+  <!-- Links -->
+  <a id='current_user' style="color:chartreuse;font-size: 30px;"></a>
+
+  
+  <i class="fab fa-btc"></i>&nbsp;&nbsp; <a href="admin_dashboard.html">DASHBOARD</a>  &nbsp;&nbsp;&nbsp;&nbsp;
+
+  <i class="fas fa-sign-out-alt"></i> &nbsp;&nbsp;<a href="#">Logout</a>  
+
+    </div>
+<!-- Collapsible content -->
+
+</nav>
+<!--/.Navbar-->
+<body onload="fetchnumbers()">
+
+<br/>
+<div class="container">
+        <h2>CLIENTS M-PESA PAYMENTS </h2>
+        <hr/>
+    <div class="row">
+          
+      <div class="col-3">
+          
+            <div class="card">
+                    <p>Daily bookings <br/>
+                         With M-pesa</p>
+                    <div id="orders"></div>
+            
+            </div>    
+    </div>
+      <div class="col-3">
+        <div class="card">
+                <p>Weekly bookings <br/>
+                    With M-pesa</p>
+                <div id="weeklydata"></div>
+            
+        </div> 
+      </div>
+      <div class="col-6">
+        <div class="card">
+                <p>Monthly bookings With M-pesa</p>
+            <div class="table-responsive">
+            <div id="monthly"></div>
+
+            </div>
+        </div>           
+        </div>   
+      </div>
+    
+      <h2>CLIENTS BOOKINGS AND PAID WITH CASH </h2>
+      <hr/>
+    <div class="row">
+        
+    <div class="col-3">
+        
+          <div class="card">
+                  <p>Daily bookings <br/>
+                       With M-pesa</p>
+                  <div id="orders"></div>
+          
+          </div>    
+    </div>
+    <div class="col-3">
+      <div class="card">
+              <p>Weekly bookings <br/>
+                  With M-pesa</p>
+              <div id="weeklydata"></div>
+          
+      </div> 
+    </div>
+    <div class="col-6">
+      <div class="card">
+              <p>Monthly bookings With M-pesa</p>
+          <div class="table-responsive">
+          <div id="monthly"></div>
+    
+          </div>
+      </div>           
+      </div>   
+    </div>
+
+    <h2>RECEPTION M-PESA PAYMENTS </h2>
+    <hr/>
+<div class="row">
+      
+  <div class="col-3">
+      
+        <div class="card">
+                <p>Daily bookings <br/>
+                     With M-pesa</p>
+                <div id="orders"></div>
+        
+        </div>    
+</div>
+  <div class="col-3">
+    <div class="card">
+            <p>Weekly bookings <br/>
+                With M-pesa</p>
+            <div id="weeklydata"></div>
+        
+    </div> 
+  </div>
+  <div class="col-6">
+    <div class="card">
+            <p>Monthly bookings With M-pesa</p>
+        <div class="table-responsive">
+        <div id="monthly"></div>
+
+        </div>
+    </div>           
+    </div>   
+  </div>
+
+
+<h2>RECEPTION PAID WITH CASH </h2>
+<hr/>
+<div class="row">
+  
+<div class="col-3">
+  
+    <div class="card">
+            <p>Daily bookings <br/>
+                 With M-pesa</p>
+            <div id="orders"></div>
+    
+    </div>    
+</div>
+<div class="col-3">
+<div class="card">
+        <p>Weekly bookings <br/>
+            With M-pesa</p>
+        <div id="weeklydata"></div>
+    
+</div> 
+</div>
+<div class="col-6">
+<div class="card">
+        <p>Monthly bookings With M-pesa</p>
+    <div class="table-responsive">
+    <div id="monthly"></div>
+
+    </div>
+</div>           
+</div>   
+</div>
+
+</div>
+</div>
+
+</div>
+<script src="../js/cashflow.js"></script>
+
+</html>  
