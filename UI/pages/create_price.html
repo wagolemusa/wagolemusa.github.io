@@ -44,16 +44,17 @@
 </nav>
 <!--/.Navbar-->
 
-
+<br/>
 <div class="contianer">
-      
-<td><button style="color: #ffffff; background-color:#00C851; font-size: 18px; width: 10em;  border: none;
-" id="myBtn">Create Price</button></td>
-<h1>Parcel prices</h1> 
+    <div class="conts mb-5">
+
+<br/>
+<td><button type="button" class="btn btn-success" id="myBtn">Create Price</button></td>
+<h1>Available Vehicle plus Prices</h1> 
 
 
 <h3 id="msgerror"></h3>
-   <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search by Dates..">
+   <!-- <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search by Dates.."> -->
   <div id="shows">
 
 
@@ -72,8 +73,14 @@
       <input type="text" name="car_number" placeholder="Car Number" required>
       <input list="hosting" type="text" name="from_location" placeholder="From......" required>
       <input list="hosting" type="text" name="to_location" placeholder="To........" required>
+      <input type="text" name="arrival" placeholder="Arrival" required>
+      <select class="browser-default custom-select" name="period">
+        <option selected>Open this select menu</option>
+        <option value="Day">Day</option>
+        <option value="Night">Night</option>
+      </select><br/><br/>
       <input type="number" name="price" placeholder="price" required>
-      <input type="time" name="day_time" required>
+      <input type="text" name="day_time" required>
       <datalist id="hosting">
           <option value="nairobi" />
           <option value="mombasa"/>
@@ -183,7 +190,7 @@
 
 </div>
 
-<div id="myModal1" class="modal1">
+<!-- <div id="myModal1" class="modal1">
 
   <div class="modal-content1">
     <span class="close1">&times;</span>
@@ -197,9 +204,9 @@
      <div id="editor"></div>    
 <br/>
   </div>
-</div>
+</div> -->
 
-<script>
+<!-- <script>
 var modal1 = document.getElementById('myModal1');
 var btn1 = document.getElementById("myBtn1");
 var span1 = document.getElementsByClassName("close1")[0];
@@ -214,7 +221,7 @@ window.onclick = function(event) {
         modal1.style.display = "none";
     }
 }
-</script>
+</script> -->
 
 
 <script src="../js/script.js"></script>
