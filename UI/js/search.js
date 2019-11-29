@@ -101,13 +101,14 @@ function books(book_id, car_number, from_location, to_location, price){
     <textarea maxlength="20" rows ="2" cols = "38" name="price">${price}</textarea><br><br>
 
     <input type="number" maxlength="20" rows ="2" cols = "33" name="quality" placeholder="How many seats"><br><br>
-    <input type="date" maxlength="20" rows ="2" cols = "33" name="dates" placeholder="Date"><br><br>
-
+    <input type="date"maxlength="20" rows ="2" cols = "33" name="dates" placeholder="Date"><br><br>
+ 
      <button class="view" name="save" id="search">Book</button></form>
     <br/>
   </div>
 </div>
 `;
+
 document.getElementById("search").addEventListener("click",
     function modifyEntry(event){
         event.preventDefault();

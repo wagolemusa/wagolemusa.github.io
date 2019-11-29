@@ -49,9 +49,9 @@ headers:{"Content-Type":"application/json", "Accept":"applicaton/json"}})
     output +=`
     <tbody>
     <tr>
-        <td> ${month[searchme]["mon"]} </td>
-        <td>${month[searchme]["yyyy"]}</td>
-        <td> <h4>${month[searchme]["amount"]}</h4></td>    
+        <td><h5><b>${month[searchme]["mon"]} </b></h5></td>
+        <td><h5><b>${month[searchme]["yyyy"]}</b></h5></td>
+        <td><h5><b>${month[searchme]["amount"]}</b></h5></td>    
     </tbody>  
     `;
     })
@@ -111,9 +111,9 @@ headers:{"Content-Type":"application/json", "Accept":"applicaton/json"}})
     output +=`
     <tbody>
     <tr>
-        <td> ${month[searchme]["mon"]} </td>
-        <td>${month[searchme]["yyyy"]}</td>
-        <td> <h4>${month[searchme]["amount"]}</h4></td>    
+    <td><h5><b>${month[searchme]["mon"]}</b></h5></td>
+        <td><h5><b>${month[searchme]["yyyy"]}</b></h5></td>
+        <td><h5><b>${month[searchme]["amount"]}</b></h5></td>    
     </tbody>  
     `;
     })
@@ -171,9 +171,9 @@ headers:{"Content-Type":"application/json", "Accept":"applicaton/json"}})
     output +=`
     <tbody>
     <tr>
-        <td> ${month[searchme]["mon"]} </td>
-        <td>${month[searchme]["yyyy"]}</td>
-        <td> <h4>${month[searchme]["amount"]}</h4></td>    
+    <td><h5><b>${month[searchme]["mon"]}</b></h5></td> 
+        <td><h5><b>${month[searchme]["yyyy"]}</b></h5></td> 
+        <td><h5><b>${month[searchme]["amount"]}</b></h5></td>    
     </tbody>  
     `;
     })
@@ -234,9 +234,9 @@ headers:{"Content-Type":"application/json", "Accept":"applicaton/json"}})
     output +=`
     <tbody>
     <tr>
-        <td> ${month[searchme]["mon"]} </td>
-        <td>${month[searchme]["yyyy"]}</td>
-        <td> <h4>${month[searchme]["amount"]}</h4></td>    
+    <td><h5><b>${month[searchme]["mon"]} </b></h5></td> 
+        <td><h5><b>${month[searchme]["yyyy"]}</b></h5></td> 
+        <td><h5><b>${month[searchme]["amount"]}</b></h5></td>     
     </tbody>  
     `;
     })
