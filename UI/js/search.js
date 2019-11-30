@@ -95,10 +95,10 @@ function books(book_id, car_number, from_location, to_location, price){
     document.getElementById("editor").innerHTML =`
 
     <form name="modify"><br><p id="id"></p><br>
-    <textarea maxlength="20" rows ="2" cols = "38" name="car_number">${car_number}</textarea><br><br>
-    <textarea maxlength="20" rows ="2" cols = "38" name="from_location">${from_location}</textarea><br><br>
-    <textarea maxlength="20" rows ="2" cols = "38" name="to_location">${to_location}</textarea><br><br>
-    <textarea maxlength="20" rows ="2" cols = "38" name="price">${price}</textarea><br><br>
+    <textarea disabled="disabled" maxlength="20" rows ="2" cols = "38" name="car_number">${car_number}</textarea><br><br>
+    <textarea  disabled="disabled "maxlength="20" rows ="2" cols = "38" name="from_location">${from_location}</textarea><br><br>
+    <textarea  disabled="disabled" maxlength="20" rows ="2" cols = "38" name="to_location">${to_location}</textarea><br><br>
+    <textarea  disabled="disabled" maxlength="20" rows ="2" cols = "38" name="price">${price}</textarea><br><br>
 
     <input type="number" maxlength="20" rows ="2" cols = "33" name="quality" placeholder="How many seats"><br><br>
     <input type="date"maxlength="20" rows ="2" cols = "33" name="dates" placeholder="Date"><br><br>
