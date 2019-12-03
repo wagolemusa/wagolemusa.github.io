@@ -95,15 +95,20 @@ function books(book_id, car_number, from_location, to_location, price){
     document.getElementById("editor").innerHTML =`
 
     <form name="modify"><br><p id="id"></p><br>
-    <textarea maxlength="20" rows ="2" cols = "38" name="car_number">${car_number}</textarea><br><br>
-    <textarea maxlength="20" rows ="2" cols = "38" name="from_location">${from_location}</textarea><br><br>
-    <textarea maxlength="20" rows ="2" cols = "38" name="to_location">${to_location}</textarea><br><br>
-    <textarea maxlength="20" rows ="2" cols = "38" name="price">${price}</textarea><br><br>
-
-    <input type="number" maxlength="20" rows ="2" cols = "33" name="quality" placeholder="How many seats"><br><br>
-    <input type="date"maxlength="20" rows ="2" cols = "33" name="dates" placeholder="Date"><br><br>
+    <h5>Car Number</h5>
+    <textarea class="form-control rounded-0 id="exampleFormControlTextarea1" disabled="disabled" rows ="1" cols = "30" name="car_number">${car_number}</textarea><br>
+    <h5>From</h5>
+    <textarea class="form-control rounded-0 id="exampleFormControlTextarea1" disabled="disabled" rows ="1" cols = "30" name="from_location">${from_location}</textarea><br>
+    <h5>To</h5>
+    <textarea class="form-control rounded-0 id="exampleFormControlTextarea1" disabled="disabled"  rows ="1" cols = "30" name="to_location">${to_location}</textarea><br>
+   <h5>Price</h5>
+    <textarea class="form-control rounded-0 id="exampleFormControlTextarea1" disabled="disabled"  rows ="1" cols = "30" name="price">${price}</textarea><br>
+    <h5>Seats</h5>
+    <input class="form-control form-control-lg" input"type="number"  name="quality" placeholder="How many seats"><br>
+    <h5>Travel Date</h5>
+    <input class="form-control form-control-lg" type="text"  input" type="date"  name="dates" placeholder="Date"><br>
  
-     <button class="view" name="save" id="search">Book</button></form>
+     <button class="btn btn-default"  name="save" id="search">Book</button></form>
     <br/>
   </div>
 </div>
