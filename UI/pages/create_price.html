@@ -80,8 +80,11 @@
         <option value="Night">Night</option>
       </select><br/><br/>
       <input type="number" name="price" placeholder="price" required>
+      <input type="date" id="dob"> 
+      <button onclick="dateDisplay()">Submit</button> 
+      <p id="demo"></p> 
+
       <input type="text" name="day_time" required>
-      <datalist id="hosting">
           <option value="nairobi" />
           <option value="mombasa"/>
           <option value="kisumu" />
@@ -223,6 +226,12 @@ window.onclick = function(event) {
 }
 </script> -->
 
+<script> 
+  function dateDisplay() { 
+      var x = document.getElementById("dob").value; 
+      document.getElementById("demo").innerHTML = x; 
+  } 
+</script> 
 
 <script src="../js/script.js"></script>
 <script src="../js/create_price.js"></script>

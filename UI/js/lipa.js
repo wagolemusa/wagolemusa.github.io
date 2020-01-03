@@ -127,19 +127,20 @@ function mpesa(book_id, bookingref, car_number, from_location, to_location, pric
     document.getElementById("editor").innerHTML =`
 
     <form name="modify"><br><p id="id"></p><br>
-    <input type="number" maxlength="20" rows ="2" cols = "33" name="phone" placeholder="245 678 67 7700"><br><br>
+    <h6>Enter Phone Number</h6>
+    <input type="number" maxlength="20" rows ="2" cols = "33" name="phone" placeholder="254 678 67 7700"><br><br>
 
-    <textarea disabled="disabled" maxlength="20" rows ="2" cols = "38" name="book_id">${book_id}</textarea><br><br>
-    <textarea disabled="disabled" maxlength="20" rows ="2" cols = "38" name="bookingref">${bookingref}</textarea><br><br>
-    <textarea disabled="disabled" maxlength="20" rows ="2" cols = "38" name="car_number">${car_number}</textarea><br><br>
-    <textarea disabled="disabled" maxlength="20" rows ="2" cols = "38" name="from_location">${from_location}</textarea><br><br>
-    <textarea disabled="disabled" maxlength="20" rows ="2" cols = "38" name="to_location">${to_location}</textarea><br><br>
-    <textarea disabled="disabled" maxlength="20" rows ="2" cols = "38" name="price">${price}</textarea><br><br>
-    <textarea disabled="disabled" maxlength="20" rows ="2" cols = "38" name="quality">${quality}</textarea><br><br>
-    <textarea disabled="disabled" maxlength="20" rows ="2" cols = "38" name="dates">${dates}</textarea><br><br>
-    <textarea disabled="disabled" maxlength="20" rows ="2" cols = "38" name="total">${total}</textarea><br><br>
+    <textarea disabled="disabled" class="form-control rounded-0 id="exampleFormControlTextarea1" name="book_id">${book_id}</textarea><br><br>
+    <textarea disabled="disabled" class="form-control rounded-0 id="exampleFormControlTextarea1" name="bookingref">${bookingref}</textarea><br><br>
+    <textarea disabled="disabled" class="form-control rounded-0 id="exampleFormControlTextarea1" name="car_number">${car_number}</textarea><br><br>
+    <textarea disabled="disabled" class="form-control rounded-0 id="exampleFormControlTextarea1" name="from_location">${from_location}</textarea><br><br>
+    <textarea disabled="disabled" class="form-control rounded-0 id="exampleFormControlTextarea1" name="to_location">${to_location}</textarea><br><br>
+    <textarea disabled="disabled" class="form-control rounded-0 id="exampleFormControlTextarea1" name="price">${price}</textarea><br><br>
+    <textarea disabled="disabled" class="form-control rounded-0 id="exampleFormControlTextarea1" name="quality">${quality}</textarea><br><br>
+    <textarea disabled="disabled" class="form-control rounded-0 id="exampleFormControlTextarea1" name="dates">${dates}</textarea><br><br>
+    <textarea disabled="disabled" class="form-control rounded-0 id="exampleFormControlTextarea1" name="total">${total}</textarea><br><br>
 
-     <button class="view" name="save" id="search">Book</button></form>
+     <button class="btn btn-default" name="save" id="search">Book</button></form>
     <br/>
   </div>
 </div>
