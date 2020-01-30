@@ -49,42 +49,58 @@
     <div class="conts mb-5">
 
 <br/>
-<td><button type="button" class="btn btn-success" id="myBtn">Create Price</button></td>
-<h1>Available Vehicle plus Prices</h1> 
 
+<h3>Available Vehicle plus Prices</h3> 
 
-<h3 id="msgerror"></h3>
+<h5 id="msgerror"></h5>
    <!-- <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search by Dates.."> -->
-  <div id="shows">
-
-
-  </div>
-</div>
-
-
-<div id="myModal" class="modal">
 
   <!-- Modal content -->
-  <div class="modal-content">
-    <span class="close">&times;</span>
+  <!-- <td><button type="button" class="btn btn-success" id="myBtn">Create Price</button></td> -->
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#basicExampleModal">
+    Create Price
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="basicExampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Create Delivery Prices</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
     <h3 id="msg"></h3>
-    <h1>Create Delivery Prices</h1>
     <form name="create" id="prices">
       <input type="text" name="car_number" placeholder="Car Number" required>
       <input list="hosting" type="text" name="from_location" placeholder="From......" required>
       <input list="hosting" type="text" name="to_location" placeholder="To........" required>
-      <input type="text" name="arrival" placeholder="Arrival" required>
       <select class="browser-default custom-select" name="period">
         <option selected>Open this select menu</option>
         <option value="Day">Day</option>
         <option value="Night">Night</option>
       </select><br/><br/>
+      <input type="text" name="arrival" placeholder="Arrival" required>
       <input type="number" name="price" placeholder="price" required>
-      <input type="date" id="dob"> 
-      <button onclick="dateDisplay()">Submit</button> 
-      <p id="demo"></p> 
+      <input type="text" name="day_time" placeholder="Time" required>
+      <input type="text" name="dates"  placeholder="Dates" required>
+      <button type='submit' id="prices">Create price</button>
+      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+  </div> 
+  </form>
 
-      <input type="text" name="day_time" required>
+  </div>
+</div>
+</div>
+<div id="shows"></div>
+
+</div>
+<datalist id="hosting">
+
           <option value="nairobi" />
           <option value="mombasa"/>
           <option value="kisumu" />
@@ -186,12 +202,14 @@
           <option value="maragua"/>
           <option value="kendu Bay"/>
       </datalist>
-      <button type='submit' id="prices">Create price</button>
-    </form>
+   
 <br/>
+
+</div>
   </div>
 
 </div>
+
 
 <!-- <div id="myModal1" class="modal1">
 
@@ -226,13 +244,9 @@ window.onclick = function(event) {
 }
 </script> -->
 
-<script> 
-  function dateDisplay() { 
-      var x = document.getElementById("dob").value; 
-      document.getElementById("demo").innerHTML = x; 
-  } 
-</script> 
-
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js" type="text/javascript"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js" type="text/javascript"></script>
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="Stylesheet" type="text/css" />
 <script src="../js/script.js"></script>
 <script src="../js/create_price.js"></script>
 <!-- JQuery -->

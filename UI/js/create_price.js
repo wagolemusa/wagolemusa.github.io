@@ -1,3 +1,9 @@
+
+ $ ('#datepicker').datepicker({
+    weekdaysShort: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'],
+    showMonthsShort: true
+    })
+
 let token = localStorage.getItem('access_token')
 let current_user = localStorage.getItem('current_user')
 let access_token = "Bearer " + token
@@ -22,7 +28,7 @@ function fetchprice(event){
     let arrival = document.forms["create"]["arrival"].value
     let price = document.forms["create"]["price"].value;
     let day_time = document.forms["create"]["day_time"].value;
-    let dates = document.forms["dates"]["dates"].value;
+    let dates = document.forms["create"]["dates"].value;
     let data = {car_number:car_number, from_location:from_location, to_location:to_location, period:period, arrival:arrival, price:price, day_time:day_time, dates:dates};
     fetch(url, {method:"POST",
     headers:{
@@ -182,3 +188,4 @@ function deletehistory(price_id){
 
 //     });
 // }
+
