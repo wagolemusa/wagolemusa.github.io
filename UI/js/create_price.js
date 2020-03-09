@@ -62,7 +62,6 @@ fetch("https://senditparcel.herokuapp.com/api/admin/v2/locations",{
     response.json().then((collection)=>{ 
 
         console.log(collection)
-    
 
             collection = collection["collection"];
             let output = `

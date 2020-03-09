@@ -1080,6 +1080,21 @@ margin-bottom:15px;
 color:#d5d5d5;
 }
 
+.dis{
+  background-color: #ffffff;
+  padding: 2em;
+}
+
+.tabl th{
+  font-size: 18px;
+  color:#1C2331;
+  font-weight: 500;
+}
+
+.tabl td{
+  font-size: 16px;
+}
+
 
 
 #myCarousel .carousel-item h4{-webkit-animation-name:fadeInLeft; animation-name:fadeInLeft;} 
@@ -1093,7 +1108,7 @@ color:#d5d5d5;
 }
 #myCarousel .container {max-width: 1430px;  }
 #myCarousel .carousel-item{height:100%; min-height:550px; }
-#myCarousel{position:relative; z-index:1; background:url(/UI/img/j2j.jpg) center center no-repeat; background-size:cover; }
+#myCarousel{position:relative; z-index:1; background:url(/UI/img/jjt.jpg) center center no-repeat; background-size:cover; }
 
 
 
@@ -1149,4 +1164,76 @@ color:#d5d5d5;
 .works p{
   font-size: 17px;
   color: #1C2331;
+}
+
+#logbox {
+  padding: 10px;
+  margin: 50px auto;
+  width: 340px;
+  background-color: #fff;
+  -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+}
+
+h1 {
+  text-align: center;
+  font-size: 175%;
+  color: #757575;
+  font-weight: 300;
+}
+
+h1, input {
+  font-family: "Open Sans", Helvetica, sans-serif;
+}
+
+.input {
+  width: 75%;
+  height: 50px;
+  display: block;
+  margin: 0 auto 15px;
+  padding: 0 15px;
+  border: none;
+  border-bottom: 2px solid #ebebeb;
+}
+.input:focus {
+  outline: none;
+  border-bottom-color: #3CC !important;
+}
+.input:hover {
+  border-bottom-color: #dcdcdc;
+}
+.input:invalid {
+  box-shadow: none;
+}
+
+.pass:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px white inset;
+}
+
+.inputButton {
+  position: relative;
+  width: 85%;
+  height: 50px;
+  display: block;
+  margin: 30px auto 30px;
+  color: white;
+  background-color:  #00c851!important;
+  border: none;
+  -webkit-box-shadow: 0 5px 0 #00c851;
+  -moz-box-shadow: 0 5px 0  #00c851;
+  box-shadow: 0 5px 0  #00c851;
+}
+.inputButton:hover {
+  top: 2px;
+  -webkit-box-shadow: 0 3px 0 #00c851;
+  -moz-box-shadow: 0 3px 0 #00c851;
+  box-shadow: 0 3px 0 #00c851;
+}
+.inputButton:active {
+  top: 5px;
+  box-shadow: none;
+}
+.inputButton:focus {
+  outline: none;
 }

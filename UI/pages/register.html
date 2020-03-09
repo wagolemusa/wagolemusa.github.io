@@ -1,102 +1,128 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
 	<title>SendIT</title>
-  <!-- Font Awesome -->
-  <link rel="stylesheet" type="text/css" href="../css/style.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
 
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-  <!-- Bootstrap core CSS -->
-  <link href="../css/bootstrap.min.css" rel="stylesheet">
-  <!-- Material Design Bootstrap -->
-  <link href="../css/mdb.min.css" rel="stylesheet">
-  <!-- Your custom styles (optional) -->
-  <link href="../css/style.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.7/css/mdb.min.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+<script src="./UI/js/home.js"></script>
 </head>
-<body>
-  
-  <nav class="navbar navbar-expand-lg navbar-dark primary-color">
-    <a class="navbar-brand" href="#">
-       <img src="../img/delivery.png">
-    </a>
-  
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
-      aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  
-    <div class="collapse navbar-collapse" id="basicExampleNav">
-  
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="../../index.html">Home
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Stations</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
-        </li>
+
+<nav class="navbar navbar-expand-sm fixed-top navbar-dark amber darken-4">
+    <a class="navbar-brand" href="../../index.html">
+        <img src="../img/delivery.png">
+     </a>
  
-    
-  
-      </ul>
-      <!-- Links -->
-  
-      <form class="form-inline">
-       
-          <a class="nav-link" href="login.html">Login</a>
-          <a class="nav-link" href="register.html">Register</a>
+   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+     aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+     <span class="navbar-toggler-icon"></span>
+   </button>
  
+   <div class="collapse navbar-collapse" id="basicExampleNav">
  
-      </form> 
-    </div>
-    <!-- Collapsible content -->
-  
-  </nav>
-  <!--/.Navbar-->
- <br/>
-<div class="card">
-
-    <h5 class="card-header info-color white-text text-center py-4">
-        <strong>Create Account</strong>
-    </h5>
-  <div class="card-body px-lg-5 pt-0">
-
-<h2 id="reg"></h2>
-<form name="register" id="regform">
-
-        <input type="text" name="first_name" id="defaultContactFormName" class="form-control mb-4" placeholder="First Name">
-       
-        <input type="text" name="last_name" id="defaultContactFormName" class="form-control mb-4" placeholder="Last Name">
-
-    
-        <input type="text" name="username" id="defaultContactFormEmail" class="form-control mb-4" placeholder="Username">
-
-        <input type="number" name="phone" id="defaultContactFormEmail" class="form-control mb-4" placeholder="Phone Number">
-
-        <input type="email" name="email" id="defaultContactFormEmail" class="form-control mb-4" placeholder="Email">
-
-   
-        <input type="password" name="password" id="defaultContactFormEmail" class="form-control mb-4" placeholder="Password">
+     <ul class="navbar-nav mr-auto">
+       <li class="nav-item" style="color: #ffffff; font-weight: 500;">
+         <a class="nav-link" href="../../index.html">Home
+         </a>
+       </li>
+      
+       <li class="nav-item" style="color: #ffffff; font-weight: 500;">
+         <a class="nav-link" href="pricing.html">Pricing</a>
+       </li>
+     </ul>
+     <!-- Links -->
+ 
+     <form class="form-inline">
+      
+         <a class="nav-link" href="login.html" style="color: #ffffff; font-weight: 500;">Login</a>
+         <a class="nav-link" href="register.html" style="color: #ffffff; font-weight: 500;">Register</a>
 
 
-        <input type="password" name="confirm_password" id="defaultContactFormEmail" class="form-control mb-4" placeholder="Confirm Password">
+     </form> 
+   </div>
+   <!-- Collapsible content -->
+ </nav>
+ <!--/.Navbar-->
+ <br/><br/><br/><br/>
 
+ <div class="container">
+   <div class="row">
+  <div class="col-md-6">
+    <h2 id="reg"></h2>
+  <div id="logbox">
+    <form name="register" id="regform">
+      <input type="text" name="first_name" placeholder="First Name" autofocus="autofocus" required="required" class="input pass"/>
+      <input type="text" name="last_name" placeholder="Last Name" autofocus="autofocus" required="required" class="input pass"/>
+      <input type="text" name="username" placeholder="Username" autofocus="autofocus" required="required" class="input pass"/>
+      <input type="number" name="phone" placeholder="Phone Number" autofocus="autofocus" required="required" class="input pass"/>
+      <input type="text" name="email" placeholder="Email Address" autofocus="autofocus" required="required" class="input pass"/>
 
-  <button name="submit" id="submit" class="btn btn-info btn-block my-4">Register</button> 
-  <a href="login.html">Already a member ? Sign In..</a>
-    <br/>
-  <br/>
+      <input type="password" name="password" placeholder="Choose a password" required="required" class="input pass"/>
+      <input type="password" name="confirm_password"  placeholder="Confirm password" required="required" class="input pass"/>
 
-</form>
+      <input name="submit" id="submit" value="Sign me up!" class="inputButton"/>
+      <div class="text-center">
+          already have an account? <a href="login.html" id="login_id">login</a>
+      </div>
+    </form>
+  </div>
 </div>
+
+<div class="col-md-6">
+  <div class="row">
+    <div class="col-2">
+    <i class="fas fa-check-circle fa-2x indigo-text"></i>
+    </div>
+    <div class="col-10">
+      <h2 class="font-weight-bold" style="color: #00c851!important;">Create an account</h2>
+      <p class="grey-text" style="font-size: 20px;">Have a total of 10 tickets on your profile history and Travel for One trip for <span>Free</span>
+      </p>
+      <div style="height:15px"></div>
+    </div>
+  </div>
+  <img src="../img/edit1.png" class="img-fluid" alt="Responsive">
+</div>
+</div>
+ </div>
+  <!--col-md-6-->
+
+
+<!-- Footer -->
+<footer class="page-footer font-small mdb-color darken-4
+pt-4">
+
+  <!-- Footer Elements -->
+  <div class="container">
+
+    <!-- Call to action -->
+    <ul class="list-unstyled list-inline text-center py-2">
+      <li class="list-inline-item">
+        <h5 class="mb-1">Register, Book and get discount</h5>
+      </li>
+      <li class="list-inline-item">
+        <a href="#!" class="btn btn-outline-success btn-rounded waves-effect">Sign up!</a>
+      </li>
+    </ul>
+    <!-- Call to action -->
+
+  </div>
+  <!-- Footer Elements -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2020 Copyright:
+    <a href="#"> xycoders</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+
 <script src="../js/home.js"></script>
 
 <!-- JQuery -->
