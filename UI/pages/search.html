@@ -39,7 +39,7 @@
        </li>
       
        <li class="nav-item" style="color: #ffffff; font-weight: 500;">
-         <a class="nav-link" href="pricing.html">Pricing</a>
+         <a class="nav-link" href="pricing1.html">Pricing</a>
        </li>
      </ul>
      <!-- Links -->
@@ -62,33 +62,26 @@
    <!-- Collapsible content -->
  </nav>
  <!--/.Navbar-->
- <br/><br/><br/><br/>
-<div class="contianer">
-    <div class="conts mb-5">
+ <br/>
+<div class="container">
+<div class="conts mb-5">
     
   <h3 id="reg"></h3>
-
-    <h1>Where Do You Want To Go </h1>
+  <h2 class="font-weight-bold" style="color: #00c851!important; font-weight: 600; font-family: Georgia, 'Times New Roman', Times, serif;">Where Do You Want To Go</h2>
+  <br/>
     <div class="row">    
-        <div class="col">
+        <div class="col-md-3">
 
-    <form name="search" id="searches">
-        <div class="md-form mt-0">
-          <input list="hosting"  type="text" name="from_location" placeholder="From ........">
-        </div>
+        <form name="search" id="searches">
+          <input list="hosting" type="text" name="from_location" placeholder="From ............" autofocus="autofocus" required="required" class="input pass"/>
       </div>
-      <div class="col">
-            <div class="md-form mt-0">
-
-         <input list="hosting" type="text" name="to_location" placeholder="To ............">
-      </div>
-      <div class ="col">
-
-        in
+      <div class="col-md-3">
+        <input list="hosting" type="text" name="to_location" placeholder="To ............" autofocus="autofocus" required="required" class="input pass"/>
       </div>
 
+      <div class ="col-md-3">
+        <input type="date" name="dates" placeholder="Date" autofocus="autofocus" required="required" class="input pass"/>
       </div>
-
          <datalist id="hosting">
           <option value="nairobi" />
           <option value="mombasa"/>
@@ -191,8 +184,8 @@
           <option value="maragua"/>
           <option value="kendu Bay"/>
       </datalist>
-      <div class="col">
-      <button class="btn btn-default" type='submit' id="submit">Search</button>
+      <div class="col-md-3">
+        <button class="btn btn-default" type='submit' id="submit">Search</button>
       </div>
     </form>
   </br> 
@@ -253,9 +246,6 @@ pt-4">
 
 </footer>
 <!-- Footer -->
-
-
-
 <script>
     var modal4 = document.getElementById('myModal4');
     var btn4 = document.getElementById("myBtn4");

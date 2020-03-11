@@ -5,68 +5,68 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
 	<title>SendIT</title>
-  <!-- Font Awesome -->
-  <link rel="stylesheet" type="text/css" href="../css/style.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
 
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-  <!-- Bootstrap core CSS -->
-  <link href="../css/bootstrap.min.css" rel="stylesheet">
-  <!-- Material Design Bootstrap -->
-  <link href="../css/mdb.min.css" rel="stylesheet">
-  <!-- Your custom styles (optional) -->
-  <link href="../css/style.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.7/css/mdb.min.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+<script src="./UI/js/home.js"></script>
 </head>
 <body onload="userget()">
-    <nav class="navbar navbar-expand-lg navbar-dark primary-color">
-        <a class="navbar-brand" href="#">
-            <img src="../img/delivery.png">
+<nav class="navbar navbar-expand-sm fixed-top navbar-dark amber darken-4">
+    <a class="navbar-brand" href="../../index.html">
+        <img src="../img/delivery.png">
+     </a>
+ 
+   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+     aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+     <span class="navbar-toggler-icon"></span>
+   </button>
+ 
+   <div class="collapse navbar-collapse" id="basicExampleNav">
+ 
+     <ul class="navbar-nav mr-auto">
+       <li class="nav-item" style="color: #ffffff; font-weight: 500;">
+        <a class="nav-link" href="search.html">Book</a>
+  
          </a>
-       
-    
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
-        aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-    
-      <div class="collapse navbar-collapse" id="basicExampleNav">
-    
-        <ul class="navbar-nav mr-auto">
-     
-          <li class="nav-item">
-              <a class="nav-link" href="search.html">Book</a>
+       </li>
+       <li class="nav-item" style="color: #ffffff; font-weight: 500;">
+        <a class="nav-link" href="send.html">Send parcels</a>
   
-          </li>
-          <li class="nav-item">
-              <a class="nav-link" href="send.html">Send parcels</a>
-            </li>
-    
-          <!-- Dropdown -->
-    
-    
-        </ul>
-        <!-- Links -->
-        <a id='current_user' style="color:chartreuse;font-size: 30px;"></a>
+         </a>
+       </li>
+      
+       <li class="nav-item" style="color: #ffffff; font-weight: 500;">
+         <a class="nav-link" href="pricing1.html">Pricing</a>
+       </li>
+     </ul>
+     <!-- Links -->
+ 
+     <a id='current_user' style="color:chartreuse;font-size: 30px;"></a>
 
-        <div class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">MY MENU</a>
-            <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="payments.html">Bookings</a>
-              <a class="dropdown-item" href="my_order.html">Deliveries</a>
-              <a class="dropdown-item" href="profile.html">Profile</a>
-              <a class="dropdown-item" href="#">Logout</a>
-  
-  
-            </div>
-          </div>
-      <!-- Collapsible content -->
-    
-    </nav>
-    <!--/.Navbar-->
+     <div class="nav-item dropdown">
+         <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+           aria-haspopup="true" aria-expanded="false">MY MENU</a>
+         <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+           <a class="dropdown-item" href="payments.html">Bookings</a>
+           <a class="dropdown-item" href="my_order.html">Deliveries</a>
+           <a class="dropdown-item" href="profile.html">Profile</a>
+           <a class="dropdown-item" href="#">Logout</a>
+
+
+         </div>
+       </div>
+   </div>
+   <!-- Collapsible content -->
+ </nav>
+ <!--/.Navbar-->
+ <br/><br/>
     <div class="container">
-        <br/>
   <div class="conts mb-5">
-
+    <h2 class="font-weight-bold" style="color: #00c851!important; font-weight: 600; font-family: Georgia, 'Times New Roman', Times, serif;">Payment Histories</h2>
+<br/>
   <!-- Nav tabs -->
   <ul class="nav nav-tabs md-tabs nav-justified" role="tablist">
     <li class="nav-item">
@@ -104,27 +104,50 @@
   </div>
   </div>
   <!-- Tab panels -->
-
-
-  
-  
-
-    <div id="myModal6" class="modal6" >
+  <div id="myModal6" class="modal6" >
         <div class="modal-content6" id="printJS-form">
           <span class="close6">&times;</span>
     
           <img src="../img/delivery.png" style="width: 8em;">
-    
           <div id="showme"></div>
-    
           </div>
           <button type="button" onclick="printJS('printJS-form', 'html')">
             Print Form
          </button>  
          <br/>
       </div>
-    
-      
+    </div>
+
+
+<!-- Footer -->
+<footer class="page-footer font-small mdb-color darken-4
+pt-4">
+
+  <!-- Footer Elements -->
+  <div class="container">
+
+    <!-- Call to action -->
+    <ul class="list-unstyled list-inline text-center py-2">
+      <li class="list-inline-item">
+        <h5 class="mb-1">Register, Book and get discount</h5>
+      </li>
+      <li class="list-inline-item">
+        <a href="#!" class="btn btn-outline-success btn-rounded waves-effect">Sign up!</a>
+      </li>
+    </ul>
+    <!-- Call to action -->
+
+  </div>
+  <!-- Footer Elements -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2020 Copyright:
+    <a href="#"> xycoders</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
     <script>
       var modal6 = document.getElementById('myModal6');
       var btn6 = document.getElementById("myBtn6");
@@ -141,10 +164,6 @@
           }
       }
     </script>
-
-
-</div>
-
 
 <script>
 $(document).ready(function () {

@@ -4,8 +4,12 @@ let token = localStorage.getItem('access_token')
 let current_user = localStorage.getItem('current_user')
 let access_token = "Bearer " + token
 
+function userget(){
+    document.getElementById('current_user').innerHTML = current_user
+}
+
 //Function for searching
-fetch("https://senditparcel.herokuapp.com/api/v2/lipa",{
+fetch("https://senditparcel.herokuapp.com/api/v2/admin/paid_with_mpasa",{
     method: "GET",
     headers: {
         "Content-Type":"application/json",
@@ -14,16 +18,14 @@ fetch("https://senditparcel.herokuapp.com/api/v2/lipa",{
     },
 })
 .then((response) =>{
-    response.json().then((book)=>{
-        console.log(book)
-        if (book.message == 'Internal Server Error'){
+    response.json().then((bookpesa)=>{
+        console.log(bookpesa)
+        if (bookpesa.message == 'Internal Server Error'){
             window.location.replace("login.html")
         }
-
-        book = book["book"]
+        bookpesa = bookpesa["bookpesa"]
         let output = `
-        <h1>Historical payments</h1>
-
+        <h4 class="font-weight-bold" style="color: #1C2331; font-weight: 600; font-family: Georgia, 'Times New Roman', Times, serif;">History Mpesa Payments</h4>
         <table id="dtBasicExample" class="table table-striped table-bordered table-sm" cellspacing="0" width="100%">
         <thead>
         <tr>
@@ -34,27 +36,25 @@ fetch("https://senditparcel.herokuapp.com/api/v2/lipa",{
     <th class="th-sm">Price</th>
     <th class="th-sm">Quantity</th>
     <th class="th-sm">Amount</th>
-    <th class="th-sm">Phone</th>
     <th class="th-sm">Booked On</th>
     <th class="th-sm">Paid On</th>
     <th class="th-sm">Status</th> `;
 
-        Object.keys(book).forEach(function(sendt){
+        Object.keys(bookpesa).forEach(function(sendt){
 
             output +=`
 
             <tr>
-            <td>${book[sendt]["bookingref"]}</td>
-            <td>${book[sendt]["car_number"]}</td>
-            <td>${book[sendt]["from_location"]}</td>
-            <td>${book[sendt]["to_location"]}</td>
-            <td>${book[sendt]["price"]}</td>
-            <td>${book[sendt]["quality"]}</td>
-            <td>${book[sendt]["amount"]}</td>
-            <td>${book[sendt]["phone"]}</td>
-            <td>${book[sendt]["dates"]}</td>
-            <td>${book[sendt]["created_on"]}</td>
-            <td>${book[sendt]["status"]}</td>
+            <td>${bookpesa[sendt]["bookingref"]}</td>
+            <td>${bookpesa[sendt]["car_number"]}</td>
+            <td>${bookpesa[sendt]["from_location"]}</td>
+            <td>${bookpesa[sendt]["to_location"]}</td>
+            <td>${bookpesa[sendt]["price"]}</td>
+            <td>${bookpesa[sendt]["quality"]}</td>
+            <td>${bookpesa[sendt]["amount"]}</td>
+            <td>${bookpesa[sendt]["dates"]}</td>
+            <td>${bookpesa[sendt]["created_on"]}</td>
+            <td><button type="button" class="btn btn-success">${bookpesa[sendt]["status"]}</td>
 
            </tr> `;
         })
@@ -83,8 +83,6 @@ function viewSingle(payment_id){
     console.log(data)
 
     let show = `
-
-
     `;
     Object.keys(data).forEach(function(searchme){
 
@@ -109,13 +107,9 @@ function viewSingle(payment_id){
         })
         document.getElementById("showme").innerHTML = show 
         modal6.style.display = "block";
-
-
     })
     .catch(error => console.log('error:',error));
     }
-
-
 
 
 // Fetching from bookings where payed by cash
@@ -148,9 +142,9 @@ fetch("https://senditparcel.herokuapp.com/api/v2/book",{
         <th>quality</th>
         <th>dates</th>
         <th>total</th>
-        <th>Payemnts Status</th>
         <th>Booked No</th>
-        <th style="width:30%;"></th>
+        <th>Payemnts Status</th>
+
         </tr>
         </thead>
         `;
@@ -168,8 +162,9 @@ fetch("https://senditparcel.herokuapp.com/api/v2/book",{
             <td>${book[sendt]["quality"]}</td>
             <td>${book[sendt]["dates"]}</td>
             <td>${book[sendt]["total"]}</td>
-            <td>${book[sendt]["payments"]}</td>
             <td>${book[sendt]["created_on"]}</td>
+            <td><button type="button" class="btn btn-success">${book[sendt]["payments"]}</td>
+
            </tr>`;
         })
         document.getElementById("sendthis").innerHTML = output + `</table>`;
