@@ -62,65 +62,16 @@
    <!-- Collapsible content -->
  </nav>
  <!--/.Navbar-->
- <br/><br/>
-
+ <br/><br/> <br/>
+ <section class="dis">
+   
 <div class="container">
-    <div class="conts mb-5">
-
-      <h2 class="font-weight-bold" style="color: #00c851!important; font-weight: 600; font-family: Georgia, 'Times New Roman', Times, serif;">Delivery Histories</h2>
-      <br/>
-    <ul class="nav nav-tabs" id="myTab" role="tablist">
-      <li class="nav-item">
-        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
-          aria-selected="true">Intransit</a>
-
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
-          aria-selected="false">Delivered</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact"
-          aria-selected="false">Canceled</a>
-      </li>
-    </ul>
-    <div class="tab-content" id="myTabContent">
-      <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-        <div id="sendthis"></div>
-        
-      </div>
-      <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-        <div id="history"></div> 
-      </div>
-      <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-     
-        <div id="cancled"></div>  
-      </div>
-    </div>
-
+    <h2 class=" h3 text-center" style="color: #00c851
+    ;  font-size: 2em; font-weight: 600;">OUR PRICING</h2>
+    <br>
+    <div id="shows"></div>
 </div>
-
-
-<!-- Model for changing destination -->
-<div id="myModal2" class="modal2">
-
-  <!-- Modal content -->
-  <div class="modal-content2">
-      <div id="sendthis"></div>
-
-    <span class="close2">&times;</span>
-          <h2 class="font-weight-bold" style="color: #00c851!important; font-weight: 600; font-family: Georgia, 'Times New Roman', Times, serif;">Change destination</h2>
-
-          <h3 id="change"></h3>
-          <h5 class="modalText" id = "destination"></h5><p class="modalText" id ="single"></p>
-
-      <div id="editor"></div>
-
-    </form>
-<br/>
-  </div>
-</div>
-</div>
+</section>
 <!-- Footer -->
 <footer class="page-footer font-small mdb-color darken-4
 pt-4">
@@ -150,28 +101,8 @@ pt-4">
 
 </footer>
 <!-- Footer -->
+<script src="../js/pricing.js"></script>
 
-<script>
-    var modal2 = document.getElementById('myModal2');
-    var btn2 = document.getElementById("myBtn2");
-    var span2 = document.getElementsByClassName("close")[0];
-    btn.onclick = function() {
-        modal2.style.display = "block";
-    }
-    span2.onclick = function() {
-        modal2.style.display = "none";
-    }
-    window.onclick = function(event) {
-        if (event.target == modal2) {
-            modal2.style.display = "none";
-        }
-    }
-
-</script>
-<!-- <script src="../js/script.js"></script> -->
-<script src="../js/veiw.js"></script>
-<script src="../js/user_history_deliveries.js"></script>
-<!-- JQuery -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <!-- Bootstrap tooltips -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
@@ -179,7 +110,6 @@ pt-4">
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <!-- MDB core JavaScript -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.7/js/mdb.min.js"></script>
-
 
 </body>
 </html> 

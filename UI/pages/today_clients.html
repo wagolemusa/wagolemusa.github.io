@@ -52,128 +52,156 @@
 
       <h3 id="reg"></h3>
 
-    <h1>Where Do You Want To Go </h1>
-    <div class="row">    
-        <div class="col">
-
-    <form name="search" id="searches">
-        <div class="md-form mt-0">
-          <input list="hosting"  type="text" name="from_location" placeholder="From ........">
+    <h3 id="reg"></h3>
+    <h2 class="font-weight-bold" style="color: #00c851!important; font-weight: 600; font-family: Georgia, 'Times New Roman', Times, serif;">Where Do You Want To Go</h2>
+    <br/>
+      <div class="row">    
+          <div class="col-md-3">
+  
+          <form name="search" id="searches">
+            <input list="hosting" type="text" name="from_location" placeholder="From ............" autofocus="autofocus" required="required" class="input pass"/>
         </div>
+        <div class="col-md-3">
+          <input list="hosting" type="text" name="to_location" placeholder="To ............" autofocus="autofocus" required="required" class="input pass"/>
+        </div>
+  
+        <div class ="col-md-3">
+          <input type="date" name="dates" placeholder="Date" autofocus="autofocus" required="required" class="input pass"/>
+        </div>
+           <datalist id="hosting">
+            <option value="nairobi" />
+            <option value="mombasa"/>
+            <option value="kisumu" />
+            <option value="nakuru" />
+            <option value="eldoret" />
+            <option value="kehancha"/>
+            <option value="ruiru" />
+            <option value="kikuyu" />
+            <option value="kangundo-Tala" />
+            <option value="malindi" />
+            <option value="naivasha" />
+            <option value="kitui"/>
+            <option value=machakos" />
+            <option value="thika" />
+            <option value="athi River"/>
+            <option value="karuri" />
+            <option value="nyeri"/>
+            <option value="kilifi"/>
+            <option value="garissa" />
+            <option value="vihiga" />
+            <option value="mumias" />
+            <option value="bomet"/>
+            <option value="molo"/>
+            <option value="ngong"/>
+            <option value="kitale"/>
+            <option value="litein"/>
+            <option value="limuru"/>
+            <option value="lericho"/>
+            <option value="kimilili"/>
+            <option value="awasi"/>
+            <option value="kakamega"/>
+            <option value="kapsabet"/>
+            <option value="mariakani"/>
+            <option value="kiambu"/>
+            <option value="mandera"/>
+            <option value="nyamira"/>
+            <option value="mwingi"/>
+            <option value="kisii"/>
+            <option value="wajir"/>
+            <option value="rongo"/>
+            <option value="bungoma"/>
+            <option value="ahero"/>
+            <option value="nandi Hills"/>
+            <option value="makuyu"/>
+            <option value="kapenguria"/>
+            <option value="taveta"/>
+            <option value="narok"/>
+            <option value="olKalou"/>
+            <option value="kakuma"/>
+            <option value="webuye"/>
+            <option value="malaba"/>
+            <option value="mbita Point"/>
+            <option value="ukunda"/>
+            <option value="wundanyi"/>
+            <option value="busia"/>
+            <option value="runyenjes"/>
+            <option value="migori"/>
+            <option value="malava"/>
+            <option value="suneka"/>
+            <option value="embu"/>
+            <option value="ogembo"/>
+            <option value="homa Bay"/>
+            <option value="lodwar"/>
+            <option value="kitengela"/>
+            <option value="ukwala"/>
+            <option value="keroka"/>
+            <option value="meru"/>
+            <option value="matuu"/>
+            <option value="oyugis"/>
+            <option value="nyahururu"/>
+            <option value="kipkelion"/>
+            <option value="luanda"/>
+            <option value="nanyuki"/>
+            <option value="maua"/>
+            <option value="mtwapa"/>
+            <option value="isiolo"/>
+            <option value="eldama Ravine"/>
+            <option value="voi"/>
+            <option value="siaya"/>
+            <option value="nyansiongo"/>
+            <option value="londiani"/>
+            <option value="iten/Tambach"/>
+            <option value="chuka"/>
+            <option value="malakisi"/>
+            <option value="juja"/>
+            <option value="ongata Rongai"/>
+            <option value="bondo"/>
+            <option value="moyale"/>
+            <option value="maralal"/>
+            <option value="gilgil"/>
+            <option value="nambale"/>
+            <option value="tabaka"/>
+            <option value="muhoroni"/>
+            <option value="kerugoya/Kutus"/>
+            <option value="ugunja"/>
+            <option value="yala"/>
+            <option value="rumuruti"/>
+            <option value="burnt Forest"/>
+            <option value="maragua"/>
+            <option value="kendu Bay"/>
+        </datalist>
+        <div class="col-md-3">
+          <button class="btn btn-default" type='submit' id="submit">Search</button>
+        </div>
+      </form>
+    </br> 
       </div>
-        <div class="col">
-            <div class="md-form mt-0">
+        </div>
+      <div id="showsearch"></div>
+    </div>
+  
+  
+  
+  <div id="myModal4" class="modal4">
+  
+    <!-- Modal content -->
+    <div class="modal-content4">
+        <div id="sendthis"></div>
+  
+      <span class="close4">&times;</span>
+            <h2>Bookings </h2>
+            <h3 id="msge"></h3>
+            <h5 class="modalText" id = "car_number"></h5><p class="modalText" id ="single"></p>
+            <h5 class="modalText" id = "from_location"></h5></h5><p class="modalText" id ="location"></p>
+            <h5 class="modalText" id = "to_location"></h5></h5><p class="modalText" id ="too"></p>
+            <h5 class="modalText" id = "price"></h5></h5><p class="modalText" id ="pessa"></p>
+            
+        <div id="editor"></div>
+  
+      </form>
+  <br/>
 
-         <input list="hosting" type="text" name="to_location" placeholder="To ............">
-      </div>
-      </div>
-         <datalist id="hosting">
-          <option value="nairobi" />
-          <option value="mombasa"/>
-          <option value="kisumu" />
-          <option value="nakuru" />
-          <option value="eldoret" />
-          <option value="kehancha"/>
-          <option value="ruiru" />
-          <option value="kikuyu" />
-          <option value="kangundo-Tala" />
-          <option value="malindi" />
-          <option value="naivasha" />
-          <option value="kitui"/>
-          <option value=machakos" />
-          <option value="thika" />
-          <option value="athi River"/>
-          <option value="karuri" />
-          <option value="nyeri"/>
-          <option value="kilifi"/>
-          <option value="garissa" />
-          <option value="vihiga" />
-          <option value="mumias" />
-          <option value="bomet"/>
-          <option value="molo"/>
-          <option value="ngong"/>
-          <option value="kitale"/>
-          <option value="litein"/>
-          <option value="limuru"/>
-          <option value="lericho"/>
-          <option value="kimilili"/>
-          <option value="awasi"/>
-          <option value="kakamega"/>
-          <option value="kapsabet"/>
-          <option value="mariakani"/>
-          <option value="kiambu"/>
-          <option value="mandera"/>
-          <option value="nyamira"/>
-          <option value="mwingi"/>
-          <option value="kisii"/>
-          <option value="wajir"/>
-          <option value="rongo"/>
-          <option value="bungoma"/>
-          <option value="ahero"/>
-          <option value="nandi Hills"/>
-          <option value="makuyu"/>
-          <option value="kapenguria"/>
-          <option value="taveta"/>
-          <option value="narok"/>
-          <option value="olKalou"/>
-          <option value="kakuma"/>
-          <option value="webuye"/>
-          <option value="malaba"/>
-          <option value="mbita Point"/>
-          <option value="ukunda"/>
-          <option value="wundanyi"/>
-          <option value="busia"/>
-          <option value="runyenjes"/>
-          <option value="migori"/>
-          <option value="malava"/>
-          <option value="suneka"/>
-          <option value="embu"/>
-          <option value="ogembo"/>
-          <option value="homa Bay"/>
-          <option value="lodwar"/>
-          <option value="kitengela"/>
-          <option value="ukwala"/>
-          <option value="keroka"/>
-          <option value="meru"/>
-          <option value="matuu"/>
-          <option value="oyugis"/>
-          <option value="nyahururu"/>
-          <option value="kipkelion"/>
-          <option value="luanda"/>
-          <option value="nanyuki"/>
-          <option value="maua"/>
-          <option value="mtwapa"/>
-          <option value="isiolo"/>
-          <option value="eldama Ravine"/>
-          <option value="voi"/>
-          <option value="siaya"/>
-          <option value="nyansiongo"/>
-          <option value="londiani"/>
-          <option value="iten/Tambach"/>
-          <option value="chuka"/>
-          <option value="malakisi"/>
-          <option value="juja"/>
-          <option value="ongata Rongai"/>
-          <option value="bondo"/>
-          <option value="moyale"/>
-          <option value="maralal"/>
-          <option value="gilgil"/>
-          <option value="nambale"/>
-          <option value="tabaka"/>
-          <option value="muhoroni"/>
-          <option value="kerugoya/Kutus"/>
-          <option value="ugunja"/>
-          <option value="yala"/>
-          <option value="rumuruti"/>
-          <option value="burnt Forest"/>
-          <option value="maragua"/>
-          <option value="kendu Bay"/>
-      </datalist>
-      <div class="col">
-      <button class="btn btn-default" type='submit' id="submit">Search</button>
-      </div>
-    </form>
-  </br> 
+
     </div>
       </div>
     <div id="showsearch"></div>
@@ -200,6 +228,36 @@
     </form>
 <br/>
   </div>
+</div>
+<!-- Footer -->
+<footer class="page-footer font-small mdb-color darken-4
+pt-4">
+
+  <!-- Footer Elements -->
+  <div class="container">
+
+    <!-- Call to action -->
+    <ul class="list-unstyled list-inline text-center py-2">
+      <li class="list-inline-item">
+        <h5 class="mb-1">Register, Book and get discount</h5>
+      </li>
+      <li class="list-inline-item">
+        <a href="#!" class="btn btn-outline-success btn-rounded waves-effect">Sign up!</a>
+      </li>
+    </ul>
+    <!-- Call to action -->
+
+  </div>
+  <!-- Footer Elements -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2020 Copyright:
+    <a href="#"> xycoders</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
 
 
 <script>

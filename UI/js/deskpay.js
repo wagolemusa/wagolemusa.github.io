@@ -127,15 +127,15 @@ function mpesa(desk_id, bookingref, car_number, from_location, to_location, pric
     document.getElementById("editor").innerHTML =`
 
     <form name="modify"><br><p id="id"></p><br>
-    <textarea maxlength="20" rows ="2" cols = "38" name="desk_id">${desk_id}</textarea><br><br>
-    <textarea maxlength="20" rows ="2" cols = "38" name="bookingref">${bookingref}</textarea><br><br>
-    <textarea maxlength="20" rows ="2" cols = "38" name="car_number">${car_number}</textarea><br><br>
-    <textarea maxlength="20" rows ="2" cols = "38" name="from_location">${from_location}</textarea><br><br>
-    <textarea maxlength="20" rows ="2" cols = "38" name="to_location">${to_location}</textarea><br><br>
-    <textarea maxlength="20" rows ="2" cols = "38" name="price">${price}</textarea><br><br>
-    <textarea maxlength="20" rows ="2" cols = "38" name="quality">${quantiy}</textarea><br><br>
-    <textarea maxlength="20" rows ="2" cols = "38" name="dates">${date_when}</textarea><br><br>
-    <textarea maxlength="20" rows ="2" cols = "38" name="amount">${amount}</textarea><br><br>
+    <textarea disabled="disabled" maxlength="20" rows ="2" cols = "38" name="desk_id">${desk_id}</textarea><br><br>
+    <textarea disabled="disabled" maxlength="20" rows ="2" cols = "38" name="bookingref">${bookingref}</textarea><br><br>
+    <textarea disabled="disabled" maxlength="20" rows ="2" cols = "38" name="car_number">${car_number}</textarea><br><br>
+    <textarea disabled="disabled" maxlength="20" rows ="2" cols = "38" name="from_location">${from_location}</textarea><br><br>
+    <textarea disabled="disabled" maxlength="20" rows ="2" cols = "38" name="to_location">${to_location}</textarea><br><br>
+    <textarea disabled="disabled" maxlength="20" rows ="2" cols = "38" name="price">${price}</textarea><br><br>
+    <textarea disabled="disabled" maxlength="20" rows ="2" cols = "38" name="quality">${quantiy}</textarea><br><br>
+    <textarea disabled="disabled" maxlength="20" rows ="2" cols = "38" name="dates">${date_when}</textarea><br><br>
+    <textarea disabled="disabled" maxlength="20" rows ="2" cols = "38" name="amount">${amount}</textarea><br><br>
 
     <input type="number" maxlength="20" rows ="2" cols = "33" name="phone" placeholder="245 678 67 7700"><br><br>
      <button class="view" name="save" id="search">Book</button></form>

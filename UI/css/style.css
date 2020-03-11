@@ -162,7 +162,6 @@ padding-right: 5em;
 }
 
 .card1{
-  margin-left: 33px;
   margin-top: 50px;
   background-color: rgb(255, 255, 255);
   padding: 30px;
@@ -916,16 +915,12 @@ min-height: 1px;
 }
 
 .conts{
-  background-color: #ffffff;
-padding: 2em;
+background-color: #ffffff;
+padding: 5em;
 box-shadow: 0 2px 5px 0 rgba(143, 100, 100, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 border: 1px solid transparent;
-
 border-top-left-radius: 1rem;
 border-top-right-radius: 1rem;
-box-shadow: 1px 2px 14px rgba(0,0,0,.1);
-padding: .9375rem 1.4rem 4rem;
-padding-bottom: 2em;
 
 }
 
@@ -1089,10 +1084,19 @@ color:#d5d5d5;
   font-size: 18px;
   color:#1C2331;
   font-weight: 500;
+  color:  #fd7e14;
 }
 
 .tabl td{
   font-size: 16px;
+}
+
+.conts th{
+  font-size: 18px;
+  color:#1C2331;
+  font-weight: 500;
+  color:  #fd7e14;
+
 }
 
 
@@ -1188,7 +1192,6 @@ h1, input {
 }
 
 .input {
-  width: 75%;
   height: 50px;
   display: block;
   margin: 0 auto 15px;
