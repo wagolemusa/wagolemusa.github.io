@@ -21,7 +21,8 @@ function searchfetch(event){
     let url = route +"/v2/search"
     let from_location = document.forms["search"]["from_location"].value;
     let to_location = document.forms["search"]["to_location"].value;
-    let data = {from_location:from_location, to_location:to_location};
+    let dates = document.forms["search"]["dates"].value;
+    let data = {from_location:from_location, to_location:to_location, dates:dates};
     fetch (url, {method:"POST",
     headers:{
         "Content-Type":"application/json",
@@ -33,13 +34,14 @@ function searchfetch(event){
 .then((res)=>res.json())
 .then((data)=>{
     
+    if (data["message"] == "There is no Route yet")
         document.getElementById("reg").innerText = data["message"];
     
     if (data.message == 'Internal Server Error'){
         window.location.replace("login.html")
     }
 
-    // else{
+    else{
         data = data["data"];
         console.log(data)
         let output = `
@@ -74,7 +76,7 @@ function searchfetch(event){
     //     document.getElementById("reg").innerText = data["message"];
 
     // }
-    // }
+    }
 
 })
 .catch(error => console.log('error:',error));
@@ -106,7 +108,7 @@ function books(book_id, car_number, from_location, to_location, price){
     <h5>Seats</h5>
     <input class="form-control form-control-lg" input"type="number"  name="quality" placeholder="How many seats"><br>
     <h5>Travel Date</h5>
-    <input class="form-control form-control-lg" type="text"  input" type="date"  name="dates" placeholder="Date"><br>
+    <input class="form-control form-control-lg" type="date"  input" type="date"  name="dates" placeholder="Date"><br>
  
      <button class="btn btn-default"  name="save" id="search">Book</button></form>
     <br/>

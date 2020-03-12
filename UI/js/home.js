@@ -33,13 +33,15 @@ function fetchuser(event){
     })
     .then((res)=>res.json())
     .then((data) =>{
-        if (data){
-            document.getElementById("reg").innerText = data["message"];
+    if (data["message"] == "Successfully registered an account"){
+        window.location.replace("login.html") 
+     
+    }
+     else{
+        document.getElementById("reg").innerText = data["message"];
+         
 
-        }else{
-            window.location.replace("login.html")        
-
-        }
+     }
 })
 .catch(error => console.log('error:',error));
 
