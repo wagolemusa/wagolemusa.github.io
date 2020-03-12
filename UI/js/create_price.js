@@ -34,7 +34,7 @@ function fetchprice(event){
     body:JSON.stringify(data)
 })
 .then ((response)=>response.json())
-.then((data)=>{
+.then((data)=> {
     if (data){
         document.getElementById("msg").innerText = data["message"]
         // window.location.replace("create_price.html")
