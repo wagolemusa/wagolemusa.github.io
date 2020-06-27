@@ -21,7 +21,8 @@ function searchfetch(event){
     let url = route +"/v2/search"
     let from_location = document.forms["search"]["from_location"].value;
     let to_location = document.forms["search"]["to_location"].value;
-    let data = {from_location:from_location, to_location:to_location};
+    let dates = document.forms["search"]["dates"].value;
+    let data = {from_location:from_location, to_location:to_location, dates:dates};
     fetch (url, {method:"POST",
     headers:{
         "Content-Type":"application/json",

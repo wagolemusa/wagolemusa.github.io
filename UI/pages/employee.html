@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,17 +29,12 @@
 
   <ul class="navbar-nav mr-auto">
 
-
-
-
   </ul>
   <!-- Links -->
   <a id='current_user' style="color:chartreuse;font-size: 30px;"></a>
 
-  <i class="fab fa-btc"></i>&nbsp;&nbsp; <a href="today_clients.html">Reception Desk</a>  &nbsp;&nbsp;&nbsp;&nbsp;
-
-  <i class="far fa-calendar-plus"></i>&nbsp;&nbsp; <a href="create_price.html">Create Price</a>  &nbsp;&nbsp;&nbsp;&nbsp;
-  <i class="fab fa-btc"></i>&nbsp;&nbsp; <a href="employee.html">Create Employee</a>  &nbsp;&nbsp;&nbsp;&nbsp;
+  
+  <i class="fab fa-btc"></i>&nbsp;&nbsp; <a href="admin_dashboard.html">DASHBOARD</a>  &nbsp;&nbsp;&nbsp;&nbsp;
 
   <i class="fas fa-sign-out-alt"></i> &nbsp;&nbsp;<a href="#">Logout</a>  
 
@@ -51,47 +45,44 @@
 <!--/.Navbar-->
 
 
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                <h2 style="font-size: 30px; font-weight: bold;">Create Employee</h2>
+                <h3 id="msg"></h3>
+                <form name="employee" id="empy">
+                <input type="text" name="first_name" placeholder="First Name" required>
+                <input type="text" name="last_name" placeholder="Last Name" required>
+                <input type="text" name="username" placeholder="Username" required>
+                <input type="text" name="email" placeholder="Email" required>
+                <input type="text" name="permit_number" placeholder="Permit Number" required>
+                <input type="text" name="city" placeholder="City" required>
+                <input type="number" name="age" placeholder="Age" required>
+                <input type="text" name="salary" placeholder="Salary" required>
+                <input type="number" name="nation_id" placeholder="Nation ID" required>
+                <select class="browser-default custom-select" name="sex">
+                    <option selected>Sex</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                  </select><br/><br/>
+                <input type="number" name="phone_number" placeholder="Phone Number" required>
+                <input type="file" name="image">
 
+                <button type='submit' id="empy">Create Employee</button>
+                </form>
+                </div>
+            </div>
 
+        </div>
 
-<nav class="navbar1 navbar-expand navbar-dark white static-top font-weight-bold">
-  <a href="bookers.html" class="btn btn-outline-default waves-effect">Cash</a>&nbsp;&nbsp; 
-  <a href="searchpay.html" class="btn btn-outline-primary waves-effect">Mpesa </a>&nbsp;&nbsp; 
-  <a href="payment_admin.html" class="btn btn-outline-success waves-effect">Payments</a>&nbsp;&nbsp; 
-  <a href="intransit.html" class="btn btn-outline-info waves-effect">Parcels</a>&nbsp;&nbsp; 
-  <a href="charts.html" class="btn btn-outline-warning waves-effect">Analıysıs</a>&nbsp;&nbsp; 
+        <div class="col-md-6">
 
-  <a href="cashflow.html" class="btn btn-outline-default waves-effect">Cash Flow</a>&nbsp;&nbsp; 
+            <img src="../img/empl.jpg" class="img-fluid" alt="Responsive image">
 
-  <a href="sms.html" class="btn btn-outline-danger waves-effect">SMS</a>&nbsp;&nbsp; 
-  </nav>
-<body onload="fetchnumbers()">
-<br/>
-
-
-<h3 style="color: #999;
-">Admin Dashboard</h3> 
-  <div class="row">
-    <div class="col-md-4">
-      <div class="color-block">
-        <h2 id="output"></h2>
-        <b>Users</b>
-      </div>
+        </div>
     </div>
-    <div class="col-md-4">
-      <div class="color-block1">
-        <h2 id="orders"></h2>
-        <p>Bookings</p>
-      </div>
-    </div>
-    <div class="col-md-4">
-
-      <div class="color-block2">
-        <h2 id="parcel"></h2>
-        <p>Parcel Orders</p>
-      </div>
-    </div>
-  </div>
 </div>
 
 <!-- Footer -->
@@ -124,10 +115,11 @@ pt-4">
 </footer>
 <!-- Footer -->
 
-</body>
-</html> 
-
-<script src="../js/number.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js" type="text/javascript"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js" type="text/javascript"></script>
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="Stylesheet" type="text/css" />
+<script src="../js/script.js"></script>
+<script src="../js/employee.js"></script>
 <!-- JQuery -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <!-- Bootstrap tooltips -->
@@ -136,3 +128,5 @@ pt-4">
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <!-- MDB core JavaScript -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.7/js/mdb.min.js"></script>
+
+</body>

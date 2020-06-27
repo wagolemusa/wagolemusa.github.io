@@ -24,7 +24,8 @@ function fetchprice(event){
     let price = document.forms["create"]["price"].value;
     let day_time = document.forms["create"]["day_time"].value;
     let dates = document.forms["create"]["dates"].value;
-    let data = {car_number:car_number, from_location:from_location, to_location:to_location, period:period, arrival:arrival, price:price, day_time:day_time, dates:dates};
+    let driver = document.forms["create"]["driver"].value;
+    let data = {car_number:car_number, from_location:from_location, to_location:to_location, period:period, arrival:arrival, price:price, day_time:day_time, dates:dates, driver:driver};
     fetch(url, {method:"POST",
     headers:{
         "Content-Type":"application/json",
@@ -76,6 +77,7 @@ fetch("https://senditparcel.herokuapp.com/api/admin/v2/locations",{
             <th>Time</th>
             <th>Price</th>
             <th>Date</th>
+            <th>driver</th>
 
             </tr>
             </thead>
@@ -97,6 +99,7 @@ fetch("https://senditparcel.herokuapp.com/api/admin/v2/locations",{
                     <td>${collection[pric]["day_time"]}</td>
                     <td>${collection[pric]["price"]}</td>
                     <td>${collection[pric]["dates"]}</td>
+                    <td>${collection[pric]["driver"]}</td>
                     <td><button  class="btn btn-danger" onclick="deletehistory(${collection[pric]["price_id"]})">Delete</button></td>`
             
             });
