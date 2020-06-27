@@ -22,7 +22,8 @@ fetch("https://senditparcel.herokuapp.com/api/admin/v2/bookings",{
 
         book = book["book"]
         let output = `
-        <table id="tablePreview" class="table table-striped table-hover table-borderless">
+    <div class="table-responsive">
+        <table id="tablePreview"  class="table" class="table table-bordered" table-hover table-borderless">
         <thead>
         <tr>
         <th>Reciept Number</th>
@@ -50,7 +51,8 @@ fetch("https://senditparcel.herokuapp.com/api/admin/v2/bookings",{
             <td>${book[sendt]["quality"]}</td>
             <td>${book[sendt]["total"]}</td>
 
-            <td><button class="btn btn-default" id="myBtn6" value="Edit" onclick="viewSingle(${book[sendt]["book_id"]})">Print Receipt</button></td> <tbody>`;
+            <td><button class="btn btn-default" id="myBtn6" value="Edit" onclick="viewSingle(${book[sendt]["book_id"]})">Print Receipt</button></td> <tbody>
+            </div>`;
         })
         document.getElementById("showsearch").innerHTML = output + `</table>`;
 
