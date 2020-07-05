@@ -100,6 +100,7 @@ fetch("https://senditparcel.herokuapp.com/api/admin/v2/locations",{
                     <td>${collection[pric]["price"]}</td>
                     <td>${collection[pric]["dates"]}</td>
                     <td>${collection[pric]["driver"]}</td>
+                    <td><button  class="btn btn-primary" onclick="edit(${collection[pric]["price_id"]})">Asign Driver</button></td>
                     <td><button  class="btn btn-danger" onclick="deletehistory(${collection[pric]["price_id"]})">Delete</button></td>`
             
             });
@@ -128,6 +129,44 @@ function deletehistory(price_id){
         })
         
     }
+}
+
+function edit(price_id, driver){
+
+    modal1.style.display="block";
+    document.getElementById("single").innerHTML = "";
+    document.getElementById("driver").innerText = "";
+    document.getElementById("editor").innerHTML =`
+
+    <form name="modify"><br><p id="id"></p><br>
+    <textarea maxlength="20" rows ="2" cols = "33" name="driver">${driver}</textarea><br><br>
+     <button type='submit'  id="submit">Asign Driver</button></form>
+    <br/>
+  </div>
+</div>
+`;
+    document.getElementById("submit").addEventListener("click",
+    function modifyEntry(event){
+        event.preventDefault();
+        let url = "https://senditparcel.herokuapp.com/api/v2/assign/driver/"+price_id;
+
+            let  driver = document.forms["modify"]["driver"].value;
+    
+            let data = {driver:driver}
+
+            fetch(`${url}`, {
+                method:'PUT', headers: {"Contant-Type":"application/json","Authorization":access_token},
+                body:JSON.stringify(data)
+            })
+            .then((response)=>response.json())
+            .then((data)=>{
+                document.getElementById("msge").innerText = data["message"]
+                // window.location.replace("create_price.html")
+
+            })
+            .catch((error)=>console.log(error))
+
+    });
 }
 
 

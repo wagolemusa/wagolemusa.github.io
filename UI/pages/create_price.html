@@ -211,6 +211,36 @@
 
 </div>
 
+
+<div id="myModal1" class="modal1">
+
+  <div class="modal-content1">
+    <span class="close1">&times;</span>
+    <h3 id="msge"></h3>
+    <h1>Asign Driver</h1>
+    <h5 class="modalText" id = "driver"></h5><p class="modalText" id ="single"></p>
+     <div id="editor"></div>    
+<br/>
+  </div>
+</div>
+
+<script>
+var modal1 = document.getElementById('myModal1');
+var btn1 = document.getElementById("myBtn1");
+var span1 = document.getElementsByClassName("close1")[0];
+btn1.onclick = function() {
+    modal1.style.display = "block";
+}
+span8.onclick = function() {
+    modal1.style.display = "none";
+}
+window.onclick = function(event) {
+    if (event.target == modal1) {
+        modal1.style.display = "none";
+    }
+}
+</script>
+
 <!-- Footer -->
 <footer class="page-footer font-small mdb-color darken-4
 pt-4">
@@ -241,38 +271,6 @@ pt-4">
 </footer>
 <!-- Footer -->
 
-<!-- <div id="myModal1" class="modal1">
-
-  <div class="modal-content1">
-    <span class="close1">&times;</span>
-    <h3 id="msge"></h3>
-    <h1>Update</h1>
-    <h5 class="modalText" id = "car_number"></h5><p class="modalText" id ="single"></p>
-    <h5 class="modalText" id = "from_location"></h5></h5><p class="modalText" id ="location"></p>
-    <h5 class="modalText" id = "to_location"></h5></h5><p class="modalText" id ="too"></p>
-    <h5 class="modalText" id = "price"></h5></h5><p class="modalText" id ="pessa"></p>
-    <h5 class="modalText" id = "day_time"></h5></h5><p class="modalText" id ="timee"></p>
-     <div id="editor"></div>    
-<br/>
-  </div>
-</div> -->
-
-<!-- <script>
-var modal1 = document.getElementById('myModal1');
-var btn1 = document.getElementById("myBtn1");
-var span1 = document.getElementsByClassName("close1")[0];
-btn1.onclick = function() {
-    modal1.style.display = "block";
-}
-span8.onclick = function() {
-    modal1.style.display = "none";
-}
-window.onclick = function(event) {
-    if (event.target == modal1) {
-        modal1.style.display = "none";
-    }
-}
-</script> -->
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js" type="text/javascript"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js" type="text/javascript"></script>
